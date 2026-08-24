@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Page introuvable — Diables Rouges Supporters Club</title>
+<meta name="description" content="Cette page n'existe pas ou plus sur le site Diables Rouges Supporters Club.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+<link rel="apple-touch-icon" href="assets/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Caveat:wght@700&family=Archivo:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
+<style>
+  .grain{
+    position:fixed; inset:0; pointer-events:none; z-index:60;
+    opacity:0.08; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .err{
+    min-height:calc(100vh - 82px);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; padding:60px 5vw; position:relative; overflow:hidden;
+  }
+  .err-bg{
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    font-family:'Anton'; font-size:min(45vw,420px); color:transparent;
+    -webkit-text-stroke:1.5px rgba(208,2,27,0.12); white-space:nowrap; pointer-events:none; z-index:0;
+  }
+  .err-inner{position:relative; z-index:2;}
+  .err-tag{
+    display:inline-block; font-family:'JetBrains Mono'; font-size:11px; letter-spacing:0.2em;
+    color:var(--on-accent); background:var(--red); padding:6px 14px; margin-bottom:22px;
+    transform:rotate(-1.5deg);
+  }
+  .err h1{font-size:clamp(32px,5.4vw,58px); max-width:20ch; margin:0 auto; line-height:1.1;}
+  .err p{margin-top:18px; max-width:48ch; margin-left:auto; margin-right:auto; font-size:15px; line-height:1.6; color:var(--paper-dim);}
+  .err-actions{margin-top:34px; display:flex; gap:14px; flex-wrap:wrap; justify-content:center;}
+  .err .cta{
+    display:inline-block; padding:14px 28px;
+    background:var(--red); color:var(--on-accent);
+    font-family:'Anton'; font-size:14px; letter-spacing:0.06em;
+    text-transform:uppercase; transition:transform .15s;
+  }
+  .err .cta:hover{transform:translateY(-2px);}
+  .err .cta.ghost{background:none; color:var(--black); border:2px solid var(--black);}
+  .err .cta.ghost:hover{background:var(--black); color:var(--paper);}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Aller au contenu principal</a>
+<div class="grain"></div>
+
+<header>
+  <div class="brand">
+    <a href="index.html" style="display:flex; align-items:center; gap:14px;">
+    <div class="crest">
+      <img src="assets/logo.jpg" alt="Diables Rouges Supporters Club" width="54" height="54">
+    </div>
+    <div class="brand-text">
+      <div class="top">Depuis 1899 · Stade Robert-Diochon</div>
+      <div class="bottom">Diables Rouges</div>
+    </div>
+    </a>
+  </div>
+  <nav>
+    <a href="actus.html">Actus</a>
+    <a href="calendrier.html">Calendrier</a>
+    <a href="effectif.html">Effectif</a>
+    <a href="histoire.html">Histoire</a>
+    <a href="photos.html">Photos</a>
+    <a href="infos-pratiques.html">Infos</a>
+    <a href="suivre.html">Nous suivre</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Changer de thème">
+    <svg class="icon-sun" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v3M12 18.5v3M4.5 4.5l2.1 2.1M17.4 17.4l2.1 2.1M2.5 12h3M18.5 12h3M4.5 19.5l2.1-2.1M17.4 6.6l2.1-2.1"/></svg>
+    <svg class="icon-moon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.2A8.5 8.5 0 1 1 9.8 4a6.7 6.7 0 0 0 10.2 10.2Z"/></svg>
+  </button>
+  <button class="menu-btn" id="menu-btn" aria-label="Ouvrir le menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="actus.html">Actus</a>
+  <a href="calendrier.html">Calendrier</a>
+  <a href="effectif.html">Effectif</a>
+  <a href="histoire.html">Histoire</a>
+  <a href="photos.html">Photos</a>
+  <a href="infos-pratiques.html">Infos</a>
+  <a href="suivre.html">Nous suivre</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main id="main">
+<div class="err">
+  <div class="err-bg">404</div>
+  <div class="err-inner">
+    <div class="err-tag">HORS-JEU</div>
+    <h1>Cette page n'existe pas.</h1>
+    <p>Le lien est mort, mal tapé, ou la page a changé d'adresse. Pas de panique.</p>
+    <div class="err-actions">
+      <a class="cta" href="index.html">Retour à l'accueil</a>
+      <a class="cta ghost" href="actus.html">Voir les actus</a>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div>© 2026 Diables Rouges Supporters Club — page fan non-officielle, tenue par des passionnés du FC Rouen 1899.</div>
+  <div class="foot-links">
+    <a href="https://x.com/DiablesRouges_">X / Twitter</a>
+    <a href="https://fcr1899.com">Site officiel FCR1899</a>
+    <a href="https://billetterie-fcrouen.fr/">Billetterie</a>
+    <a href="mentions-legales.html">Mentions légales</a>
+  </div>
+</footer>
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileNav = document.getElementById('mobile-nav');
+  menuBtn.addEventListener('click', ()=>{
+    const isOpen = mobileNav.classList.toggle('open');
+    menuBtn.classList.toggle('open', isOpen);
+    document.body.classList.toggle('nav-open', isOpen);
+  });
+  mobileNav.querySelectorAll('a').forEach(a=>{
+    a.addEventListener('click', ()=>{
+      mobileNav.classList.remove('open');
+      menuBtn.classList.remove('open');
+      document.body.classList.remove('nav-open');
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Histoire du club — Diables Rouges Supporters Club</title>
+<meta name="description" content="127 ans d'histoire du FC Rouen 1899, du Petit-Trianon au Stade Robert-Diochon.">
+<link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+<link rel="apple-touch-icon" href="assets/logo.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Diables Rouges Supporters Club">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Histoire du club — Diables Rouges Supporters Club">
+<meta property="og:description" content="127 ans d'histoire du FC Rouen 1899, du Petit-Trianon au Stade Robert-Diochon.">
+<meta property="og:image" content="og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="og-image.jpg">
+<meta name="twitter:title" content="Histoire du club — Diables Rouges Supporters Club">
+<meta name="twitter:description" content="127 ans d'histoire du FC Rouen 1899, du Petit-Trianon au Stade Robert-Diochon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Caveat:wght@700&family=Archivo:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
+<style>
+  .grain{
+    position:fixed; inset:0; pointer-events:none; z-index:60;
+    opacity:0.08; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* ---------- PAGE BANNER (editorial, sobre) ---------- */
+  .banner{
+    position:relative; padding:70px 5vw 46px; background:var(--paper); overflow:hidden;
+    border-bottom:1px solid rgba(12,11,10,0.1);
+  }
+  .banner-bg-text{
+    position:absolute; top:-10px; right:-2%; z-index:0;
+    font-family:'Anton'; font-size:min(20vw,180px); color:transparent;
+    -webkit-text-stroke:1px rgba(208,2,27,0.10);
+    white-space:nowrap; user-select:none; pointer-events:none;
+  }
+  .banner-stack{position:relative; z-index:2; max-width:760px;}
+  .banner-eyebrow{
+    display:flex; align-items:center; gap:10px;
+    font-family:'JetBrains Mono'; font-size:11px; letter-spacing:0.24em;
+    color:var(--gold-ink); font-weight:700; text-transform:uppercase;
+    margin-bottom:18px;
+  }
+  .banner-eyebrow::before{content:""; width:26px; height:2px; background:var(--gold-ink);}
+  .banner h1{
+    font-size:clamp(36px, 5.6vw, 64px);
+    line-height:1.02;
+    color:var(--black);
+  }
+  .banner-sub{
+    margin-top:22px; max-width:62ch; font-size:15.5px; line-height:1.7; color:var(--paper-dim);
+  }
+  .source-note{
+    margin-top:18px; font-family:'JetBrains Mono'; font-size:11px; color:var(--paper-dim);
+    border-left:2px solid var(--gold-ink); padding-left:10px;
+  }
+  .source-note a{color:var(--gold-ink); border-bottom:1px dotted var(--gold-ink);}
+
+  /* ---------- KEY STATS STRIP ---------- */
+  .stats-strip{
+    display:grid; grid-template-columns:repeat(4,1fr); border-bottom:1px solid rgba(12,11,10,0.1);
+    background:var(--black-soft);
+  }
+  .stat-cell{padding:24px 5vw; text-align:center; border-right:1px solid rgba(12,11,10,0.08);}
+  .stat-cell:last-child{border-right:none;}
+  .stat-cell .num{font-family:'Archivo Black'; font-size:clamp(20px,2.6vw,30px); color:var(--gold-ink);}
+  .stat-cell .lbl{font-family:'JetBrains Mono'; font-size:10px; letter-spacing:0.1em; color:var(--paper-dim); margin-top:6px; text-transform:uppercase;}
+  @media(max-width:700px){ .stats-strip{grid-template-columns:repeat(2,1fr);} .stat-cell:nth-child(2){border-right:none;} .stat-cell:nth-child(1),.stat-cell:nth-child(2){border-bottom:1px solid rgba(12,11,10,0.08);} }
+
+  /* ---------- SECTION HEAD ---------- */
+  section{padding:70px 5vw;}
+  .sec-head{margin-bottom:8px;}
+  .sec-head .kicker{font-family:'JetBrains Mono'; font-size:11px; letter-spacing:0.2em; color:var(--gold-ink); text-transform:uppercase;}
+  .sec-head h2{font-size:clamp(26px,3.6vw,40px); margin-top:8px;}
+  .sec-head .rule{height:1px; background:rgba(12,11,10,0.12); margin-top:24px; max-width:820px; margin-left:auto; margin-right:auto;}
+
+  /* ---------- TIMELINE (éditorial, sobre) ---------- */
+  .timeline{position:relative; max-width:820px; margin:48px auto 0;}
+  .timeline::before{
+    content:""; position:absolute; left:88px; top:6px; bottom:6px; width:1px;
+    background:rgba(12,11,10,0.14);
+  }
+  @media(max-width:620px){ .timeline::before{left:0;} }
+
+  .era{
+    position:relative; display:grid; grid-template-columns:88px 1fr; gap:28px;
+    margin-bottom:6px;
+  }
+  @media(max-width:620px){ .era{grid-template-columns:1fr; gap:8px;} }
+  .era-year{
+    font-family:'JetBrains Mono'; font-size:13px; color:var(--paper-dim); text-align:right; padding-top:28px;
+    letter-spacing:0.02em;
+  }
+  @media(max-width:620px){ .era-year{text-align:left; padding-top:24px; padding-bottom:4px; color:var(--gold-ink);} }
+
+  .era-card{
+    position:relative;
+    padding:26px 0 26px 32px;
+    border-left:2px solid var(--red);
+  }
+  @media(max-width:620px){ .era-card{padding-left:20px;} }
+  .era-card::before{
+    content:""; position:absolute; left:-6px; top:32px; width:10px; height:10px; border-radius:50%;
+    background:var(--black); border:2px solid var(--red);
+  }
+  .era-card .kicker{
+    font-family:'JetBrains Mono'; font-size:10px; letter-spacing:0.14em; color:var(--gold-ink);
+    text-transform:uppercase; font-weight:700; display:block; margin-bottom:8px;
+  }
+  .era-card h3{font-size:19px; margin-bottom:10px; color:var(--black); line-height:1.2;}
+  .era-card p{font-size:14.5px; line-height:1.7; margin:0; color:var(--paper-dim);}
+  .era-card p + p{margin-top:10px;}
+
+  /* ---------- FIGURES DU CLUB ---------- */
+  .figures{max-width:960px; margin:48px auto 0; display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  .figure-card{
+    background:var(--black-soft); border:1px solid rgba(12,11,10,0.08); padding:24px 20px;
+  }
+  .figure-card .fname{font-family:'Anton'; font-size:17px; color:var(--black); line-height:1.15;}
+  .figure-card .frole{font-family:'JetBrains Mono'; font-size:10px; letter-spacing:0.1em; color:var(--gold-ink); text-transform:uppercase; margin-top:6px;}
+  .figure-card p{font-size:13.5px; line-height:1.6; color:var(--paper-dim); margin:12px 0 0;}
+  @media(max-width:780px){ .figures{grid-template-columns:1fr;} }
+
+  /* ---------- MANIFESTE ---------- */
+  .manifesto{
+    position:relative;
+    background:var(--red);
+    color:var(--on-accent);
+    padding:80px 5vw;
+    text-align:center;
+    overflow:hidden;
+    border-top:6px solid var(--black);
+  }
+  .manifesto-inner{position:relative; z-index:2; max-width:640px; margin:0 auto;}
+  .manifesto h2{font-size:clamp(26px,4.6vw,46px); line-height:1.1;}
+  .manifesto p.hand{font-size:clamp(20px,2.6vw,28px); margin-top:18px; color:var(--on-accent);}
+  .manifesto .cta{
+    display:inline-block; margin-top:28px; padding:15px 32px;
+    background:var(--on-accent); color:var(--red);
+    font-family:'Anton'; font-size:14px; letter-spacing:0.06em;
+    text-transform:uppercase; border:2px solid var(--black);
+    transition:transform .15s, background .15s;
+  }
+  .manifesto .cta:hover{transform:translateY(-2px);}
+
+  /* ---------- ANIMATIONS (sobres) ---------- */
+  @media (prefers-reduced-motion: no-preference){
+    .reveal{opacity:0; transform:translateY(16px); transition:opacity .5s ease, transform .5s ease;}
+    .reveal.visible{opacity:1; transform:translateY(0);}
+
+    .era-reveal{opacity:0; transform:translateY(10px); transition:opacity .45s ease, transform .45s ease;}
+    .era-reveal.visible{opacity:1; transform:translateY(0);}
+  }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Aller au contenu principal</a>
+<div class="grain"></div>
+
+<header>
+  <div class="brand">
+    <a href="index.html" style="display:flex; align-items:center; gap:14px;">
+    <div class="crest">
+      <img src="assets/logo.jpg" alt="Diables Rouges Supporters Club" width="54" height="54">
+    </div>
+    <div class="brand-text">
+      <div class="top">Depuis 1899 · Stade Robert-Diochon</div>
+      <div class="bottom">Diables Rouges</div>
+    </div>
+    </a>
+  </div>
+  <nav>
+    <a href="actus.html">Actus</a>
+    <a href="calendrier.html">Calendrier</a>
+    <a href="effectif.html">Effectif</a>
+    <a href="histoire.html" class="active">Histoire</a>
+    <a href="photos.html">Photos</a>
+    <a href="infos-pratiques.html">Infos</a>
+    <a href="suivre.html">Nous suivre</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Changer de thème">
+    <svg class="icon-sun" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v3M12 18.5v3M4.5 4.5l2.1 2.1M17.4 17.4l2.1 2.1M2.5 12h3M18.5 12h3M4.5 19.5l2.1-2.1M17.4 6.6l2.1-2.1"/></svg>
+    <svg class="icon-moon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.2A8.5 8.5 0 1 1 9.8 4a6.7 6.7 0 0 0 10.2 10.2Z"/></svg>
+  </button>
+  <button class="menu-btn" id="menu-btn" aria-label="Ouvrir le menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="actus.html">Actus</a>
+  <a href="calendrier.html">Calendrier</a>
+  <a href="effectif.html">Effectif</a>
+  <a href="histoire.html" class="active">Histoire</a>
+  <a href="photos.html">Photos</a>
+  <a href="infos-pratiques.html">Infos</a>
+  <a href="suivre.html">Nous suivre</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main id="main">
+<div class="banner">
+  <div class="banner-bg-text">1899</div>
+  <div class="banner-stack">
+    <div class="banner-eyebrow">LE CLUB · HISTOIRE</div>
+    <h1>Cent vingt-sept ans de football à Rouen.</h1>
+    <p class="banner-sub">Du Petit-Trianon au Stade Robert-Diochon, des demi-finales européennes aux trois dépôts de bilan, jusqu'au renouveau actuel en Ligue 3 : l'histoire complète du FC Rouen 1899, saison après saison.</p>
+    <div class="source-note mono">Sources : <a href="https://fr.wikipedia.org/wiki/Football_Club_de_Rouen_1899" target="_blank" rel="noopener noreferrer">Wikipédia ↗</a> et <a href="https://fcr1899.com/le-club/" target="_blank" rel="noopener noreferrer">fcr1899.com/le-club ↗</a>.</div>
+  </div>
+</div>
+
+<div class="stats-strip">
+  <div class="stat-cell"><div class="num">10/07/1899</div><div class="lbl">Fondation officielle</div></div>
+  <div class="stat-cell"><div class="num">14 saisons</div><div class="lbl">En Division 1</div></div>
+  <div class="stat-cell"><div class="num">3</div><div class="lbl">Dépôts de bilan</div></div>
+  <div class="stat-cell"><div class="num">Ligue 3</div><div class="lbl">Division actuelle</div></div>
+</div>
+
+<section>
+  <div class="sec-head reveal">
+    <div class="kicker mono">Chronologie</div>
+    <h2>Les grandes dates</h2>
+  </div>
+
+  <div class="timeline">
+
+    <div class="era">
+      <div class="era-year mono">1899</div>
+      <div class="era-card era-reveal">
+        <span class="kicker">Fondation</span>
+        <h3>Naissance du club</h3>
+        <p>L'association est officiellement déclarée en préfecture le 10 juillet 1899. Raoul Hurard en devient le premier président, aux côtés notamment de M. Willig, un commerçant tout juste rentré d'Angleterre, et d'Eugène Maréchal.</p>
+      </div>
+    </div>
+
+    <div class="era">
+      <div class="era-year mono">1908–1917</div>
+      <div class="era-card era-reveal">
+        <span class="kicker">Premiers terrains</span>
+        <h3>Du Petit-Trianon au stade des Bruyères</h3>
+        <p>Le club s'installe rue d'Elbeuf, au terrain du Petit-Trianon, à partir de septembre 1908. En 1917 est inauguré le stade des Bruyères — qui deviendra plus tard le Stade Robert-Diochon, aujourd'hui doté d'une capacité de 8 372 places.</p>
+      </div>
+    </div>
+
+    <div class="era">
+      <div class="era-year mono">1913–1925</div>
+      <div class="era-card era-reveal">
+        <span class="kicker">Premières finales</span>
+        <h3>Marseille, puis une finale en deux actes</h3>
+        <p>Le 27 avril 1913, Rouen dispute la finale du championnat USFSA devant 6 923 spectateurs, battu 1-0 par Marseille. En 1925, le club atteint la finale de la Coupe de France : match nul 1-1 le 26 avril, puis défaite 2-3 lors de la rejoue du 10 mai — l'époque où les finales indécises se rejouaient entièrement.</p>
+      </div>
+    </div>
+
+    <div class="era">
+      <div class="era-year mono">1933–1939</div>
+      <div class="era-card era-reveal">
+        <span class="kicker">Ère professionnelle</span>
+        <h3>Le professionnalisme et Jean Nicolas</h3>
+        <p>Rouen adopte le statut professionnel le 26 mars 1933, en Division 2. Le titre de champion de D2 arrive en 1936, synonyme de première montée en élite. S'ensuivent deux 4<sup>es</sup> places (1937, 1938), portées par l'avant-centre Jean Nicolas — qui inscrit notamment 7 buts en un seul match face à Valenciennes, le 1<sup>er</sup> mai 1938.</p>
+      </div>
+    </div>
+
+    <div class="era">
+      <div class="era-year mono">1960–1970</div>
+      <div class="era-card era-reveal">
+        <span class="kicker">Le second âge d'or</span>
+        <h3>Dix saisons en Division 1, une épopée européenne</h3>
+        <p>Deuxième et plus long séjour en élite : dix saisons consécutives, ponctuées d'une 4<sup>e</sup> place en 1960-61 devant un record d'affluence de 22 805 spectateurs, puis d'une nouvelle 4<sup>e</sup> place en 1968-69. Sur la scène européenne, Rouen élimine le Bayern Munich et le Standard de Liège avant d'atteindre les demi-finales de la Coupe Intertoto (1963-64), puis affronte Arsenal en huitièmes de finale de la Coupe des villes de foires en 1969-70 (0-0 à domicile, défaite 1-0 à Londres le 17 décembre).</p>
+      </div>
+    </div>
+
+    <div class="era">
+      <div class="era-year mono">1970–1986</div>
+      <div class="era-card era-reveal">
+        <span class="kicker">L'ascenseur</span>
+        <h3>Montées, records et relégations en cascade</h3>
+        <p>Une relégation administrative met fin au séjour en D1 en 1970. Le club y retourne par les barrages en 1976-77 devant un nouveau record d'affluence (23 532 spectateurs, le 8 avril), avant de redescendre dès la saison suivante. Nouvelle montée en 1981-82, puis un maintien marqué par 54 matchs d'invincibilité à domicile, série interrompue le 1<sup>er</sup> avril 1983 — une saison où Rouen bat tour à tour Bordeaux (futur champion), Monaco, Auxerre et Nancy (7-1). La relégation de 1984-85 se joue aux tirs au but face à Rennes (7-6), avant une nouvelle descente en D3 l'année suivante.</p>
+      </div>
+    </div>
+
+    <div class="era">
+      <div class="era-year mono">1995–2013</div>
+      <div class="era-card era-reveal">
+        <span class="kicker">Les années de crise</span>
+        <h3>Trois dépôts de bilan</h3>
+        <p>Le club dépose le bilan une première fois en 1995, une deuxième en 1997, une troisième en 2013 — une lente rechute qui le fait redescendre jusqu'en Division d'Honneur, l'échelon régional.</p>
+      </div>
+    </div>
+
+    <div class="era">
+      <div class="era-year mono">2015–2019</div>
+      <div class="era-card era-reveal">
+        <span class="kicker">Renaissance par le bas</span>
+        <h3>Le détour par Quevilly</h3>
+        <p>Pour tenir, le club se rapproche de l'US Quevilly en 2015 sous le nom Quevilly Rouen Métropole, avant de reprendre son indépendance complète en 2018. La reconstruction sportive suit : retour en National 3 en 2017, puis en National 2 dès 2019.</p>
+      </div>
+    </div>
+
+    <div class="era">
+      <div class="era-year mono">2023–2024</div>
+      <div class="era-card era-reveal">
+        <span class="kicker">Retour au national</span>
+        <h3>Le National, puis le sauvetage</h3>
+        <p>Rouen retrouve le National — troisième division — en 2023. La saison suivante, le club électrise la Normandie en Coupe de France en éliminant deux formations de Ligue 1, Toulouse et l'AS Monaco, avant d'être racheté et sauvé d'un quatrième dépôt de bilan par l'homme d'affaires turc Tarkan Ser.</p>
+      </div>
+    </div>
+
+    <div class="era">
+      <div class="era-year mono">Aujourd'hui</div>
+      <div class="era-card era-reveal">
+        <span class="kicker">2026</span>
+        <h3>Le Diochon, encore et toujours</h3>
+        <p>Le FC Rouen 1899 évolue désormais en Ligue 3 (l'ex-National), sous la présidence de Samuel Yasar et la direction de Tarkan Ser, avec Régis Brouard sur le banc. Cent vingt-sept ans après sa fondation, le club continue d'écrire son histoire au Stade Robert-Diochon — et nous, depuis les tribunes, on continue de la raconter.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="sec-head reveal">
+    <div class="kicker mono">Portraits</div>
+    <h2>Trois figures du club</h2>
+  </div>
+
+  <div class="figures">
+    <div class="figure-card reveal">
+      <div class="fname">Jean Nicolas</div>
+      <div class="frole mono">Avant-centre · 1930s</div>
+      <p>330 buts en championnat sous le maillot rouennais. Meilleur buteur de l'histoire de l'équipe de France à l'époque (21 buts en 25 sélections), il inscrit 7 buts en un seul match face à Valenciennes en 1938.</p>
+    </div>
+    <div class="figure-card reveal">
+      <div class="fname">Roger Rio</div>
+      <div class="frole mono">Défenseur · Capitaine</div>
+      <p>437 apparitions sous le maillot du FC Rouen — l'une des plus longues carrières du club. Capitaine de l'équipe jusqu'en 1951.</p>
+    </div>
+    <div class="figure-card reveal">
+      <div class="fname">Michel Bensoussan</div>
+      <div class="frole mono">Gardien de but</div>
+      <p>Passé par Rouen, il décroche la médaille d'or aux Jeux olympiques de 1984 avec l'équipe de France olympique.</p>
+    </div>
+  </div>
+</section>
+
+<div class="manifesto" id="rejoindre">
+  <div class="manifesto-inner reveal">
+    <h2>127 ans d'histoire.<br>On n'en rate pas une ligne.</h2>
+    <p class="hand">Et la saison prochaine, on sera encore là pour la raconter.</p>
+    <a class="cta" href="https://x.com/DiablesRouges_">Suivre @DiablesRouges_ ↗</a>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div>© 2026 Diables Rouges Supporters Club — page fan non-officielle, tenue par des passionnés du FC Rouen 1899.</div>
+  <div class="foot-links">
+    <a href="https://x.com/DiablesRouges_">X / Twitter</a>
+    <a href="https://fcr1899.com">Site officiel FCR1899</a>
+    <a href="https://billetterie-fcrouen.fr/">Billetterie</a>
+    <a href="mentions-legales.html">Mentions légales</a>
+  </div>
+</footer>
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileNav = document.getElementById('mobile-nav');
+  menuBtn.addEventListener('click', ()=>{
+    const isOpen = mobileNav.classList.toggle('open');
+    menuBtn.classList.toggle('open', isOpen);
+    document.body.classList.toggle('nav-open', isOpen);
+  });
+  mobileNav.querySelectorAll('a').forEach(a=>{
+    a.addEventListener('click', ()=>{
+      mobileNav.classList.remove('open');
+      menuBtn.classList.remove('open');
+      document.body.classList.remove('nav-open');
+    });
+  });
+
+  const revealEls = document.querySelectorAll('.reveal, .era-reveal');
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -30px 0px'});
+    revealEls.forEach((el,i)=>{
+      el.style.transitionDelay = (i % 5) * 60 + 'ms';
+      io.observe(el);
+    });
+  } else {
+    revealEls.forEach(el=>el.classList.add('visible'));
+  }
+</script>
+
+</body>
+</html>

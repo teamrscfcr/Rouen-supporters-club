@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Infos pratiques — Diables Rouges Supporters Club</title>
+<meta name="description" content="Tarifs, tribunes, accès et abonnements au Stade Robert-Diochon pour venir voir le FC Rouen 1899.">
+<link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+<link rel="apple-touch-icon" href="assets/logo.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Diables Rouges Supporters Club">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Infos pratiques — Diables Rouges Supporters Club">
+<meta property="og:description" content="Tarifs, tribunes, accès et abonnements au Stade Robert-Diochon pour venir voir le FC Rouen 1899.">
+<meta property="og:image" content="og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="og-image.jpg">
+<meta name="twitter:title" content="Infos pratiques — Diables Rouges Supporters Club">
+<meta name="twitter:description" content="Tarifs, tribunes, accès et abonnements au Stade Robert-Diochon pour venir voir le FC Rouen 1899.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Caveat:wght@700&family=Archivo:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
+<style>
+  .grain{
+    position:fixed; inset:0; pointer-events:none; z-index:60;
+    opacity:0.08; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* ---------- PAGE BANNER (editorial, sobre) ---------- */
+  .banner{
+    position:relative; padding:70px 5vw 46px; background:var(--paper); overflow:hidden;
+    border-bottom:1px solid rgba(12,11,10,0.1);
+  }
+  .banner-bg-text{
+    position:absolute; top:-10px; right:-2%; z-index:0;
+    font-family:'Anton'; font-size:min(20vw,180px); color:transparent;
+    -webkit-text-stroke:1px rgba(208,2,27,0.10);
+    white-space:nowrap; user-select:none; pointer-events:none;
+  }
+  .banner-stack{position:relative; z-index:2; max-width:760px;}
+  .banner-eyebrow{
+    display:flex; align-items:center; gap:10px;
+    font-family:'JetBrains Mono'; font-size:11px; letter-spacing:0.24em;
+    color:var(--gold-ink); font-weight:700; text-transform:uppercase;
+    margin-bottom:18px;
+  }
+  .banner-eyebrow::before{content:""; width:26px; height:2px; background:var(--gold-ink);}
+  .banner h1{
+    font-size:clamp(36px, 5.6vw, 64px);
+    line-height:1.02;
+    color:var(--black);
+  }
+  .banner-sub{
+    margin-top:22px; max-width:62ch; font-size:15.5px; line-height:1.7; color:var(--paper-dim);
+  }
+  .source-note{
+    margin-top:18px; font-family:'JetBrains Mono'; font-size:11px; color:var(--paper-dim);
+    border-left:2px solid var(--gold-ink); padding-left:10px;
+  }
+  .source-note a{color:var(--gold-ink); border-bottom:1px dotted var(--gold-ink);}
+
+  /* ---------- KEY FACTS STRIP ---------- */
+  .stats-strip{
+    display:grid; grid-template-columns:repeat(4,1fr); border-bottom:1px solid rgba(12,11,10,0.1);
+    background:var(--black-soft);
+  }
+  .stat-cell{padding:24px 5vw; text-align:center; border-right:1px solid rgba(12,11,10,0.08);}
+  .stat-cell:last-child{border-right:none;}
+  .stat-cell .num{font-family:'Archivo Black'; font-size:clamp(18px,2.4vw,26px); color:var(--gold-ink);}
+  .stat-cell .lbl{font-family:'JetBrains Mono'; font-size:10px; letter-spacing:0.1em; color:var(--paper-dim); margin-top:6px; text-transform:uppercase;}
+  @media(max-width:700px){ .stats-strip{grid-template-columns:repeat(2,1fr);} .stat-cell:nth-child(2){border-right:none;} .stat-cell:nth-child(1),.stat-cell:nth-child(2){border-bottom:1px solid rgba(12,11,10,0.08);} }
+
+  /* ---------- SECTION HEAD ---------- */
+  section{padding:64px 5vw;}
+  .sec-head{margin-bottom:8px; max-width:820px; margin-left:auto; margin-right:auto;}
+  .sec-head .kicker{font-family:'JetBrains Mono'; font-size:11px; letter-spacing:0.2em; color:var(--gold-ink); text-transform:uppercase;}
+  .sec-head h2{font-size:clamp(24px,3.4vw,36px); margin-top:8px;}
+  .sec-head p{margin-top:12px; font-size:14.5px; line-height:1.7; color:var(--paper-dim);}
+
+  /* ---------- TARIFS TABLE ---------- */
+  .tarifs-wrap{max-width:820px; margin:36px auto 0; border:1px solid rgba(12,11,10,0.12); background:var(--black-soft); overflow-x:auto;}
+  table.tarifs{width:100%; border-collapse:collapse; font-size:13.5px; min-width:520px;}
+  table.tarifs thead th{
+    font-family:'JetBrains Mono'; font-size:10px; letter-spacing:0.08em; color:var(--paper-dim); text-align:center;
+    padding:12px 10px; border-bottom:2px solid rgba(12,11,10,0.15); text-transform:uppercase;
+  }
+  table.tarifs thead th:first-child{text-align:left;}
+  table.tarifs tbody td{
+    padding:13px 10px; text-align:center; border-bottom:1px solid rgba(12,11,10,0.08);
+  }
+  table.tarifs tbody tr:last-child td{border-bottom:none;}
+  table.tarifs td.trib{text-align:left;}
+  table.tarifs td.trib .name{font-weight:700;}
+  table.tarifs td.trib .cat{font-family:'JetBrains Mono'; font-size:10px; color:var(--paper-dim); display:block; margin-top:2px;}
+  table.tarifs td.best{font-family:'Archivo Black'; color:var(--gold-ink);}
+  .tarifs-note{max-width:820px; margin:16px auto 0; font-size:13px; line-height:1.6; color:var(--paper-dim);}
+
+  /* ---------- INFO CARDS (accès) ---------- */
+  .info-grid{max-width:960px; margin:36px auto 0; display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  .info-card{
+    background:var(--black-soft); border:1px solid rgba(12,11,10,0.08); padding:24px 20px;
+  }
+  .info-card .icon{font-family:'JetBrains Mono'; font-size:10px; letter-spacing:0.14em; color:var(--gold-ink); text-transform:uppercase; font-weight:700;}
+  .info-card h3{font-size:17px; margin-top:10px; line-height:1.2; color:var(--black);}
+  .info-card p{font-size:13.5px; line-height:1.65; color:var(--paper-dim); margin:10px 0 0;}
+  @media(max-width:780px){ .info-grid{grid-template-columns:1fr;} }
+
+  .addr-block{
+    max-width:820px; margin:28px auto 0; padding:20px 24px; border-left:3px solid var(--red);
+    background:var(--black-soft);
+  }
+  .addr-block .lbl{font-family:'JetBrains Mono'; font-size:10px; letter-spacing:0.1em; color:var(--gold-ink); text-transform:uppercase;}
+  .addr-block .val{font-size:16px; font-weight:700; margin-top:6px;}
+  .addr-block .val2{font-size:13.5px; color:var(--paper-dim); margin-top:4px;}
+
+  /* ---------- MANIFESTE ---------- */
+  .manifesto{
+    position:relative;
+    background:var(--red);
+    color:var(--on-accent);
+    padding:80px 5vw;
+    text-align:center;
+    overflow:hidden;
+    border-top:6px solid var(--black);
+  }
+  .manifesto-inner{position:relative; z-index:2; max-width:640px; margin:0 auto;}
+  .manifesto h2{font-size:clamp(26px,4.6vw,46px); line-height:1.1;}
+  .manifesto p.hand{font-size:clamp(20px,2.6vw,28px); margin-top:18px; color:var(--on-accent);}
+  .manifesto .cta{
+    display:inline-block; margin-top:28px; padding:15px 32px;
+    background:var(--on-accent); color:var(--red);
+    font-family:'Anton'; font-size:14px; letter-spacing:0.06em;
+    text-transform:uppercase; border:2px solid var(--black);
+    transition:transform .15s;
+  }
+  .manifesto .cta:hover{transform:translateY(-2px);}
+
+  /* ---------- ANIMATIONS (sobres) ---------- */
+  @media (prefers-reduced-motion: no-preference){
+    .reveal{opacity:0; transform:translateY(16px); transition:opacity .5s ease, transform .5s ease;}
+    .reveal.visible{opacity:1; transform:translateY(0);}
+  }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Aller au contenu principal</a>
+<div class="grain"></div>
+
+<header>
+  <div class="brand">
+    <a href="index.html" style="display:flex; align-items:center; gap:14px;">
+    <div class="crest">
+      <img src="assets/logo.jpg" alt="Diables Rouges Supporters Club" width="54" height="54">
+    </div>
+    <div class="brand-text">
+      <div class="top">Depuis 1899 · Stade Robert-Diochon</div>
+      <div class="bottom">Diables Rouges</div>
+    </div>
+    </a>
+  </div>
+  <nav>
+    <a href="actus.html">Actus</a>
+    <a href="calendrier.html">Calendrier</a>
+    <a href="effectif.html">Effectif</a>
+    <a href="histoire.html">Histoire</a>
+    <a href="photos.html">Photos</a>
+    <a href="infos-pratiques.html" class="active">Infos</a>
+    <a href="suivre.html">Nous suivre</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Changer de thème">
+    <svg class="icon-sun" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v3M12 18.5v3M4.5 4.5l2.1 2.1M17.4 17.4l2.1 2.1M2.5 12h3M18.5 12h3M4.5 19.5l2.1-2.1M17.4 6.6l2.1-2.1"/></svg>
+    <svg class="icon-moon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.2A8.5 8.5 0 1 1 9.8 4a6.7 6.7 0 0 0 10.2 10.2Z"/></svg>
+  </button>
+  <button class="menu-btn" id="menu-btn" aria-label="Ouvrir le menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="actus.html">Actus</a>
+  <a href="calendrier.html">Calendrier</a>
+  <a href="effectif.html">Effectif</a>
+  <a href="histoire.html">Histoire</a>
+  <a href="photos.html">Photos</a>
+  <a href="infos-pratiques.html" class="active">Infos</a>
+  <a href="suivre.html">Nous suivre</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main id="main">
+<div class="banner">
+  <div class="banner-bg-text">DIOCHON</div>
+  <div class="banner-stack">
+    <div class="banner-eyebrow">VENIR AU STADE</div>
+    <h1>Tout ce qu'il faut savoir avant d'aller au Diochon.</h1>
+    <p class="banner-sub">Tarifs, tribunes, accès, transports : de quoi préparer sa place sans mauvaise surprise au guichet.</p>
+    <div class="source-note mono">Sources : <a href="https://fcr1899.com/campagne-dabonnements-2026-2027-ensemble-visons-plus-haut/" target="_blank" rel="noopener noreferrer">fcr1899.com ↗</a>, <a href="https://www.metropole-rouen-normandie.fr/actualite/2024/stade-diochon-allez-y-en-transports-en-commun-54707" target="_blank" rel="noopener noreferrer">Métropole Rouen Normandie ↗</a> et <a href="https://en.wikipedia.org/wiki/Stade_Robert_Diochon" target="_blank" rel="noopener noreferrer">Wikipédia ↗</a>.</div>
+  </div>
+</div>
+
+<div class="stats-strip">
+  <div class="stat-cell"><div class="num">8 372</div><div class="lbl">Places au Diochon</div></div>
+  <div class="stat-cell"><div class="num">3</div><div class="lbl">Tribunes ouvertes</div></div>
+  <div class="stat-cell"><div class="num">Dès 16€</div><div class="lbl">Billet le moins cher</div></div>
+  <div class="stat-cell"><div class="num">1917</div><div class="lbl">Ouverture du stade</div></div>
+</div>
+
+<section id="tarifs">
+  <div class="sec-head reveal">
+    <div class="kicker mono">Billetterie</div>
+    <h2>Tarifs par tribune — saison 2026-2027</h2>
+    <p>Les abonnés et réabonnés paient un tarif au match nettement inférieur au billet à l'unité — jusqu'à -50% pour un réabonnement en Lenoble. Achat en ligne sur <a href="https://billetterie-fcrouen.fr/" target="_blank" rel="noopener noreferrer" style="color:var(--red-deep); border-bottom:1px dotted var(--red-deep);">billetterie-fcrouen.fr ↗</a>.</p>
+  </div>
+
+  <div class="tarifs-wrap reveal">
+    <table class="tarifs">
+      <thead>
+        <tr>
+          <th class="mono">Tribune</th>
+          <th class="mono">Billet match classique</th>
+          <th class="mono">Abonnement / match</th>
+          <th class="mono">Réabonnement / match</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="trib"><span class="name">Horlaville</span><span class="cat">Catégorie 1</span></td>
+          <td>22 € <span style="color:var(--paper-dim); font-size:11px;">(26 € match de gala)</span></td>
+          <td>14 €</td>
+          <td class="best">12 €</td>
+        </tr>
+        <tr>
+          <td class="trib"><span class="name">Horlaville</span><span class="cat">Catégorie 2</span></td>
+          <td>20 €</td>
+          <td>12 €</td>
+          <td class="best">11 €</td>
+        </tr>
+        <tr>
+          <td class="trib"><span class="name">Lenoble</span><span class="cat">Catégorie 3</span></td>
+          <td>16 €</td>
+          <td>11 €</td>
+          <td class="best">8 €</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="tarifs-note reveal">Un espace « Doyen &amp; PMR » existe en Horlaville CAT 1 (bloc G), avec accompagnement dédié. La tribune familiale se trouve en Horlaville CAT 2 (bloc R), pensée pour les enfants de 0 à 12 ans. Tarifs et blocs à confirmer au moment de l'achat, ils peuvent évoluer en cours de saison.</p>
+</section>
+
+<section id="acces" style="padding-top:0; background:var(--black-soft);">
+  <div class="sec-head reveal">
+    <div class="kicker mono">Accès</div>
+    <h2>Venir au Stade Robert-Diochon</h2>
+  </div>
+
+  <div class="addr-block reveal">
+    <div class="lbl">Adresse</div>
+    <div class="val">48 avenue des Canadiens, 76140 Le Petit-Quevilly</div>
+    <div class="val2">Tél. billetterie/accueil : 02 35 72 34 35</div>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card reveal">
+      <div class="icon">Transports en commun</div>
+      <h3>Bus &amp; T4</h3>
+      <p>Lignes T4, 41, F1, F3 et F9 desservent le stade. Le réseau est gratuit deux heures avant et deux heures après le match sur présentation d'un billet ou d'une preuve d'achat. Le P+R Zénith - Parc Expo rejoint le Diochon en 5 minutes en T4.</p>
+    </div>
+    <div class="info-card reveal">
+      <div class="icon">Voiture</div>
+      <h3>Parking Zénith</h3>
+      <p>Les véhicules particuliers se garent sur le parking du Zénith de Rouen, puis rejoignent le stade par navettes gratuites sur présentation du billet de match.</p>
+    </div>
+    <div class="info-card reveal">
+      <div class="icon">Entrées du stade</div>
+      <h3>Entrées lettrées</h3>
+      <p>L'entrée B est réservée aux supporters du FC Rouen accédant à la tribune Lenoble. L'entrée F correspond au parking de la Ferme, rue Pierre-Lefrançois. Le sens d'accès dépend de la tribune indiquée sur votre billet.</p>
+    </div>
+  </div>
+</section>
+
+<div class="manifesto" id="rejoindre">
+  <div class="manifesto-inner reveal">
+    <h2>Une place au Diochon,<br>et on chante ensemble.</h2>
+    <p class="hand">Billets et abonnements en ligne, sans passer par le guichet.</p>
+    <a class="cta" href="https://billetterie-fcrouen.fr/" target="_blank" rel="noopener noreferrer">Billetterie officielle ↗</a>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div>© 2026 Diables Rouges Supporters Club — page fan non-officielle, tenue par des passionnés du FC Rouen 1899.</div>
+  <div class="foot-links">
+    <a href="https://x.com/DiablesRouges_">X / Twitter</a>
+    <a href="https://fcr1899.com">Site officiel FCR1899</a>
+    <a href="https://billetterie-fcrouen.fr/">Billetterie</a>
+    <a href="mentions-legales.html">Mentions légales</a>
+  </div>
+</footer>
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileNav = document.getElementById('mobile-nav');
+  menuBtn.addEventListener('click', ()=>{
+    const isOpen = mobileNav.classList.toggle('open');
+    menuBtn.classList.toggle('open', isOpen);
+    document.body.classList.toggle('nav-open', isOpen);
+  });
+  mobileNav.querySelectorAll('a').forEach(a=>{
+    a.addEventListener('click', ()=>{
+      mobileNav.classList.remove('open');
+      menuBtn.classList.remove('open');
+      document.body.classList.remove('nav-open');
+    });
+  });
+
+  const revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -30px 0px'});
+    revealEls.forEach((el,i)=>{
+      el.style.transitionDelay = (i % 5) * 60 + 'ms';
+      io.observe(el);
+    });
+  } else {
+    revealEls.forEach(el=>el.classList.add('visible'));
+  }
+</script>
+
+</body>
+</html>

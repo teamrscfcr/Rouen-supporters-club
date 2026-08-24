@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Remplacer https://VOTRE-DOMAINE-A-COMPLETER par le vrai domaine une fois le site hébergé -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Diables Rouges Supporters Club — Actus</title>
+  <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
+  <description>Actus vues des tribunes sur le FC Rouen 1899, par les Diables Rouges Supporters Club — page fan non-officielle.</description>
+  <language>fr-fr</language>
+  <atom:link href="https://VOTRE-DOMAINE-A-COMPLETER/feed.xml" rel="self" type="application/rss+xml"/>
+  <lastBuildDate>Sat, 22 Aug 2026 12:01:00 +0200</lastBuildDate>
+
+  <item>
+    <title>Groupe affûté à l'entraînement avant Villefranche</title>
+    <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
+    <guid isPermaLink="false">drs-2026-08-22-groupe</guid>
+    <pubDate>Sat, 22 Aug 2026 12:01:00 +0200</pubDate>
+    <category>Groupe</category>
+    <description>Difficile de juger de l'extérieur, mais l'ambiance et l'intensité aperçues aux abords du centre d'entraînement cette semaine donnent plutôt confiance avant Villefranche. Le groupe garde le rythme après un début de saison sans défaite.</description>
+  </item>
+
+  <item>
+    <title>Malik Tchokounté, déjà décisif sur les trois premiers matchs</title>
+    <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
+    <guid isPermaLink="false">drs-2026-08-22-tchokounte</guid>
+    <pubDate>Sat, 22 Aug 2026 12:00:00 +0200</pubDate>
+    <category>Effectif</category>
+    <description>Avant même le coup d'envoi de la saison, le club avait officialisé la signature de l'attaquant Malik Tchokounté, fort de plus de 250 matchs de Ligue 2 dans les jambes. Trois journées plus tard, le pari est déjà payant : buteur contre Orléans et Quevilly, décisif sur pratiquement chaque sortie.</description>
+    <source url="https://fcr1899.com/malik-tchokounte-rejoint-le-fc-rouen/">fcr1899.com</source>
+  </item>
+
+  <item>
+    <title>Le retour contre Quevilly (J19) se profile déjà</title>
+    <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
+    <guid isPermaLink="false">drs-2026-08-21-retour-qrm</guid>
+    <pubDate>Fri, 21 Aug 2026 12:01:00 +0200</pubDate>
+    <category>Officiel</category>
+    <description>Encore loin, mais on y pense déjà : le match retour face à Quevilly-Rouen Métropole (J19) est prévu début février 2027. On partagera les infos billetterie officielles dès qu'elles seront publiées par le club.</description>
+  </item>
+
+  <item>
+    <title>Villefranche le 29, ça se prépare</title>
+    <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
+    <guid isPermaLink="false">drs-2026-08-21-deplacement-villefranche</guid>
+    <pubDate>Fri, 21 Aug 2026 12:00:00 +0200</pubDate>
+    <category>Déplacement</category>
+    <description>Après l'encadrement renforcé à Orléans, on espère un déplacement plus tranquille pour Villefranche le 29. Aucun bus officiel n'est annoncé à ce jour de notre côté — si vous organisez un covoiturage ou un groupe, faites-le savoir autour de vous.</description>
+  </item>
+
+  <item>
+    <title>3-0 contre Quevilly, le Diochon a gueulé du premier au dernier sifflet</title>
+    <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
+    <guid isPermaLink="false">drs-2026-08-20-qrm-3-0</guid>
+    <pubDate>Thu, 20 Aug 2026 18:01:00 +0200</pubDate>
+    <category>Matchday</category>
+    <description>Le FC Rouen a fait le nécessaire face à Quevilly (QRM) pour ce troisième match de la saison : ouverture du score de Tchokounté sur un centre de Bassin (14e), doublé par une frappe splendide de Tramoni (34e), et le but du confort signé Traoré (85e). 6 500 spectateurs au Diochon pour cette victoire qui lance idéalement la saison.</description>
+    <source url="https://www.ici.fr/normandie/seine-maritime-76/rouen/ligue-3-le-fc-rouen-bat-logiquement-qrm-3-0-et-lance-idealement-sa-saison-8451240">ici.fr</source>
+  </item>
+
+  <item>
+    <title>Debrief à chaud après J3 : pressing haut, bloc compact</title>
+    <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
+    <guid isPermaLink="false">drs-2026-08-20-debrief-j3</guid>
+    <pubDate>Thu, 20 Aug 2026 18:00:00 +0200</pubDate>
+    <category>Tribune</category>
+    <description>Petit debrief tactique à chaud après J3 : un bloc compact, un pressing haut qui a étouffé la sortie de balle adverse, et une capacité à faire déjouer Quevilly pendant de longues séquences. Une base solide à confirmer à Villefranche.</description>
+  </item>
+
+  <item>
+    <title>Neuf supporters rouennais interdits de stade avant le derby face à QRM</title>
+    <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
+    <guid isPermaLink="false">drs-2026-08-19-interdits-stade</guid>
+    <pubDate>Wed, 19 Aug 2026 12:00:00 +0200</pubDate>
+    <category>Tribune</category>
+    <description>À l'approche du derby face à Quevilly-Rouen Métropole, la préfecture a pris ses précautions : un arrêté interdit à neuf supporters rouennais l'accès aux stades pendant six mois. Une mesure préventive qui n'a pas empêché le Diochon de faire le plein pour la réception de QRM.</description>
+    <source url="https://www.francebleu.fr/sports/football/fcr-qrm-neuf-supporters-rouennais-interdits-de-stade-pendant-six-mois-la-prefecture-prend-ses-precautions-4713720">francebleu.fr</source>
+  </item>
+
+  <item>
+    <title>Calendrier de la phase aller confirmé par le club</title>
+    <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
+    <guid isPermaLink="false">drs-2026-08-18-calendrier-aller</guid>
+    <pubDate>Tue, 18 Aug 2026 12:00:00 +0200</pubDate>
+    <category>Officiel</category>
+    <description>Le club a confirmé le calendrier complet de la phase aller : 17 journées avant la trêve de janvier, avec un enchaînement dense en septembre et octobre. Le calendrier complet, phase aller et retour, est disponible sur notre page dédiée.</description>
+    <source url="https://supporters-12rouennais.com/calendrier/">12 Rouennais</source>
+  </item>
+
+  <item>
+    <title>Woobens Pacius débarque de Nashville SC</title>
+    <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
+    <guid isPermaLink="false">drs-2026-08-17-pacius</guid>
+    <pubDate>Mon, 17 Aug 2026 12:00:00 +0200</pubDate>
+    <category>Effectif</category>
+    <description>Le club a officialisé l'arrivée de l'attaquant international haïtien Woobens Pacius (25 ans), transféré définitivement en provenance de Nashville SC (MLS). Le club américain conserve un pourcentage à la revente. Reste une formalité avant que Pacius ne puisse fouler les pelouses de Ligue 3 : l'obtention de son visa de travail, encore en cours.</description>
+    <source url="https://www.ici.fr/normandie/seine-maritime-76/rouen/woobens-pacius-un-attaquant-venu-des-etats-unis-arrive-au-fc-rouen-9819870">ici.fr</source>
+  </item>
+
+  <item>
+    <title>2-1 à Orléans, arraché en fin de match par Sory Traoré</title>
+    <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
+    <guid isPermaLink="false">drs-2026-08-14-orleans-2-1</guid>
+    <pubDate>Fri, 14 Aug 2026 18:00:00 +0200</pubDate>
+    <category>Matchday</category>
+    <description>Manière parfaite à Orléans pour ce deuxième match de la saison à l'extérieur : Tchokounté ouvre le score sur penalty (13e), Orléans égalise à son tour sur penalty (68e) via Legendre, avant que Traoré ne redonne l'avantage à Rouen en fin de match (78e). Victoire 2-1 qui lance idéalement la saison à l'extérieur, sous encadrement renforcé après l'arrêté préfectoral de la semaine.</description>
+    <source url="https://fcr1899.com/le-fcr-simpose-a-orleans/">fcr1899.com</source>
+  </item>
+
+  <item>
+    <title>Déplacement à Orléans encadré par arrêté préfectoral</title>
+    <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
+    <guid isPermaLink="false">drs-2026-08-11-arrete-orleans</guid>
+    <pubDate>Tue, 11 Aug 2026 12:00:00 +0200</pubDate>
+    <category>Déplacement</category>
+    <description>Publié le 11 août par la préfecture du Loiret, un arrêté est venu réglementer les conditions de déplacement des supporters rouennais pour la réception par l'US Orléans au stade de la Source, invoquant un différend grave entre groupes de supporters. Le match s'est finalement déroulé sans incident notable.</description>
+    <source url="https://orleansloiretfoot.com/arrete-prefectoral/">orleansloiretfoot.com</source>
+  </item>
+
+  <item>
+    <title>0-0 contre Cannes pour l'ouverture de la saison</title>
+    <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
+    <guid isPermaLink="false">drs-2026-08-07-cannes-0-0</guid>
+    <pubDate>Fri, 07 Aug 2026 18:00:00 +0200</pubDate>
+    <category>Matchday</category>
+    <description>Pour son entrée en matière, le FC Rouen accroche un 0-0 frustrant face à AS Cannes. Un penalty accordé après une faute sur Borne (37e) est finalement annulé après visionnage vidéo, et Tchokounté voit sa tentative repoussée par le gardien Beunardeau (53e). Un point de départ pour une saison qui s'annonce longue.</description>
+    <source url="https://supporters-12rouennais.com/fc-rouen-as-cannes-0-0/">12 Rouennais</source>
+  </item>
+
+  <item>
+    <title>Les cartes d'abonnés de la saison sont disponibles</title>
+    <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
+    <guid isPermaLink="false">drs-2026-08-01-cartes-abonnes</guid>
+    <pubDate>Sat, 01 Aug 2026 12:00:00 +0200</pubDate>
+    <category>Officiel</category>
+    <description>La campagne d'abonnement 2026-2027 a démarré le 26 juin. Réabonnements et nouveaux abonnements se font désormais en ligne, justificatifs vérifiés au retrait de la carte. Un message est envoyé par le club dès que la carte est prête à être récupérée.</description>
+    <source url="https://fcr1899.com/les-cartes-abonnes-sont-disponibles/">fcr1899.com</source>
+  </item>
+
+  <item>
+    <title>La DNCG valide le budget du club</title>
+    <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
+    <guid isPermaLink="false">drs-2026-06-30-dncg</guid>
+    <pubDate>Tue, 30 Jun 2026 12:00:00 +0200</pubDate>
+    <category>Officiel</category>
+    <description>Le 30 juin 2026, la DNCG a donné un avis favorable au budget du FC Rouen 1899, confirmant selon le communiqué « la solidité du travail mené par le club et la rigueur de sa gestion ». Le club est ainsi autorisé à participer au championnat de Ligue 3 pour la saison 2026-2027, sous réserve de la confirmation du statut professionnel par le Comité Exécutif de la FFF.</description>
+    <source url="https://fcr1899.com/communique-dncg-2/">fcr1899.com</source>
+  </item>
+
+</channel>
+</rss>

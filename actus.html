@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Actus — Diables Rouges Supporters Club</title>
+<meta name="description" content="Toute l'actu vue des tribunes : résultats, ambiance, déplacements et coulisses du FC Rouen 1899.">
+<link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+<link rel="apple-touch-icon" href="assets/logo.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Diables Rouges Supporters Club">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Actus — Diables Rouges Supporters Club">
+<meta property="og:description" content="Toute l'actu vue des tribunes : résultats, ambiance, déplacements et coulisses du FC Rouen 1899.">
+<meta property="og:image" content="og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="og-image.jpg">
+<meta name="twitter:title" content="Actus — Diables Rouges Supporters Club">
+<meta name="twitter:description" content="Toute l'actu vue des tribunes : résultats, ambiance, déplacements et coulisses du FC Rouen 1899.">
+<link rel="alternate" type="application/rss+xml" title="Diables Rouges Supporters Club — Actus" href="feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Caveat:wght@700&family=Archivo:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
+<style>
+  .grain{
+    position:fixed; inset:0; pointer-events:none; z-index:60;
+    opacity:0.14; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .scratches{
+    position:fixed; inset:0; pointer-events:none; z-index:59; opacity:0.05;
+    background-image: repeating-linear-gradient(88deg, transparent 0 40px, rgba(12,11,10,0.6) 40px 41px, transparent 41px 90px),
+                       repeating-linear-gradient(-83deg, transparent 0 60px, rgba(12,11,10,0.4) 60px 61px, transparent 61px 130px);
+  }
+
+  /* ---------- PAGE BANNER ---------- */
+  .banner{
+    position:relative; padding:56px 5vw 40px; background:var(--paper); overflow:hidden;
+    border-bottom:1px solid rgba(12,11,10,0.08);
+  }
+  .banner-bg-text{
+    position:absolute; top:-14px; left:-4%; z-index:0;
+    font-family:'Anton'; font-size:min(24vw,200px); color:transparent;
+    -webkit-text-stroke:1.5px rgba(208,2,27,0.14);
+    white-space:nowrap; user-select:none; pointer-events:none;
+  }
+  .banner-stack{position:relative; z-index:2;}
+  .torn-panel{
+    background:var(--red);
+    padding:10px 22px 22px;
+    transform:rotate(-0.8deg);
+    box-shadow:0 16px 32px rgba(12,11,10,0.16);
+    clip-path: polygon(0% 3%, 6% 0%, 20% 2%, 33% 0%, 48% 2%, 61% 0%, 76% 2%, 89% 0%, 100% 3%, 99% 96%, 91% 100%, 78% 97%, 65% 100%, 52% 97%, 39% 100%, 26% 97%, 13% 100%, 1% 97%);
+    max-width:min(560px, 92vw); display:inline-block;
+  }
+  .banner-eyebrow{
+    display:inline-block; font-family:'JetBrains Mono'; font-size:11px; letter-spacing:0.2em;
+    color:var(--on-gold); background:var(--gold); padding:5px 10px; transform:rotate(-1deg);
+    margin:14px 0 18px; font-weight:700;
+  }
+  .banner h1{
+    font-size:clamp(34px, 6vw, 70px);
+    line-height:0.92;
+    color:var(--black);
+  }
+  .banner-sub{
+    margin-top:20px; max-width:60ch; font-size:15px; line-height:1.6; color:var(--paper-dim);
+  }
+  .rss-link{
+    display:inline-flex; align-items:center; gap:6px; margin-top:16px;
+    font-size:11px; letter-spacing:0.08em; color:var(--gold-ink);
+    border-bottom:1px dotted var(--gold-ink); padding-bottom:2px;
+  }
+  .rss-link:hover{color:var(--red);}
+
+  /* ---------- FILTER BAR ---------- */
+  .filters{
+    display:flex; flex-wrap:wrap; gap:10px; padding:0 5vw 34px; position:relative; z-index:2;
+  }
+  .filter-btn{
+    font-family:'JetBrains Mono'; font-size:12px; font-weight:700; letter-spacing:0.06em;
+    text-transform:uppercase; padding:9px 16px; background:var(--black-soft);
+    border:2px solid var(--paper-dim); color:var(--paper-dim); cursor:pointer;
+    transition:all .15s;
+  }
+  .filter-btn:hover{border-color:var(--black); color:var(--black);}
+  .filter-btn.active{background:var(--red); border-color:var(--red); color:var(--on-accent); transform:translateY(-2px);}
+
+  /* ---------- ACTUS GRID ---------- */
+  section{padding:0 5vw 64px;}
+  .actus-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:26px;}
+  .actu-card{
+    background:var(--paper); color:var(--black);
+    border:1px solid rgba(12,11,10,0.1);
+    padding:22px 20px 24px; display:flex; flex-direction:column; gap:12px; min-height:180px;
+    position:relative; box-shadow:0 10px 24px rgba(12,11,10,0.08);
+    transition:opacity .3s ease, transform .3s ease, box-shadow .18s ease;
+    cursor:pointer;
+  }
+  .actu-card:hover{box-shadow:0 16px 34px rgba(12,11,10,0.14); transform:translateY(-3px);}
+  .actu-card:focus-visible{outline:2px solid var(--gold-ink); outline-offset:3px;}
+  .actu-card .read-more{
+    font-family:'JetBrains Mono'; font-size:10px; letter-spacing:0.1em; color:var(--red-deep);
+    opacity:0.7; margin-top:-4px;
+  }
+  .actu-card.feature .read-more{color:var(--gold); opacity:0.85;}
+  .actu-card .tape{top:-14px; left:calc(50% - 45px); transform:rotate(-2deg);}
+  .actu-card .tag{font-family:'JetBrains Mono'; font-size:10px; color:var(--red-deep); letter-spacing:0.14em; font-weight:700;}
+  .actu-card .date{font-family:'JetBrains Mono'; font-size:10px; color:#6b6255;}
+  .actu-card p{font-size:15px; line-height:1.45; flex-grow:1;}
+  .actu-card.feature{
+    grid-column:span 2; background:var(--red); color:var(--on-accent);
+  }
+  .actu-card.feature .tag{color:var(--gold);}
+  .actu-card.feature .date{color:rgba(236,229,212,0.7);}
+  .actu-card.feature p{font-family:'Anton'; font-size:23px; line-height:1.15; text-transform:uppercase;}
+  .actu-card.hidden{opacity:0 !important; transform:scale(.94) !important; pointer-events:none;}
+  @media(max-width:820px){
+    .actus-grid{grid-template-columns:1fr;}
+    .actu-card.feature{grid-column:span 1;}
+  }
+
+  /* ---------- MODAL ---------- */
+  .modal-overlay{
+    position:fixed; inset:0; z-index:80; display:none;
+    background:rgba(12,11,10,0.82);
+    align-items:center; justify-content:center; padding:5vw;
+  }
+  .modal-overlay.open{display:flex;}
+  .modal-card{
+    background:var(--paper); color:var(--black);
+    max-width:560px; width:100%; max-height:82vh; overflow-y:auto;
+    padding:30px 28px 32px; position:relative;
+    box-shadow:0 24px 60px rgba(12,11,10,0.28);
+    border:1px solid rgba(12,11,10,0.08);
+  }
+  .modal-card .tape{top:-14px; left:calc(50% - 45px); transform:rotate(-2deg);}
+  .modal-close{
+    position:absolute; top:14px; right:16px; width:30px; height:30px;
+    background:var(--black); color:var(--paper); border:none; cursor:pointer;
+    font-family:'Anton'; font-size:16px; line-height:1;
+    display:flex; align-items:center; justify-content:center;
+    transition:transform .15s, background .15s;
+  }
+  .modal-close:hover{background:var(--red); color:var(--on-accent); transform:rotate(90deg);}
+  .modal-tag{font-family:'JetBrains Mono'; font-size:11px; color:var(--red-deep); letter-spacing:0.14em; font-weight:700;}
+  .modal-card h3{font-size:clamp(20px,3vw,28px); margin-top:10px; line-height:1.1;}
+  .modal-date{font-family:'JetBrains Mono'; font-size:11px; color:#6b6255; margin-top:8px;}
+  .modal-body{margin-top:18px; font-size:15px; line-height:1.65;}
+  .modal-source{
+    margin-top:16px; font-family:'JetBrains Mono'; font-size:11px; color:#8a8071;
+    border-top:1px solid rgba(12,11,10,0.1); padding-top:12px;
+  }
+  .modal-source a{color:var(--red-deep); border-bottom:1px dotted var(--red-deep);}
+
+  /* ---------- ANIMATIONS ---------- */
+  @media (prefers-reduced-motion: no-preference){
+    @keyframes popIn{
+      0%{opacity:0; transform:translateY(18px) rotate(-3deg) scale(.95);}
+      100%{opacity:1; transform:translateY(0) rotate(-0.8deg) scale(1);}
+    }
+    .torn-panel{animation:popIn .8s cubic-bezier(.2,.8,.3,1) both;}
+
+    @keyframes drift{
+      0%,100%{transform:translateX(0);} 50%{transform:translateX(-16px);}
+    }
+    .banner-bg-text{animation:drift 11s ease-in-out infinite;}
+
+    @keyframes flicker{
+      0%,100%{opacity:0.14;} 50%{opacity:0.09;}
+    }
+    .grain{animation:flicker 6s ease-in-out infinite;}
+
+    .reveal{opacity:0; transform:translateY(24px); transition:opacity .55s ease, transform .55s ease;}
+    .reveal.visible{opacity:1; transform:translateY(0);}
+
+    .filter-btn{opacity:0; transform:translateY(10px); animation:riseIn .5s ease both;}
+    @keyframes riseIn{ to{opacity:1; transform:translateY(0);} }
+    .filter-btn:nth-child(1){animation-delay:.03s;}
+    .filter-btn:nth-child(2){animation-delay:.06s;}
+    .filter-btn:nth-child(3){animation-delay:.09s;}
+    .filter-btn:nth-child(4){animation-delay:.12s;}
+    .filter-btn:nth-child(5){animation-delay:.15s;}
+    .filter-btn:nth-child(6){animation-delay:.18s;}
+    .filter-btn:nth-child(7){animation-delay:.21s;}
+
+    @keyframes modalPop{
+      0%{opacity:0; transform:scale(.94) translateY(14px);}
+      100%{opacity:1; transform:scale(1) translateY(0);}
+    }
+    .modal-overlay.open .modal-card{animation:modalPop .35s cubic-bezier(.2,.8,.3,1) both;}
+  }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Aller au contenu principal</a>
+<div class="grain"></div>
+<div class="scratches"></div>
+
+<header>
+  <div class="brand">
+    <a href="index.html" style="display:flex; align-items:center; gap:14px;">
+    <div class="crest">
+      <img src="assets/logo.jpg" alt="Diables Rouges Supporters Club" width="54" height="54">
+    </div>
+    <div class="brand-text">
+      <div class="top">Depuis 1899 · Stade Robert-Diochon</div>
+      <div class="bottom">Diables Rouges</div>
+    </div>
+    </a>
+  </div>
+  <nav>
+    <a href="actus.html" class="active">Actus</a>
+    <a href="calendrier.html">Calendrier</a>
+    <a href="effectif.html">Effectif</a>
+    <a href="histoire.html">Histoire</a>
+    <a href="photos.html">Photos</a>
+    <a href="infos-pratiques.html">Infos</a>
+    <a href="suivre.html">Nous suivre</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Changer de thème">
+    <svg class="icon-sun" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v3M12 18.5v3M4.5 4.5l2.1 2.1M17.4 17.4l2.1 2.1M2.5 12h3M18.5 12h3M4.5 19.5l2.1-2.1M17.4 6.6l2.1-2.1"/></svg>
+    <svg class="icon-moon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.2A8.5 8.5 0 1 1 9.8 4a6.7 6.7 0 0 0 10.2 10.2Z"/></svg>
+  </button>
+  <button class="menu-btn" id="menu-btn" aria-label="Ouvrir le menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="actus.html" class="active">Actus</a>
+  <a href="calendrier.html">Calendrier</a>
+  <a href="effectif.html">Effectif</a>
+  <a href="histoire.html">Histoire</a>
+  <a href="photos.html">Photos</a>
+  <a href="infos-pratiques.html">Infos</a>
+  <a href="suivre.html">Nous suivre</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main id="main">
+<div class="banner">
+  <div class="banner-bg-text">VU DES TRIBUNES</div>
+  <div class="banner-stack">
+    <div class="torn-panel">
+      <div class="banner-eyebrow">ACTUS DU GROUPE</div>
+      <h1>Ce qui se dit<br>au Diochon.</h1>
+    </div>
+    <p class="banner-sub">Résultats, ambiance, déplacements, coulisses : tout ce qu'on choppe sur le FCR, dans l'ordre où ça tombe. Clique sur une actu pour en savoir plus.</p>
+    <a href="feed.xml" class="rss-link mono">Flux RSS des actus ↗</a>
+  </div>
+</div>
+
+<div class="filters">
+  <button class="filter-btn active" data-filter="all">Tous</button>
+  <button class="filter-btn" data-filter="matchday">Matchday</button>
+  <button class="filter-btn" data-filter="tribune">Tribune</button>
+  <button class="filter-btn" data-filter="groupe">Groupe</button>
+  <button class="filter-btn" data-filter="deplacement">Déplacement</button>
+  <button class="filter-btn" data-filter="effectif">Effectif</button>
+  <button class="filter-btn" data-filter="officiel">Officiel</button>
+</div>
+
+<section>
+  <div class="actus-grid" id="actus-grid">
+
+    <div class="actu-card feature reveal" data-cat="matchday"
+      data-full="Le FC Rouen a fait le nécessaire face à Quevilly (QRM) pour ce troisième match de la saison : ouverture du score de Tchokounté sur un centre de Bassin (14e), doublé par une frappe splendide de Tramoni (34e), et le but du confort signé Traoré (85e). 6 500 spectateurs au Diochon pour cette victoire qui lance idéalement la saison."
+      data-source="https://www.ici.fr/normandie/seine-maritime-76/rouen/ligue-3-le-fc-rouen-bat-logiquement-qrm-3-0-et-lance-idealement-sa-saison-8451240" data-source-name="ici.fr">
+      <div class="tape"></div>
+      <div class="tag">MATCHDAY</div>
+      <p>3-0, et le Diochon a gueulé du premier au dernier sifflet. On n'a pas arrêté de chanter face à Quevilly.</p>
+      <div class="read-more mono">LIRE LA SUITE →</div>
+      <div class="date mono">20 AOÛT 2026</div>
+    </div>
+
+    <div class="actu-card reveal" data-cat="effectif"
+      data-full="Avant même le coup d'envoi de la saison, le club avait officialisé la signature de l'attaquant Malik Tchokounté, fort de plus de 250 matchs de Ligue 2 dans les jambes. Trois journées plus tard, le pari est déjà payant : buteur contre Orléans et Quevilly, décisif sur pratiquement chaque sortie."
+      data-source="https://fcr1899.com/malik-tchokounte-rejoint-le-fc-rouen/" data-source-name="fcr1899.com">
+      <div class="tape"></div>
+      <div class="tag">EFFECTIF</div>
+      <p>Retour sur l'arrivée de Malik Tchokounté, déjà décisif sur les trois premiers matchs.</p>
+      <div class="read-more mono">LIRE LA SUITE →</div>
+      <div class="date mono">22 AOÛT 2026</div>
+    </div>
+
+    <div class="actu-card reveal" data-cat="groupe"
+      data-full="Difficile de juger de l'extérieur, mais l'ambiance et l'intensité aperçues aux abords du centre d'entraînement cette semaine donnent plutôt confiance avant Villefranche. Le groupe garde le rythme après un début de saison sans défaite.">
+      <div class="tape"></div>
+      <div class="tag">GROUPE</div>
+      <p>Le groupe a l'air affûté à l'entraînement cette semaine. Ça promet pour la suite.</p>
+      <div class="read-more mono">LIRE LA SUITE →</div>
+      <div class="date mono">22 AOÛT 2026</div>
+    </div>
+
+    <div class="actu-card reveal" data-cat="deplacement"
+      data-full="Après l'encadrement renforcé à Orléans, on espère un déplacement plus tranquille pour Villefranche le 29. Aucun bus officiel n'est annoncé à ce jour de notre côté — si vous organisez un covoiturage ou un groupe, faites-le savoir autour de vous.">
+      <div class="tape"></div>
+      <div class="tag">DÉPLACEMENT</div>
+      <p>Villefranche le 29, ça se prépare. On espère voir du monde faire le déplacement.</p>
+      <div class="read-more mono">LIRE LA SUITE →</div>
+      <div class="date mono">21 AOÛT 2026</div>
+    </div>
+
+    <div class="actu-card reveal" data-cat="officiel"
+      data-full="Encore loin, mais on y pense déjà : le match retour face à Quevilly-Rouen Métropole (J19) est prévu début février 2027. On partagera les infos billetterie officielles dès qu'elles seront publiées par le club.">
+      <div class="tape"></div>
+      <div class="tag">OFFICIEL</div>
+      <p>Le retour contre Quevilly (J19, février) se profile déjà dans un coin de la tête.</p>
+      <div class="read-more mono">LIRE LA SUITE →</div>
+      <div class="date mono">21 AOÛT 2026</div>
+    </div>
+
+    <div class="actu-card reveal" data-cat="tribune"
+      data-full="Petit debrief tactique à chaud après J3 : un bloc compact, un pressing haut qui a étouffé la sortie de balle adverse, et une capacité à faire déjouer Quevilly pendant de longues séquences. Une base solide à confirmer à Villefranche.">
+      <div class="tape"></div>
+      <div class="tag">TRIBUNE</div>
+      <p>Debrief à chaud après J3 : pressing haut, bloc compact, ça a payé face à Quevilly.</p>
+      <div class="read-more mono">LIRE LA SUITE →</div>
+      <div class="date mono">20 AOÛT 2026</div>
+    </div>
+
+    <div class="actu-card reveal" data-cat="tribune"
+      data-full="À l'approche du derby face à Quevilly-Rouen Métropole, la préfecture a pris ses précautions : un arrêté interdit à neuf supporters rouennais l'accès aux stades pendant six mois. Une mesure préventive qui n'a pas empêché le Diochon de faire le plein pour la réception de QRM."
+      data-source="https://www.francebleu.fr/sports/football/fcr-qrm-neuf-supporters-rouennais-interdits-de-stade-pendant-six-mois-la-prefecture-prend-ses-precautions-4713720" data-source-name="francebleu.fr">
+      <div class="tape"></div>
+      <div class="tag">TRIBUNE</div>
+      <p>Neuf supporters rouennais interdits de stade pendant six mois avant le derby face à QRM.</p>
+      <div class="read-more mono">LIRE LA SUITE →</div>
+      <div class="date mono">19 AOÛT 2026</div>
+    </div>
+
+    <div class="actu-card reveal" data-cat="officiel"
+      data-full="Le club a confirmé le calendrier complet de la phase aller : 17 journées avant la trêve de janvier, avec un enchaînement dense en septembre et octobre. Le calendrier complet, phase aller et retour, est disponible sur notre page dédiée."
+      data-source="https://supporters-12rouennais.com/calendrier/" data-source-name="12 Rouennais">
+      <div class="tape"></div>
+      <div class="tag">OFFICIEL</div>
+      <p>Calendrier de la phase aller confirmé par le club. 17 journées avant la trêve de janvier.</p>
+      <div class="read-more mono">LIRE LA SUITE →</div>
+      <div class="date mono">18 AOÛT 2026</div>
+    </div>
+
+    <div class="actu-card reveal" data-cat="effectif"
+      data-full="Le club a officialisé l'arrivée de l'attaquant international haïtien Woobens Pacius (25 ans), transféré définitivement en provenance de Nashville SC (MLS). Le club américain conserve un pourcentage à la revente. Reste une formalité avant que Pacius ne puisse fouler les pelouses de Ligue 3 : l'obtention de son visa de travail, encore en cours."
+      data-source="https://www.ici.fr/normandie/seine-maritime-76/rouen/woobens-pacius-un-attaquant-venu-des-etats-unis-arrive-au-fc-rouen-9819870" data-source-name="ici.fr">
+      <div class="tape"></div>
+      <div class="tag">EFFECTIF</div>
+      <p>Woobens Pacius débarque de Nashville SC, transfert définitif annoncé le 17 août.</p>
+      <div class="read-more mono">LIRE LA SUITE →</div>
+      <div class="date mono">17 AOÛT 2026</div>
+    </div>
+
+    <div class="actu-card reveal" data-cat="matchday"
+      data-full="Manière parfaite à Orléans pour ce deuxième match de la saison à l'extérieur : Tchokounté ouvre le score sur penalty (13e), Orléans égalise à son tour sur penalty (68e) via Legendre, avant que Traoré ne redonne l'avantage à Rouen en fin de match (78e). Victoire 2-1 qui lance idéalement la saison à l'extérieur, sous encadrement renforcé après l'arrêté préfectoral de la semaine."
+      data-source="https://fcr1899.com/le-fcr-simpose-a-orleans/" data-source-name="fcr1899.com">
+      <div class="tape"></div>
+      <div class="tag">MATCHDAY</div>
+      <p>2-1 à Orléans, arraché en fin de match par Sory Traoré. Fallait pas lâcher, on n'a pas lâché.</p>
+      <div class="read-more mono">LIRE LA SUITE →</div>
+      <div class="date mono">14 AOÛT 2026</div>
+    </div>
+
+    <div class="actu-card reveal" data-cat="deplacement"
+      data-full="Publié le 11 août par la préfecture du Loiret, un arrêté est venu réglementer les conditions de déplacement des supporters rouennais pour la réception par l'US Orléans au stade de la Source, invoquant un différend grave entre groupes de supporters. Le match s'est finalement déroulé sans incident notable."
+      data-source="https://orleansloiretfoot.com/arrete-prefectoral/" data-source-name="orleansloiretfoot.com">
+      <div class="tape"></div>
+      <div class="tag">DÉPLACEMENT</div>
+      <p>Déplacement à Orléans encadré par arrêté préfectoral, après un différend grave entre groupes de supporters.</p>
+      <div class="read-more mono">LIRE LA SUITE →</div>
+      <div class="date mono">11 AOÛT 2026</div>
+    </div>
+
+    <div class="actu-card reveal" data-cat="matchday"
+      data-full="Pour son entrée en matière, le FC Rouen accroche un 0-0 frustrant face à AS Cannes. Un penalty accordé après une faute sur Borne (37e) est finalement annulé après visionnage vidéo, et Tchokounté voit sa tentative repoussée par le gardien Beunardeau (53e). Un point de départ pour une saison qui s'annonce longue."
+      data-source="https://supporters-12rouennais.com/fc-rouen-as-cannes-0-0/" data-source-name="12 Rouennais">
+      <div class="tape"></div>
+      <div class="tag">MATCHDAY</div>
+      <p>0-0 contre Cannes pour l'ouverture : un penalty accordé puis annulé à la vidéo, et un groupe qui cherche encore ses marques.</p>
+      <div class="read-more mono">LIRE LA SUITE →</div>
+      <div class="date mono">07 AOÛT 2026</div>
+    </div>
+
+    <div class="actu-card reveal" data-cat="officiel"
+      data-full="La campagne d'abonnement 2026-2027 a démarré le 26 juin. Réabonnements et nouveaux abonnements se font désormais en ligne, justificatifs vérifiés au retrait de la carte. Un message est envoyé par le club dès que la carte est prête à être récupérée."
+      data-source="https://fcr1899.com/les-cartes-abonnes-sont-disponibles/" data-source-name="fcr1899.com">
+      <div class="tape"></div>
+      <div class="tag">OFFICIEL</div>
+      <p>Les cartes d'abonnés de la saison sont disponibles au retrait.</p>
+      <div class="read-more mono">LIRE LA SUITE →</div>
+      <div class="date mono">01 AOÛT 2026</div>
+    </div>
+
+    <div class="actu-card reveal" data-cat="officiel"
+      data-full="Le 30 juin 2026, la DNCG a donné un avis favorable au budget du FC Rouen 1899, confirmant selon le communiqué « la solidité du travail mené par le club et la rigueur de sa gestion ». Le club est ainsi autorisé à participer au championnat de Ligue 3 pour la saison 2026-2027, sous réserve de la confirmation du statut professionnel par le Comité Exécutif de la FFF."
+      data-source="https://fcr1899.com/communique-dncg-2/" data-source-name="fcr1899.com">
+      <div class="tape"></div>
+      <div class="tag">OFFICIEL</div>
+      <p>La DNCG valide le budget du club. Feu vert pour disputer la Ligue 3 cette saison.</p>
+      <div class="read-more mono">LIRE LA SUITE →</div>
+      <div class="date mono">30 JUIN 2026</div>
+    </div>
+
+  </div>
+</section>
+</main>
+
+<footer>
+  <div>© 2026 Diables Rouges Supporters Club — page fan non-officielle, tenue par des passionnés du FC Rouen 1899.</div>
+  <div class="foot-links">
+    <a href="https://x.com/DiablesRouges_">X / Twitter</a>
+    <a href="https://fcr1899.com">Site officiel FCR1899</a>
+    <a href="https://billetterie-fcrouen.fr/">Billetterie</a>
+    <a href="mentions-legales.html">Mentions légales</a>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-card">
+    <div class="tape"></div>
+    <button class="modal-close" id="modal-close" aria-label="Fermer">✕</button>
+    <div class="modal-tag mono" id="modal-tag"></div>
+    <h3 id="modal-title"></h3>
+    <div class="modal-date mono" id="modal-date"></div>
+    <div class="modal-body" id="modal-body"></div>
+    <div class="modal-source" id="modal-source"></div>
+  </div>
+</div>
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileNav = document.getElementById('mobile-nav');
+  menuBtn.addEventListener('click', ()=>{
+    const isOpen = mobileNav.classList.toggle('open');
+    menuBtn.classList.toggle('open', isOpen);
+    document.body.classList.toggle('nav-open', isOpen);
+  });
+  mobileNav.querySelectorAll('a').forEach(a=>{
+    a.addEventListener('click', ()=>{
+      mobileNav.classList.remove('open');
+      menuBtn.classList.remove('open');
+      document.body.classList.remove('nav-open');
+    });
+  });
+
+  const revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -30px 0px'});
+    revealEls.forEach((el,i)=>{
+      el.style.transitionDelay = (i % 6) * 60 + 'ms';
+      io.observe(el);
+    });
+  } else {
+    revealEls.forEach(el=>el.classList.add('visible'));
+  }
+
+  const buttons = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.actu-card');
+  buttons.forEach(btn=>{
+    btn.setAttribute('aria-pressed', btn.classList.contains('active') ? 'true' : 'false');
+    btn.addEventListener('click', ()=>{
+      buttons.forEach(b=>{ b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
+      btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
+      const f = btn.dataset.filter;
+      cards.forEach(card=>{
+        const show = (f === 'all') || (card.dataset.cat === f);
+        if(show){
+          card.style.display = '';
+          requestAnimationFrame(()=> card.classList.remove('hidden'));
+        } else {
+          card.classList.add('hidden');
+          setTimeout(()=>{ if(card.classList.contains('hidden')) card.style.display = 'none'; }, 300);
+        }
+      });
+    });
+  });
+
+  const overlay = document.getElementById('modal-overlay');
+  const modalTag = document.getElementById('modal-tag');
+  const modalTitle = document.getElementById('modal-title');
+  const modalDate = document.getElementById('modal-date');
+  const modalBody = document.getElementById('modal-body');
+  const modalSource = document.getElementById('modal-source');
+
+  let modalLastFocused = null;
+  function trapModalFocus(e){
+    if(e.key !== 'Tab' || !overlay.classList.contains('open')) return;
+    const focusable = overlay.querySelectorAll('button, a[href], [tabindex]:not([tabindex="-1"])');
+    if(!focusable.length) return;
+    const first = focusable[0], last = focusable[focusable.length - 1];
+    if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+    else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+  }
+
+  function openModal(card){
+    modalLastFocused = document.activeElement;
+    modalTag.textContent = card.querySelector('.tag').textContent;
+    modalTitle.textContent = card.querySelector('p').textContent;
+    modalDate.textContent = card.querySelector('.date').textContent;
+    modalBody.textContent = card.dataset.full || card.querySelector('p').textContent;
+    const src = card.dataset.source, srcName = card.dataset.sourceName;
+    modalSource.innerHTML = src ? `Source : <a href="${src}" target="_blank" rel="noopener noreferrer">${srcName} ↗</a>` : '';
+    modalSource.style.display = src ? '' : 'none';
+    overlay.classList.add('open');
+    document.body.classList.add('modal-open');
+    document.getElementById('modal-close').focus();
+  }
+  function closeModal(){
+    overlay.classList.remove('open');
+    document.body.classList.remove('modal-open');
+    if(modalLastFocused) modalLastFocused.focus();
+  }
+
+  cards.forEach(card=>{
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+    card.addEventListener('click', ()=> openModal(card));
+    card.addEventListener('keydown', (e)=>{
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openModal(card); }
+    });
+  });
+  document.getElementById('modal-close').addEventListener('click', closeModal);
+  overlay.addEventListener('click', (e)=>{ if(e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeModal(); trapModalFocus(e); });
+</script>
+
+</body>
+</html>

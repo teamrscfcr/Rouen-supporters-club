@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Effectif — Diables Rouges Supporters Club</title>
+<meta name="description" content="L'effectif du FC Rouen 1899 poste par poste — gardiens, défenseurs, milieux, attaquants et staff technique.">
+<link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+<link rel="apple-touch-icon" href="assets/logo.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Diables Rouges Supporters Club">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Effectif — Diables Rouges Supporters Club">
+<meta property="og:description" content="L'effectif du FC Rouen 1899 poste par poste — gardiens, défenseurs, milieux, attaquants et staff technique.">
+<meta property="og:image" content="og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="og-image.jpg">
+<meta name="twitter:title" content="Effectif — Diables Rouges Supporters Club">
+<meta name="twitter:description" content="L'effectif du FC Rouen 1899 poste par poste — gardiens, défenseurs, milieux, attaquants et staff technique.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Caveat:wght@700&family=Archivo:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
+<style>
+  .grain{
+    position:fixed; inset:0; pointer-events:none; z-index:60;
+    opacity:0.14; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .scratches{
+    position:fixed; inset:0; pointer-events:none; z-index:59; opacity:0.05;
+    background-image: repeating-linear-gradient(88deg, transparent 0 40px, rgba(12,11,10,0.6) 40px 41px, transparent 41px 90px),
+                       repeating-linear-gradient(-83deg, transparent 0 60px, rgba(12,11,10,0.4) 60px 61px, transparent 61px 130px);
+  }
+
+  /* ---------- PAGE BANNER ---------- */
+  .banner{
+    position:relative; padding:56px 5vw 40px; background:var(--paper); overflow:hidden;
+    border-bottom:1px solid rgba(12,11,10,0.08);
+  }
+  .banner-bg-text{
+    position:absolute; top:-14px; left:-4%; z-index:0;
+    font-family:'Anton'; font-size:min(24vw,200px); color:transparent;
+    -webkit-text-stroke:1.5px rgba(208,2,27,0.14);
+    white-space:nowrap; user-select:none; pointer-events:none;
+  }
+  .banner-stack{position:relative; z-index:2;}
+  .torn-panel{
+    background:var(--red);
+    padding:10px 22px 22px;
+    transform:rotate(-0.8deg);
+    box-shadow:0 16px 32px rgba(12,11,10,0.16);
+    clip-path: polygon(0% 3%, 6% 0%, 20% 2%, 33% 0%, 48% 2%, 61% 0%, 76% 2%, 89% 0%, 100% 3%, 99% 96%, 91% 100%, 78% 97%, 65% 100%, 52% 97%, 39% 100%, 26% 97%, 13% 100%, 1% 97%);
+    max-width:min(560px, 92vw); display:inline-block;
+  }
+  .banner-eyebrow{
+    display:inline-block; font-family:'JetBrains Mono'; font-size:11px; letter-spacing:0.2em;
+    color:var(--on-gold); background:var(--gold); padding:5px 10px; transform:rotate(-1deg);
+    margin:14px 0 18px; font-weight:700;
+  }
+  .banner h1{
+    font-size:clamp(34px, 6vw, 70px);
+    line-height:0.92;
+    color:var(--black);
+  }
+  .banner-sub{
+    margin-top:20px; max-width:60ch; font-size:15px; line-height:1.6; color:var(--paper-dim);
+  }
+  .source-note{
+    margin-top:14px; font-family:'JetBrains Mono'; font-size:11px; color:var(--paper-dim);
+    border-left:2px solid var(--gold-ink); padding-left:10px;
+  }
+  .source-note a{color:var(--gold-ink); border-bottom:1px dotted var(--gold-ink);}
+
+  /* ---------- TABS ---------- */
+  .tabs{
+    display:flex; flex-wrap:wrap; gap:10px; padding:0 5vw 34px; position:relative; z-index:2;
+  }
+  .tab-btn{
+    font-family:'JetBrains Mono'; font-size:12px; font-weight:700; letter-spacing:0.06em;
+    text-transform:uppercase; padding:9px 16px; background:var(--black-soft);
+    border:2px solid var(--paper-dim); color:var(--paper-dim); cursor:pointer;
+    transition:all .15s;
+  }
+  .tab-btn:hover{border-color:var(--black); color:var(--black);}
+  .tab-btn.active{background:var(--red); border-color:var(--red); color:var(--on-accent); transform:translateY(-2px);}
+  .tab-btn .count{opacity:0.7; margin-left:4px;}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:0 5vw 64px;}
+  .pos-group{margin-bottom:46px;}
+  .pos-group:last-child{margin-bottom:0;}
+  .pos-head{display:flex; align-items:baseline; gap:14px; margin-bottom:22px;}
+  .pos-head h2{font-size:clamp(20px,2.6vw,28px); position:relative; display:inline-block; white-space:nowrap;}
+  .pos-head h2 .underline{position:absolute; left:-4px; bottom:-3px; height:8px; width:calc(100% + 8px); background:var(--red); z-index:-1; transform:skewX(-10deg) rotate(-0.6deg);}
+  .pos-head .line{flex-grow:1; height:1px; background:repeating-linear-gradient(90deg, var(--paper-dim) 0 6px, transparent 6px 12px); opacity:0.5;}
+  .pos-head .count{font-family:'JetBrains Mono'; font-size:11px; color:var(--paper-dim);}
+
+  .squad{display:grid; grid-template-columns:repeat(5,1fr); gap:16px;}
+  .player{
+    border:1px solid var(--black); padding:20px 12px; text-align:center;
+    background:var(--paper); color:var(--black);
+    transition:transform .18s, background .18s, color .18s, opacity .3s ease, box-shadow .18s ease;
+    box-shadow:0 8px 18px rgba(12,11,10,0.08);
+    cursor:pointer;
+  }
+  .player:hover{transform:translateY(-4px) scale(1.04); background:var(--red); color:var(--on-accent); border-color:var(--red); box-shadow:0 14px 26px rgba(12,11,10,0.18);}
+  .player:focus-visible{outline:2px solid var(--gold-ink); outline-offset:3px;}
+  .player .num{font-family:'Archivo Black'; font-size:32px; color:var(--red);}
+  .player:hover .num{color:var(--on-accent);}
+  .player .pname{font-size:11px; letter-spacing:0.04em; margin-top:6px; text-transform:uppercase; font-weight:700;}
+  .player .pfirst{font-size:10px; letter-spacing:0.03em; margin-top:2px; text-transform:uppercase; color:#6b6255; font-weight:500;}
+  .player:hover .pfirst{color:rgba(236,229,212,0.85);}
+  .player .ptap{
+    font-family:'JetBrains Mono'; font-size:8px; letter-spacing:0.06em; color:var(--red-deep);
+    margin-top:8px; opacity:0.75;
+  }
+  .player:hover .ptap{color:var(--gold);}
+  .player.hidden{display:none;}
+  .player.bonus{border-style:dashed;}
+  @media(max-width:900px){.squad{grid-template-columns:repeat(3,1fr);}}
+  @media(max-width:520px){.squad{grid-template-columns:repeat(2,1fr);}}
+
+  /* ---------- STAFF ---------- */
+  .staff-strip{border-top:1px solid rgba(12,11,10,0.1); background:var(--black-soft); padding:56px 5vw;}
+  .staff-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(150px,1fr)); gap:14px; max-width:1100px; margin:0 auto;}
+  .staff-card{
+    background:var(--paper); border:1px solid rgba(12,11,10,0.1);
+    padding:14px 10px; text-align:center;
+    box-shadow:0 6px 14px rgba(12,11,10,0.05);
+  }
+  .staff-card .role{font-family:'JetBrains Mono'; font-size:9px; letter-spacing:0.08em; color:var(--gold-ink); text-transform:uppercase;}
+  .staff-card .sname{font-size:13px; font-weight:700; margin-top:6px; text-transform:uppercase;}
+  .staff-card .sfirst{font-size:11px; color:var(--paper-dim); margin-top:1px;}
+
+  /* ---------- MODAL ---------- */
+  .modal-overlay{
+    position:fixed; inset:0; z-index:80; display:none;
+    background:rgba(12,11,10,0.82);
+    align-items:center; justify-content:center; padding:5vw;
+  }
+  .modal-overlay.open{display:flex;}
+  .modal-card{
+    background:var(--paper); color:var(--black);
+    max-width:440px; width:100%; max-height:86vh; overflow-y:auto;
+    padding:30px 28px 32px; position:relative;
+    box-shadow:0 24px 60px rgba(12,11,10,0.28);
+    border:1px solid rgba(12,11,10,0.08);
+    text-align:center;
+  }
+  .modal-card .tape{top:-14px; left:calc(50% - 45px); transform:rotate(-2deg);}
+  .modal-close{
+    position:absolute; top:14px; right:16px; width:30px; height:30px;
+    background:var(--black); color:var(--paper); border:none; cursor:pointer;
+    font-family:'Anton'; font-size:16px; line-height:1;
+    display:flex; align-items:center; justify-content:center;
+    transition:transform .15s, background .15s;
+  }
+  .modal-close:hover{background:var(--red); color:var(--on-accent); transform:rotate(90deg);}
+  .modal-num{font-family:'Archivo Black'; font-size:52px; color:var(--red); line-height:1;}
+  .modal-card h3{font-size:clamp(20px,3vw,26px); margin-top:6px; line-height:1.1;}
+  .modal-first{font-family:'JetBrains Mono'; font-size:12px; color:#6b6255; margin-top:4px; text-transform:uppercase;}
+  .modal-poste{
+    display:inline-block; margin-top:14px; font-family:'JetBrains Mono'; font-size:11px; letter-spacing:0.1em;
+    background:var(--red-deep); color:var(--on-accent); padding:4px 12px; font-weight:700; text-transform:uppercase;
+  }
+  .modal-stats{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:22px;}
+  .modal-stat{border:1px solid rgba(12,11,10,0.12); padding:11px 8px;}
+  .modal-stat .lbl{font-family:'JetBrains Mono'; font-size:9px; letter-spacing:0.08em; color:#6b6255; text-transform:uppercase;}
+  .modal-stat .val{font-family:'Anton'; font-size:15px; margin-top:5px;}
+  .modal-minutes{margin-top:10px; font-family:'JetBrains Mono'; font-size:11px; color:#6b6255;}
+  .modal-flavor{margin-top:18px; font-size:14px; line-height:1.5; color:#3a3530;}
+  .modal-source{
+    margin-top:18px; font-family:'JetBrains Mono'; font-size:10px; color:#8a8071;
+    border-top:1px solid rgba(12,11,10,0.1); padding-top:12px;
+  }
+  .modal-source a{color:var(--red-deep); border-bottom:1px dotted var(--red-deep);}
+
+  /* ---------- ANIMATIONS ---------- */
+  @media (prefers-reduced-motion: no-preference){
+    @keyframes popIn{
+      0%{opacity:0; transform:translateY(18px) rotate(-3deg) scale(.95);}
+      100%{opacity:1; transform:translateY(0) rotate(-0.8deg) scale(1);}
+    }
+    .torn-panel{animation:popIn .8s cubic-bezier(.2,.8,.3,1) both;}
+
+    @keyframes drift{
+      0%,100%{transform:translateX(0);} 50%{transform:translateX(-16px);}
+    }
+    .banner-bg-text{animation:drift 11s ease-in-out infinite;}
+
+    @keyframes flicker{
+      0%,100%{opacity:0.14;} 50%{opacity:0.09;}
+    }
+    .grain{animation:flicker 6s ease-in-out infinite;}
+
+    .reveal{opacity:0; transform:translateY(20px); transition:opacity .5s ease, transform .5s ease;}
+    .reveal.visible{opacity:1; transform:translateY(0);}
+
+    .tab-btn{opacity:0; transform:translateY(10px); animation:riseIn .5s ease both;}
+    @keyframes riseIn{ to{opacity:1; transform:translateY(0);} }
+    .tab-btn:nth-child(1){animation-delay:.03s;}
+    .tab-btn:nth-child(2){animation-delay:.06s;}
+    .tab-btn:nth-child(3){animation-delay:.09s;}
+    .tab-btn:nth-child(4){animation-delay:.12s;}
+    .tab-btn:nth-child(5){animation-delay:.15s;}
+
+    @keyframes modalPop{
+      0%{opacity:0; transform:scale(.94) translateY(14px);}
+      100%{opacity:1; transform:scale(1) translateY(0);}
+    }
+    .modal-overlay.open .modal-card{animation:modalPop .35s cubic-bezier(.2,.8,.3,1) both;}
+  }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Aller au contenu principal</a>
+<div class="grain"></div>
+<div class="scratches"></div>
+
+<header>
+  <div class="brand">
+    <a href="index.html" style="display:flex; align-items:center; gap:14px;">
+    <div class="crest">
+      <img src="assets/logo.jpg" alt="Diables Rouges Supporters Club" width="54" height="54">
+    </div>
+    <div class="brand-text">
+      <div class="top">Depuis 1899 · Stade Robert-Diochon</div>
+      <div class="bottom">Diables Rouges</div>
+    </div>
+    </a>
+  </div>
+  <nav>
+    <a href="actus.html">Actus</a>
+    <a href="calendrier.html">Calendrier</a>
+    <a href="effectif.html" class="active">Effectif</a>
+    <a href="histoire.html">Histoire</a>
+    <a href="photos.html">Photos</a>
+    <a href="infos-pratiques.html">Infos</a>
+    <a href="suivre.html">Nous suivre</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Changer de thème">
+    <svg class="icon-sun" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v3M12 18.5v3M4.5 4.5l2.1 2.1M17.4 17.4l2.1 2.1M2.5 12h3M18.5 12h3M4.5 19.5l2.1-2.1M17.4 6.6l2.1-2.1"/></svg>
+    <svg class="icon-moon" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.2A8.5 8.5 0 1 1 9.8 4a6.7 6.7 0 0 0 10.2 10.2Z"/></svg>
+  </button>
+  <button class="menu-btn" id="menu-btn" aria-label="Ouvrir le menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<nav class="mobile-nav" id="mobile-nav">
+  <a href="actus.html">Actus</a>
+  <a href="calendrier.html">Calendrier</a>
+  <a href="effectif.html" class="active">Effectif</a>
+  <a href="histoire.html">Histoire</a>
+  <a href="photos.html">Photos</a>
+  <a href="infos-pratiques.html">Infos</a>
+  <a href="suivre.html">Nous suivre</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main id="main">
+<div class="banner">
+  <div class="banner-bg-text">L'EFFECTIF</div>
+  <div class="banner-stack">
+    <div class="torn-panel">
+      <div class="banner-eyebrow">LIGUE 3 · SAISON 2026-2027</div>
+      <h1>Le groupe au complet, poste par poste.</h1>
+    </div>
+    <p class="banner-sub">Gardiens, défenseurs, milieux, attaquants : tout le monde y passe. Clique sur un joueur pour sa fiche — âge, nationalité, stats sur les 3 premières journées.</p>
+    <div class="source-note mono">Noms/numéros/postes : <a href="https://fcr1899.com/equipe/" target="_blank" rel="noopener noreferrer">fcr1899.com/equipe ↗</a> · Âge/nationalité/stats : <a href="https://www.transfermarkt.fr/fc-rouen-1899/leistungsdaten/verein/1564" target="_blank" rel="noopener noreferrer">Transfermarkt ↗</a>.</div>
+  </div>
+</div>
+
+<div class="tabs">
+  <button class="tab-btn active" data-tab="tout">Tout <span class="count mono">(23)</span></button>
+  <button class="tab-btn" data-tab="gardiens">Gardiens <span class="count mono">(3)</span></button>
+  <button class="tab-btn" data-tab="defenseurs">Défenseurs <span class="count mono">(7)</span></button>
+  <button class="tab-btn" data-tab="milieux">Milieux <span class="count mono">(6)</span></button>
+  <button class="tab-btn" data-tab="attaquants">Attaquants <span class="count mono">(7)</span></button>
+</div>
+
+<section>
+
+  <div class="pos-group reveal" data-pos="gardiens">
+    <div class="pos-head">
+      <h2>Gardiens<span class="underline"></span></h2>
+      <div class="line"></div>
+      <div class="count mono">3</div>
+    </div>
+    <div class="squad">
+      <div class="player" data-pos="gardiens" data-poste="Gardien" data-num="30" data-name="Desprez" data-first="Didier" data-age="27 ans" data-nat="France" data-mj="Non utilisé cette saison" data-buts="—" data-min="—"><div class="num">30</div><div class="pname">Desprez</div><div class="pfirst">Didier</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="gardiens" data-poste="Gardien" data-num="1" data-name="Maraval" data-first="Axel" data-age="32 ans" data-nat="France" data-mj="3 matchs" data-buts="0" data-min="270 min jouées"><div class="num">1</div><div class="pname">Maraval</div><div class="pfirst">Axel</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="gardiens" data-poste="Gardien" data-num="16" data-name="Sanglier" data-first="Thomas" data-age="Non communiqué" data-nat="Non communiquée" data-mj="Non communiqué" data-buts="—" data-min="—"><div class="num">16</div><div class="pname">Sanglier</div><div class="pfirst">Thomas</div><div class="ptap">FICHE →</div></div>
+    </div>
+  </div>
+
+  <div class="pos-group reveal" data-pos="defenseurs">
+    <div class="pos-head">
+      <h2>Défenseurs<span class="underline"></span></h2>
+      <div class="line"></div>
+      <div class="count mono">7</div>
+    </div>
+    <div class="squad">
+      <div class="player" data-pos="defenseurs" data-poste="Défenseur" data-num="25" data-name="Diaby" data-first="Salim" data-age="25 ans" data-nat="France / Sénégal" data-mj="3 matchs" data-buts="0" data-min="62 min jouées"><div class="num">25</div><div class="pname">Diaby</div><div class="pfirst">Salim</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="defenseurs" data-poste="Défenseur" data-num="15" data-name="Lamgahez" data-first="Zakariy" data-age="23 ans" data-nat="France / Maroc" data-mj="3 matchs" data-buts="0" data-min="270 min jouées"><div class="num">15</div><div class="pname">Lamgahez</div><div class="pfirst">Zakariy</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="defenseurs" data-poste="Défenseur" data-num="5" data-name="Gaspari" data-first="Johdy" data-age="29 ans" data-nat="Angola / France" data-mj="3 matchs" data-buts="0" data-min="243 min jouées"><div class="num">5</div><div class="pname">Gaspari</div><div class="pfirst">Johdy</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="defenseurs" data-poste="Défenseur" data-num="3" data-name="Borne" data-first="Melvin" data-age="21 ans" data-nat="France / Martinique" data-mj="1 match" data-buts="0" data-min="90 min jouées"><div class="num">3</div><div class="pname">Borne</div><div class="pfirst">Melvin</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="defenseurs" data-poste="Défenseur" data-num="18" data-name="Bassin" data-first="Clément" data-age="31 ans" data-nat="France" data-mj="3 matchs" data-buts="0" data-min="270 min jouées"><div class="num">18</div><div class="pname">Bassin</div><div class="pfirst">Clément</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="defenseurs" data-poste="Défenseur" data-num="22" data-name="Mendy" data-first="Formose" data-age="32 ans" data-nat="France / Sénégal" data-mj="2 matchs" data-buts="0" data-min="180 min jouées"><div class="num">22</div><div class="pname">Mendy</div><div class="pfirst">Formose</div><div class="ptap">FICHE →</div></div>
+      <div class="player bonus" data-pos="defenseurs" data-poste="Défenseur" data-num="—" data-name="Frebourg" data-first="Enzo" data-age="Non communiqué" data-nat="Non communiquée" data-mj="Non utilisé cette saison" data-buts="—" data-min="—"><div class="num">—</div><div class="pname">Frebourg</div><div class="pfirst">Enzo</div><div class="ptap">FICHE →</div></div>
+    </div>
+  </div>
+
+  <div class="pos-group reveal" data-pos="milieux">
+    <div class="pos-head">
+      <h2>Milieux<span class="underline"></span></h2>
+      <div class="line"></div>
+      <div class="count mono">6</div>
+    </div>
+    <div class="squad">
+      <div class="player" data-pos="milieux" data-poste="Milieu" data-num="26" data-name="Gakpa" data-first="Marvin" data-age="32 ans" data-nat="France / Algérie" data-mj="3 matchs" data-buts="0" data-min="255 min jouées"><div class="num">26</div><div class="pname">Gakpa</div><div class="pfirst">Marvin</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="milieux" data-poste="Milieu" data-num="17" data-name="Samoura" data-first="Ibrahima" data-age="21 ans" data-nat="France / Sénégal" data-mj="2 matchs" data-buts="0" data-min="71 min jouées"><div class="num">17</div><div class="pname">Samoura</div><div class="pfirst">Ibrahima</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="milieux" data-poste="Milieu" data-num="13" data-name="Camara" data-first="Bakari" data-age="32 ans" data-nat="Mauritanie / France" data-mj="2 matchs" data-buts="0" data-min="180 min jouées"><div class="num">13</div><div class="pname">Camara</div><div class="pfirst">Bakari</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="milieux" data-poste="Milieu" data-num="11" data-name="Sommer" data-first="Noé" data-age="25 ans" data-nat="France" data-mj="3 matchs" data-buts="0" data-min="258 min jouées"><div class="num">11</div><div class="pname">Sommer</div><div class="pfirst">Noé</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="milieux" data-poste="Milieu" data-num="12" data-name="Touré" data-first="Amara" data-age="21 ans" data-nat="Côte d'Ivoire" data-mj="Non communiqué" data-buts="—" data-min="—"><div class="num">12</div><div class="pname">Touré</div><div class="pfirst">Amara</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="milieux" data-poste="Milieu" data-num="8" data-name="Guiry Egny" data-first="El Hadji" data-age="24 ans" data-nat="France / Côte d'Ivoire" data-mj="1 match" data-buts="0" data-min="12 min jouées"><div class="num">8</div><div class="pname">Guiry Egny</div><div class="pfirst">El Hadji</div><div class="ptap">FICHE →</div></div>
+    </div>
+  </div>
+
+  <div class="pos-group reveal" data-pos="attaquants">
+    <div class="pos-head">
+      <h2>Attaquants<span class="underline"></span></h2>
+      <div class="line"></div>
+      <div class="count mono">7</div>
+    </div>
+    <div class="squad">
+      <div class="player" data-pos="attaquants" data-poste="Attaquant" data-num="29" data-name="Viana" data-first="Joel" data-age="23 ans" data-nat="France" data-mj="2 matchs" data-buts="0" data-min="2 min jouées"><div class="num">29</div><div class="pname">Viana</div><div class="pfirst">Joel</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="attaquants" data-poste="Attaquant" data-num="21" data-name="Traoré" data-first="Sory" data-age="21 ans" data-nat="Guinée" data-mj="3 matchs" data-buts="2" data-min="52 min jouées"><div class="num">21</div><div class="pname">Traoré</div><div class="pfirst">Sory</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="attaquants" data-poste="Attaquant" data-num="19" data-name="Tramoni" data-first="Lisandru" data-age="23 ans" data-nat="France / Italie" data-mj="3 matchs" data-buts="1" data-min="223 min jouées"><div class="num">19</div><div class="pname">Tramoni</div><div class="pfirst">Lisandru</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="attaquants" data-poste="Attaquant" data-num="10" data-name="Karamoko" data-first="Issiaka" data-age="25 ans" data-nat="France / Côte d'Ivoire" data-mj="3 matchs" data-buts="0" data-min="169 min jouées"><div class="num">10</div><div class="pname">Karamoko</div><div class="pfirst">Issiaka</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="attaquants" data-poste="Attaquant" data-num="9" data-name="Tchokounté" data-first="Malik" data-age="37 ans" data-nat="France / Cameroun" data-mj="3 matchs" data-buts="2" data-min="270 min jouées"><div class="num">9</div><div class="pname">Tchokounté</div><div class="pfirst">Malik</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="attaquants" data-poste="Attaquant" data-num="7" data-name="Fuss" data-first="Valentin" data-age="26 ans" data-nat="France" data-mj="2 matchs" data-buts="0" data-min="96 min jouées"><div class="num">7</div><div class="pname">Fuss</div><div class="pfirst">Valentin</div><div class="ptap">FICHE →</div></div>
+      <div class="player bonus" data-pos="attaquants" data-poste="Attaquant" data-num="—" data-name="Pacius" data-first="Woobens" data-age="25 ans" data-nat="Haïti / Canada" data-mj="Non communiqué" data-buts="—" data-min="—"><div class="num">—</div><div class="pname">Pacius</div><div class="pfirst">Woobens</div><div class="ptap">FICHE →</div></div>
+    </div>
+  </div>
+
+</section>
+
+<div class="staff-strip">
+  <div class="pos-head reveal" style="max-width:1100px; margin:0 auto 22px;">
+    <h2>Staff technique<span class="underline"></span></h2>
+    <div class="line"></div>
+  </div>
+  <div class="staff-grid reveal">
+    <div class="staff-card"><div class="role mono">Entr. principal</div><div class="sname">Brouard</div><div class="sfirst">Régis</div></div>
+    <div class="staff-card"><div class="role mono">Entr. adjoint</div><div class="sname">Braud</div><div class="sfirst">Pascal</div></div>
+    <div class="staff-card"><div class="role mono">Entr. gardiens</div><div class="sname">Lacaille</div><div class="sfirst">Mathieu</div></div>
+    <div class="staff-card"><div class="role mono">Prép. athlétique</div><div class="sname">Catherine</div><div class="sfirst">Kevin</div></div>
+    <div class="staff-card"><div class="role mono">Prép. athlétique</div><div class="sname">David</div><div class="sfirst">Maxime</div></div>
+    <div class="staff-card"><div class="role mono">Analyste vidéo</div><div class="sname">Desvallées</div><div class="sfirst">Félix</div></div>
+    <div class="staff-card"><div class="role mono">Analyste data</div><div class="sname">Lesueur</div><div class="sfirst">Louis</div></div>
+    <div class="staff-card"><div class="role mono">Cellule médicale</div><div class="sname">Hedouin</div><div class="sfirst">Matthieu</div></div>
+    <div class="staff-card"><div class="role mono">Kiné</div><div class="sname">Baldo</div><div class="sfirst">Yoann</div></div>
+    <div class="staff-card"><div class="role mono">Intendant</div><div class="sname">Spinos</div><div class="sfirst">Thylan</div></div>
+    <div class="staff-card"><div class="role mono">Intendant</div><div class="sname">Laiguillon</div><div class="sfirst">Léo Paul</div></div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div>© 2026 Diables Rouges Supporters Club — page fan non-officielle, tenue par des passionnés du FC Rouen 1899.</div>
+  <div class="foot-links">
+    <a href="https://x.com/DiablesRouges_">X / Twitter</a>
+    <a href="https://fcr1899.com">Site officiel FCR1899</a>
+    <a href="https://billetterie-fcrouen.fr/">Billetterie</a>
+    <a href="mentions-legales.html">Mentions légales</a>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-name">
+  <div class="modal-card">
+    <div class="tape"></div>
+    <button class="modal-close" id="modal-close" aria-label="Fermer">✕</button>
+    <div class="modal-num mono" id="modal-num"></div>
+    <h3 id="modal-name"></h3>
+    <div class="modal-first" id="modal-first"></div>
+    <div class="modal-poste" id="modal-poste"></div>
+    <div class="modal-stats">
+      <div class="modal-stat"><div class="lbl mono">Âge</div><div class="val" id="modal-age"></div></div>
+      <div class="modal-stat"><div class="lbl mono">Nationalité</div><div class="val" id="modal-nat"></div></div>
+      <div class="modal-stat"><div class="lbl mono">Matchs (saison)</div><div class="val" id="modal-mj"></div></div>
+      <div class="modal-stat"><div class="lbl mono">Buts (saison)</div><div class="val" id="modal-buts"></div></div>
+    </div>
+    <div class="modal-minutes mono" id="modal-min"></div>
+    <p class="modal-flavor hand" id="modal-flavor"></p>
+    <div class="modal-source mono">Numéro/poste : <a href="https://fcr1899.com/equipe/" target="_blank" rel="noopener noreferrer">fcr1899.com ↗</a> · Âge/nat./stats : <a href="https://www.transfermarkt.fr/fc-rouen-1899/leistungsdaten/verein/1564" target="_blank" rel="noopener noreferrer">Transfermarkt ↗</a></div>
+  </div>
+</div>
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileNav = document.getElementById('mobile-nav');
+  menuBtn.addEventListener('click', ()=>{
+    const isOpen = mobileNav.classList.toggle('open');
+    menuBtn.classList.toggle('open', isOpen);
+    document.body.classList.toggle('nav-open', isOpen);
+  });
+  mobileNav.querySelectorAll('a').forEach(a=>{
+    a.addEventListener('click', ()=>{
+      mobileNav.classList.remove('open');
+      menuBtn.classList.remove('open');
+      document.body.classList.remove('nav-open');
+    });
+  });
+
+  const revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.1, rootMargin:'0px 0px -30px 0px'});
+    revealEls.forEach((el,i)=>{
+      el.style.transitionDelay = (i % 4) * 70 + 'ms';
+      io.observe(el);
+    });
+  } else {
+    revealEls.forEach(el=>el.classList.add('visible'));
+  }
+
+  const tabs = document.querySelectorAll('.tab-btn');
+  const groups = document.querySelectorAll('.pos-group');
+  tabs.forEach(tab=>{
+    tab.setAttribute('aria-pressed', tab.classList.contains('active') ? 'true' : 'false');
+    tab.addEventListener('click', ()=>{
+      tabs.forEach(t=>{ t.classList.remove('active'); t.setAttribute('aria-pressed', 'false'); });
+      tab.classList.add('active');
+      tab.setAttribute('aria-pressed', 'true');
+      const target = tab.dataset.tab;
+      groups.forEach(g=>{
+        g.style.display = (target === 'tout' || g.dataset.pos === target) ? '' : 'none';
+      });
+    });
+  });
+
+  const overlay = document.getElementById('modal-overlay');
+  const mNum = document.getElementById('modal-num');
+  const mName = document.getElementById('modal-name');
+  const mFirst = document.getElementById('modal-first');
+  const mPoste = document.getElementById('modal-poste');
+  const mAge = document.getElementById('modal-age');
+  const mNat = document.getElementById('modal-nat');
+  const mMj = document.getElementById('modal-mj');
+  const mButs = document.getElementById('modal-buts');
+  const mMin = document.getElementById('modal-min');
+  const mFlavor = document.getElementById('modal-flavor');
+  const flavorByPoste = {
+    'Gardien': 'Le dernier rempart. On souffle avec lui à chaque tir cadré.',
+    'Défenseur': "Le sale boulot, celui qu'on ne remercie jamais assez.",
+    'Milieu': 'Il fait tourner le ballon, nous on fait tourner les chants.',
+    'Attaquant': 'Un but de lui, et le Diochon explose.',
+  };
+
+  let modalLastFocused = null;
+  function trapModalFocus(e){
+    if(e.key !== 'Tab' || !overlay.classList.contains('open')) return;
+    const focusable = overlay.querySelectorAll('button, a[href], [tabindex]:not([tabindex="-1"])');
+    if(!focusable.length) return;
+    const first = focusable[0], last = focusable[focusable.length - 1];
+    if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+    else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+  }
+
+  function openModal(card){
+    modalLastFocused = document.activeElement;
+    mNum.textContent = card.dataset.num === '—' ? '—' : ('#' + card.dataset.num);
+    mName.textContent = card.dataset.name;
+    mFirst.textContent = card.dataset.first;
+    mPoste.textContent = card.dataset.poste;
+    mAge.textContent = card.dataset.age;
+    mNat.textContent = card.dataset.nat;
+    mMj.textContent = card.dataset.mj;
+    mButs.textContent = card.dataset.buts;
+    mMin.textContent = card.dataset.min !== '—' ? card.dataset.min : '';
+    mFlavor.textContent = flavorByPoste[card.dataset.poste] || '';
+    overlay.classList.add('open');
+    document.body.classList.add('modal-open');
+    document.getElementById('modal-close').focus();
+  }
+  function closeModal(){
+    overlay.classList.remove('open');
+    document.body.classList.remove('modal-open');
+    if(modalLastFocused) modalLastFocused.focus();
+  }
+
+  document.querySelectorAll('.player').forEach(card=>{
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+    card.addEventListener('click', ()=> openModal(card));
+    card.addEventListener('keydown', (e)=>{
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openModal(card); }
+    });
+  });
+  document.getElementById('modal-close').addEventListener('click', closeModal);
+  overlay.addEventListener('click', (e)=>{ if(e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeModal(); trapModalFocus(e); });
+</script>
+
+</body>
+</html>
