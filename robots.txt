@@ -3,4 +3,4 @@ Allow: /
 Disallow: /404.html
 Disallow: /mentions-legales.html
 
-Sitemap: https://VOTRE-DOMAINE-A-COMPLETER/sitemap.xml
+Sitemap: https://rouen-supporters-club.vercel.app/sitemap.xml

@@ -1,48 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Remplacer https://VOTRE-DOMAINE-A-COMPLETER par le vrai domaine une fois le site hébergé -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://VOTRE-DOMAINE-A-COMPLETER/index.html</loc>
+    <loc>https://rouen-supporters-club.vercel.app/index.html</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</loc>
+    <loc>https://rouen-supporters-club.vercel.app/actus.html</loc>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://VOTRE-DOMAINE-A-COMPLETER/calendrier.html</loc>
+    <loc>https://rouen-supporters-club.vercel.app/calendrier.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://VOTRE-DOMAINE-A-COMPLETER/effectif.html</loc>
+    <loc>https://rouen-supporters-club.vercel.app/effectif.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://VOTRE-DOMAINE-A-COMPLETER/histoire.html</loc>
+    <loc>https://rouen-supporters-club.vercel.app/histoire.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://VOTRE-DOMAINE-A-COMPLETER/infos-pratiques.html</loc>
+    <loc>https://rouen-supporters-club.vercel.app/infos-pratiques.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://VOTRE-DOMAINE-A-COMPLETER/photos.html</loc>
+    <loc>https://rouen-supporters-club.vercel.app/photos.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://VOTRE-DOMAINE-A-COMPLETER/suivre.html</loc>
+    <loc>https://rouen-supporters-club.vercel.app/suivre.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://VOTRE-DOMAINE-A-COMPLETER/contact.html</loc>
+    <loc>https://rouen-supporters-club.vercel.app/contact.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

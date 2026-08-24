@@ -1,17 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Remplacer https://VOTRE-DOMAINE-A-COMPLETER par le vrai domaine une fois le site hébergé -->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title>Diables Rouges Supporters Club — Actus</title>
-  <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
-  <description>Actus vues des tribunes sur le FC Rouen 1899, par les Diables Rouges Supporters Club — page fan non-officielle.</description>
+  <title>Rouen Supporters Club — Actus</title>
+  <link>https://rouen-supporters-club.vercel.app/actus.html</link>
+  <description>Actus vues des tribunes sur le FC Rouen 1899, par les Rouen Supporters Club — page fan non-officielle.</description>
   <language>fr-fr</language>
-  <atom:link href="https://VOTRE-DOMAINE-A-COMPLETER/feed.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Sat, 22 Aug 2026 12:01:00 +0200</lastBuildDate>
+  <atom:link href="https://rouen-supporters-club.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
+  <lastBuildDate>Mon, 24 Aug 2026 12:01:00 +0200</lastBuildDate>
+
+  <item>
+    <title>U19 : 7e place après la première journée</title>
+    <link>https://rouen-supporters-club.vercel.app/actus.html</link>
+    <guid isPermaLink="false">drs-2026-08-24-u19-classement</guid>
+    <pubDate>Mon, 24 Aug 2026 12:01:00 +0200</pubDate>
+    <category>Groupe</category>
+    <description>Après cette première journée du championnat U19 nationaux, le classement place les Diablotins à la 7e place avec 1 point, juste devant Versailles et derrière Le Havre AC et le Racing Club de France. Les prochains matchs à domicile se jouent au stade Pierre-Lefrançois.</description>
+    <source url="https://x.com/DiablesRouges_">DiablesRouges_ sur X</source>
+  </item>
+
+  <item>
+    <title>Ancien Diable Rouge, Farès Ghedjemis brille en Serie A et chez les Fennecs</title>
+    <link>https://rouen-supporters-club.vercel.app/actus.html</link>
+    <guid isPermaLink="false">drs-2026-08-24-ghedjemis</guid>
+    <pubDate>Mon, 24 Aug 2026 12:00:00 +0200</pubDate>
+    <category>Tribune</category>
+    <description>Passé par le FC Rouen lors de la saison 2023-2024 (15 matchs, 4 buts en National), Farès Ghedjemis a rejoint le Frosinone Calcio en Serie A début 2024 et y a inscrit 15 buts la saison passée, contribuant à la montée du club italien en première division. Sélectionné avec l'Algérie, il a honoré sa première cape en mars 2026 face au Guatemala.</description>
+    <source url="https://www.footnormand.fr/actualites/foot-regional/passe-par-le-hac-evreux-et-le-fc-rouen-et-si-fares-ghedjemis-sinvitait-a-la-coupe-du-monde-avec-lalgerie/">footnormand.fr</source>
+  </item>
+
+  <item>
+    <title>Belle victoire 2-0 de la réserve face à Saint-Lô</title>
+    <link>https://rouen-supporters-club.vercel.app/actus.html</link>
+    <guid isPermaLink="false">drs-2026-08-23-reserve-saint-lo</guid>
+    <pubDate>Sun, 23 Aug 2026 12:01:00 +0200</pubDate>
+    <category>Groupe</category>
+    <description>L'équipe réserve (R1) s'est imposée 2-0 face à Saint-Lô (N2), avec un but de Joel Viana. Un bon résultat pour le groupe élargi du club en ce début de saison.</description>
+    <source url="https://x.com/DiablesRouges_">DiablesRouges_ sur X</source>
+  </item>
+
+  <item>
+    <title>Premier point pour les U19 face à Versailles</title>
+    <link>https://rouen-supporters-club.vercel.app/actus.html</link>
+    <guid isPermaLink="false">drs-2026-08-23-u19-versailles</guid>
+    <pubDate>Sun, 23 Aug 2026 12:00:00 +0200</pubDate>
+    <category>Groupe</category>
+    <description>Pour leur entrée en championnat U19 nationaux, les Diablotins ont accroché un point face au FC Versailles (0-0), malgré un penalty non transformé avant la mi-temps. Une première étape encourageante pour la jeune génération rouennaise.</description>
+    <source url="https://x.com/DiablesRouges_">DiablesRouges_ sur X</source>
+  </item>
 
   <item>
     <title>Groupe affûté à l'entraînement avant Villefranche</title>
-    <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
+    <link>https://rouen-supporters-club.vercel.app/actus.html</link>
     <guid isPermaLink="false">drs-2026-08-22-groupe</guid>
     <pubDate>Sat, 22 Aug 2026 12:01:00 +0200</pubDate>
     <category>Groupe</category>
@@ -20,7 +59,7 @@
 
   <item>
     <title>Malik Tchokounté, déjà décisif sur les trois premiers matchs</title>
-    <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
+    <link>https://rouen-supporters-club.vercel.app/actus.html</link>
     <guid isPermaLink="false">drs-2026-08-22-tchokounte</guid>
     <pubDate>Sat, 22 Aug 2026 12:00:00 +0200</pubDate>
     <category>Effectif</category>
@@ -28,37 +67,20 @@
     <source url="https://fcr1899.com/malik-tchokounte-rejoint-le-fc-rouen/">fcr1899.com</source>
   </item>
 
-  <item>
-    <title>Le retour contre Quevilly (J19) se profile déjà</title>
-    <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
-    <guid isPermaLink="false">drs-2026-08-21-retour-qrm</guid>
-    <pubDate>Fri, 21 Aug 2026 12:01:00 +0200</pubDate>
-    <category>Officiel</category>
-    <description>Encore loin, mais on y pense déjà : le match retour face à Quevilly-Rouen Métropole (J19) est prévu début février 2027. On partagera les infos billetterie officielles dès qu'elles seront publiées par le club.</description>
-  </item>
 
   <item>
-    <title>Villefranche le 29, ça se prépare</title>
-    <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
-    <guid isPermaLink="false">drs-2026-08-21-deplacement-villefranche</guid>
-    <pubDate>Fri, 21 Aug 2026 12:00:00 +0200</pubDate>
-    <category>Déplacement</category>
-    <description>Après l'encadrement renforcé à Orléans, on espère un déplacement plus tranquille pour Villefranche le 29. Aucun bus officiel n'est annoncé à ce jour de notre côté — si vous organisez un covoiturage ou un groupe, faites-le savoir autour de vous.</description>
-  </item>
-
-  <item>
-    <title>3-0 contre Quevilly, le Diochon a gueulé du premier au dernier sifflet</title>
-    <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
+    <title>3-0 contre Quevilly, Diochon a gueulé du premier au dernier sifflet</title>
+    <link>https://rouen-supporters-club.vercel.app/actus.html</link>
     <guid isPermaLink="false">drs-2026-08-20-qrm-3-0</guid>
     <pubDate>Thu, 20 Aug 2026 18:01:00 +0200</pubDate>
     <category>Matchday</category>
-    <description>Le FC Rouen a fait le nécessaire face à Quevilly (QRM) pour ce troisième match de la saison : ouverture du score de Tchokounté sur un centre de Bassin (14e), doublé par une frappe splendide de Tramoni (34e), et le but du confort signé Traoré (85e). 6 500 spectateurs au Diochon pour cette victoire qui lance idéalement la saison.</description>
+    <description>Le FC Rouen a fait le nécessaire face à Quevilly (QRM) pour ce troisième match de la saison : ouverture du score de Tchokounté sur un centre de Bassin (14e), doublé par une frappe splendide de Tramoni (34e), et le but du confort signé Traoré (85e). 6 500 spectateurs à Diochon pour cette victoire qui lance idéalement la saison.</description>
     <source url="https://www.ici.fr/normandie/seine-maritime-76/rouen/ligue-3-le-fc-rouen-bat-logiquement-qrm-3-0-et-lance-idealement-sa-saison-8451240">ici.fr</source>
   </item>
 
   <item>
     <title>Debrief à chaud après J3 : pressing haut, bloc compact</title>
-    <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
+    <link>https://rouen-supporters-club.vercel.app/actus.html</link>
     <guid isPermaLink="false">drs-2026-08-20-debrief-j3</guid>
     <pubDate>Thu, 20 Aug 2026 18:00:00 +0200</pubDate>
     <category>Tribune</category>
@@ -66,18 +88,19 @@
   </item>
 
   <item>
-    <title>Neuf supporters rouennais interdits de stade avant le derby face à QRM</title>
-    <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
-    <guid isPermaLink="false">drs-2026-08-19-interdits-stade</guid>
-    <pubDate>Wed, 19 Aug 2026 12:00:00 +0200</pubDate>
+    <title>Bassin et Brouard reviennent sur la cohésion du groupe</title>
+    <link>https://rouen-supporters-club.vercel.app/actus.html</link>
+    <guid isPermaLink="false">drs-2026-08-20-bassin-brouard</guid>
+    <pubDate>Thu, 20 Aug 2026 17:00:00 +0200</pubDate>
     <category>Tribune</category>
-    <description>À l'approche du derby face à Quevilly-Rouen Métropole, la préfecture a pris ses précautions : un arrêté interdit à neuf supporters rouennais l'accès aux stades pendant six mois. Une mesure préventive qui n'a pas empêché le Diochon de faire le plein pour la réception de QRM.</description>
-    <source url="https://www.francebleu.fr/sports/football/fcr-qrm-neuf-supporters-rouennais-interdits-de-stade-pendant-six-mois-la-prefecture-prend-ses-precautions-4713720">francebleu.fr</source>
+    <description>Après la victoire face à Quevilly, le capitaine Clément Bassin résumait ainsi la philosophie du groupe : « On gagne notamment grâce à la cohésion, le recrutement a été fait dans ce sens. » De son côté, l'entraîneur Régis Brouard confiait : « Ne me demandez pas pourquoi, mais je crois en ce groupe. »</description>
+    <source url="https://x.com/DiablesRouges_">DiablesRouges_ sur X</source>
   </item>
+
 
   <item>
     <title>Calendrier de la phase aller confirmé par le club</title>
-    <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
+    <link>https://rouen-supporters-club.vercel.app/actus.html</link>
     <guid isPermaLink="false">drs-2026-08-18-calendrier-aller</guid>
     <pubDate>Tue, 18 Aug 2026 12:00:00 +0200</pubDate>
     <category>Officiel</category>
@@ -87,7 +110,7 @@
 
   <item>
     <title>Woobens Pacius débarque de Nashville SC</title>
-    <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
+    <link>https://rouen-supporters-club.vercel.app/actus.html</link>
     <guid isPermaLink="false">drs-2026-08-17-pacius</guid>
     <pubDate>Mon, 17 Aug 2026 12:00:00 +0200</pubDate>
     <category>Effectif</category>
@@ -97,7 +120,7 @@
 
   <item>
     <title>2-1 à Orléans, arraché en fin de match par Sory Traoré</title>
-    <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
+    <link>https://rouen-supporters-club.vercel.app/actus.html</link>
     <guid isPermaLink="false">drs-2026-08-14-orleans-2-1</guid>
     <pubDate>Fri, 14 Aug 2026 18:00:00 +0200</pubDate>
     <category>Matchday</category>
@@ -107,7 +130,7 @@
 
   <item>
     <title>Déplacement à Orléans encadré par arrêté préfectoral</title>
-    <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
+    <link>https://rouen-supporters-club.vercel.app/actus.html</link>
     <guid isPermaLink="false">drs-2026-08-11-arrete-orleans</guid>
     <pubDate>Tue, 11 Aug 2026 12:00:00 +0200</pubDate>
     <category>Déplacement</category>
@@ -117,7 +140,7 @@
 
   <item>
     <title>0-0 contre Cannes pour l'ouverture de la saison</title>
-    <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
+    <link>https://rouen-supporters-club.vercel.app/actus.html</link>
     <guid isPermaLink="false">drs-2026-08-07-cannes-0-0</guid>
     <pubDate>Fri, 07 Aug 2026 18:00:00 +0200</pubDate>
     <category>Matchday</category>
@@ -127,7 +150,7 @@
 
   <item>
     <title>Les cartes d'abonnés de la saison sont disponibles</title>
-    <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
+    <link>https://rouen-supporters-club.vercel.app/actus.html</link>
     <guid isPermaLink="false">drs-2026-08-01-cartes-abonnes</guid>
     <pubDate>Sat, 01 Aug 2026 12:00:00 +0200</pubDate>
     <category>Officiel</category>
@@ -137,7 +160,7 @@
 
   <item>
     <title>La DNCG valide le budget du club</title>
-    <link>https://VOTRE-DOMAINE-A-COMPLETER/actus.html</link>
+    <link>https://rouen-supporters-club.vercel.app/actus.html</link>
     <guid isPermaLink="false">drs-2026-06-30-dncg</guid>
     <pubDate>Tue, 30 Jun 2026 12:00:00 +0200</pubDate>
     <category>Officiel</category>
