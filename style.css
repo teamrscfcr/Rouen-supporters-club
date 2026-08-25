@@ -78,7 +78,7 @@ nav{display:flex; gap:26px; font-size:13px; letter-spacing:0.06em; text-transfor
 nav a{opacity:0.85; position:relative; padding-bottom:3px;}
 nav a::after{content:""; position:absolute; left:0; bottom:0; width:0; height:2px; background:var(--red); transition:width .2s;}
 nav a:hover::after{width:100%;}
-nav a.active{opacity:1;}
+nav a.active{opacity:1; color:var(--red);}
 nav a.active::after{width:100%;}
 @media(max-width:780px){ nav{display:none;} }
 
@@ -90,7 +90,8 @@ nav a.active::after{width:100%;}
 .nav-more summary::-webkit-details-marker{display:none;}
 .nav-more summary::marker{content:"";}
 .nav-more summary::before{content:""; position:absolute; left:0; bottom:0; width:0; height:2px; background:var(--red); transition:width .2s;}
-.nav-more summary:hover, .nav-more summary.active{opacity:1;}
+.nav-more summary:hover{opacity:1;}
+.nav-more summary.active{opacity:1; color:var(--red);}
 .nav-more summary:hover::before, .nav-more summary.active::before{width:100%;}
 .nav-more .caret{font-size:9px; transition:transform .15s;}
 .nav-more[open] .caret{transform:rotate(180deg);}
