@@ -66,7 +66,7 @@
   .banner h1{
     font-size:clamp(34px, 6vw, 70px);
     line-height:0.92;
-    color:var(--black);
+    color:var(--on-accent);
   }
   .banner-sub{
     margin-top:20px; max-width:60ch; font-size:15px; line-height:1.6; color:var(--paper-dim);
@@ -153,10 +153,10 @@
   }
   .modal-goals li:last-child{border-bottom:none;}
   .modal-goals .min{font-family:'JetBrains Mono'; font-weight:700; color:var(--red-deep); min-width:34px;}
-  .modal-goals .assist{color:#6b6255; font-size:12px;}
-  .modal-notes{margin-top:16px; font-size:13px; line-height:1.6; color:#4a453e;}
+  .modal-goals .assist{color:var(--paper-dim); font-size:12px;}
+  .modal-notes{margin-top:16px; font-size:13px; line-height:1.6; color:var(--paper-dim);}
   .modal-source{
-    margin-top:16px; font-family:'JetBrains Mono'; font-size:11px; color:#8a8071;
+    margin-top:16px; font-family:'JetBrains Mono'; font-size:11px; color:var(--paper-dim);
     border-top:1px solid rgba(12,11,10,0.1); padding-top:12px;
   }
   .modal-source a{color:var(--red-deep); border-bottom:1px dotted var(--red-deep);}
@@ -532,7 +532,7 @@
     const goals = (f.moments && f.moments.goals) || [];
     modalGoals.innerHTML = goals.length
       ? goals.map(g => `<li><span class="min mono">${g.min}'</span><span>${g.scorer}${g.note ? ` <span class="assist">(${g.note})</span>` : ''}${g.assist ? ` <span class="assist">— passe de ${g.assist}</span>` : ''}</span></li>`).join('')
-      : '<li><span style="color:#8a8071;">Aucun but marqué.</span></li>';
+      : '<li><span style="color:var(--paper-dim);">Aucun but marqué.</span></li>';
     const notes = (f.moments && f.moments.notes) || [];
     modalNotes.innerHTML = notes.map(n => `<p>${n}</p>`).join('');
     const src = f.moments && f.moments.source;

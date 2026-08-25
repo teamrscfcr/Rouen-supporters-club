@@ -77,7 +77,7 @@
   .hero h1{
     font-size:clamp(38px, 7.4vw, 94px);
     line-height:0.9;
-    color:var(--black);
+    color:var(--on-accent);
   }
   .hero-sub{
     margin-top:22px; max-width:60ch; font-size:16px; line-height:1.65; color:var(--paper-dim);
@@ -131,7 +131,7 @@
     padding:34px 5vw; border-top:5px solid var(--black); border-bottom:5px solid var(--black);
     display:flex; flex-wrap:wrap; gap:24px; align-items:center; justify-content:space-between;
     background:var(--red);
-    color:var(--black);
+    color:var(--on-accent);
     position:relative;
   }
   .next::after{
@@ -141,7 +141,7 @@
   }
   .next-info{position:relative;}
   .next-info .label{font-family:'JetBrains Mono'; font-size:11px; letter-spacing:0.16em; font-weight:700;}
-  .next-info h2{font-size:clamp(20px,3vw,30px); color:var(--black); margin-top:6px;}
+  .next-info h2{font-size:clamp(20px,3vw,30px); color:var(--on-accent); margin-top:6px;}
   .next-meta{font-size:13px; margin-top:6px; font-family:'JetBrains Mono';}
   .countdown{display:flex; gap:12px; position:relative;}
   .cd-cell{text-align:center;}
@@ -175,7 +175,7 @@
   .actu-card.feature .read-more{color:var(--gold); opacity:0.85;}
   .actu-card .tape{top:-14px; left:calc(50% - 45px); transform:rotate(-2deg);}
   .actu-card .tag{font-family:'JetBrains Mono'; font-size:10px; color:var(--red-deep); letter-spacing:0.14em; font-weight:700;}
-  .actu-card .date{font-family:'JetBrains Mono'; font-size:10px; color:#6b6255;}
+  .actu-card .date{font-family:'JetBrains Mono'; font-size:10px; color:var(--paper-dim);}
   .actu-card p{font-size:15px; line-height:1.45; flex-grow:1;}
   .actu-card.feature{
     grid-column:span 2; background:var(--red); color:var(--on-accent);
@@ -238,10 +238,10 @@
   }
   .modal-goals li:last-child{border-bottom:none;}
   .modal-goals .min{font-family:'JetBrains Mono'; font-weight:700; color:var(--red-deep); min-width:34px;}
-  .modal-goals .assist{color:#6b6255; font-size:12px;}
+  .modal-goals .assist{color:var(--paper-dim); font-size:12px;}
   .modal-body{margin-top:18px; font-size:15px; line-height:1.65;}
   .modal-source{
-    margin-top:16px; font-family:'JetBrains Mono'; font-size:11px; color:#8a8071;
+    margin-top:16px; font-family:'JetBrains Mono'; font-size:11px; color:var(--paper-dim);
     border-top:1px solid rgba(12,11,10,0.1); padding-top:12px;
   }
   .modal-source a{color:var(--red-deep); border-bottom:1px dotted var(--red-deep);}
@@ -684,7 +684,7 @@
     const goals = matchMoments[row.dataset.date] || [];
     modalGoals.innerHTML = goals.length
       ? goals.map(g => `<li><span class="min mono">${g.min}'</span><span>${g.scorer}${g.note ? ` <span class="assist">(${g.note})</span>` : ''}${g.assist ? ` <span class="assist">— passe de ${g.assist}</span>` : ''}</span></li>`).join('')
-      : '<li><span style="color:#8a8071;">Aucun but marqué.</span></li>';
+      : '<li><span style="color:var(--paper-dim);">Aucun but marqué.</span></li>';
     modalGoals.style.display = '';
     modalBody.style.display = 'none';
     const src = matchSources[row.dataset.date];

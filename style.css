@@ -10,6 +10,7 @@
   --tape:#d8cba3;
   --on-accent:#f5f1ea;
   --on-gold:#1a1510;
+  --ok-green:#2e7d32;
 }
 [data-theme="dark"]{
   --black:#ece5d4;
@@ -17,6 +18,8 @@
   --paper:#0c0b0a;
   --paper-dim:#a49a89;
   --gold-ink:#e8b23c;
+  --ok-green:#6fcf6f;
+  --red-deep:#ff5a5f;
 }
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
