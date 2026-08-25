@@ -35,8 +35,11 @@
 
   /* ---------- PAGE BANNER (editorial, sobre) ---------- */
   .banner{
-    position:relative; padding:70px 5vw 46px; background:var(--paper); overflow:hidden;
+    position:relative; padding:70px 5vw 46px; overflow:hidden;
     border-bottom:1px solid rgba(12,11,10,0.1);
+    background:
+      linear-gradient(100deg, rgba(12,11,10,0.82) 0%, rgba(12,11,10,0.55) 60%, rgba(12,11,10,0.32) 100%),
+      url('assets/1913-finale-usfsa.jpg') center 35% / cover no-repeat;
   }
   .banner-bg-text{
     position:absolute; top:-10px; right:-2%; z-index:0;
@@ -48,23 +51,23 @@
   .banner-eyebrow{
     display:flex; align-items:center; gap:10px;
     font-family:'JetBrains Mono'; font-size:11px; letter-spacing:0.24em;
-    color:var(--gold-ink); font-weight:700; text-transform:uppercase;
+    color:var(--gold); font-weight:700; text-transform:uppercase;
     margin-bottom:18px;
   }
-  .banner-eyebrow::before{content:""; width:26px; height:2px; background:var(--gold-ink);}
+  .banner-eyebrow::before{content:""; width:26px; height:2px; background:var(--gold);}
   .banner h1{
     font-size:clamp(36px, 5.6vw, 64px);
     line-height:1.02;
-    color:var(--black);
+    color:var(--on-accent);
   }
   .banner-sub{
-    margin-top:22px; max-width:62ch; font-size:15.5px; line-height:1.7; color:var(--paper-dim);
+    margin-top:22px; max-width:62ch; font-size:15.5px; line-height:1.7; color:rgba(245,241,234,0.82);
   }
   .source-note{
-    margin-top:18px; font-family:'JetBrains Mono'; font-size:11px; color:var(--paper-dim);
-    border-left:2px solid var(--gold-ink); padding-left:10px;
+    margin-top:18px; font-family:'JetBrains Mono'; font-size:11px; color:rgba(245,241,234,0.7);
+    border-left:2px solid var(--gold); padding-left:10px;
   }
-  .source-note a{color:var(--gold-ink); border-bottom:1px dotted var(--gold-ink);}
+  .source-note a{color:var(--gold); border-bottom:1px dotted var(--gold);}
 
   /* ---------- KEY STATS STRIP ---------- */
   .stats-strip{
