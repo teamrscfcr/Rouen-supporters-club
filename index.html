@@ -82,6 +82,15 @@
   .hero-sub{
     margin-top:22px; max-width:60ch; font-size:16px; line-height:1.65; color:var(--paper-dim);
   }
+  .hero-ctas{display:flex; flex-wrap:wrap; gap:14px; margin-top:26px;}
+  .hero-cta{
+    display:inline-flex; align-items:center; gap:8px; padding:14px 26px;
+    font-family:'Anton'; font-size:14px; letter-spacing:0.05em; text-transform:uppercase;
+    transition:transform .15s;
+  }
+  .hero-cta:hover{transform:translateY(-2px);}
+  .hero-cta.primary{background:var(--red); color:var(--on-accent); border:2px solid var(--red);}
+  .hero-cta.secondary{background:transparent; color:var(--black); border:2px solid var(--black);}
   .stamp{
     position:absolute; top:36px; right:6vw; z-index:3;
     width:118px; height:118px; border:4px solid var(--gold-ink);
@@ -373,11 +382,16 @@
     <a href="actus.html">Actus</a>
     <a href="calendrier.html">Calendrier</a>
     <a href="effectif.html">Effectif</a>
-    <a href="histoire.html">Histoire</a>
     <a href="photos.html">Photos</a>
-    <a href="infos-pratiques.html">Infos</a>
     <a href="suivre.html">Nous suivre</a>
-    <a href="contact.html">Contact</a>
+    <details class="nav-more">
+      <summary>Plus <span class="caret">▾</span></summary>
+      <div class="nav-more-panel">
+        <a href="histoire.html">Histoire</a>
+        <a href="infos-pratiques.html">Infos pratiques</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </details>
   </nav>
   <button class="theme-toggle" id="theme-toggle" aria-label="Changer de thème">
     <svg class="icon-sun" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v3M12 18.5v3M4.5 4.5l2.1 2.1M17.4 17.4l2.1 2.1M2.5 12h3M18.5 12h3M4.5 19.5l2.1-2.1M17.4 6.6l2.1-2.1"/></svg>
@@ -409,6 +423,10 @@
       <h1>Une ville Un club<br>FC Rouen</h1>
     </div>
     <p class="hero-sub">On suit le FCR à fond, journée après journée. Résultats, effectif, calendrier, et ce qu'on en pense, vu des tribunes.</p>
+    <div class="hero-ctas">
+      <a href="actus.html" class="hero-cta primary">Voir les actus →</a>
+      <a href="calendrier.html" class="hero-cta secondary">Calendrier & résultats</a>
+    </div>
 
     <div class="board" id="board">
       <div class="tape"></div>
