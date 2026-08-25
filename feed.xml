@@ -6,7 +6,17 @@
   <description>Actus vues des tribunes sur le FC Rouen 1899, par les Rouen Supporters Club — page fan non-officielle.</description>
   <language>fr-fr</language>
   <atom:link href="https://rouen-supporters-club.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Mon, 24 Aug 2026 12:01:00 +0200</lastBuildDate>
+  <lastBuildDate>Tue, 25 Aug 2026 12:00:00 +0200</lastBuildDate>
+
+  <item>
+    <title>Woobens Pacius, c'est officiel : numéro 28</title>
+    <link>https://rouen-supporters-club.vercel.app/actus.html</link>
+    <guid isPermaLink="false">drs-2026-08-25-pacius-officiel</guid>
+    <pubDate>Tue, 25 Aug 2026 12:00:00 +0200</pubDate>
+    <category>Effectif</category>
+    <description>Le club a confirmé que les dernières formalités administratives concernant Woobens Pacius étaient résolues. L'attaquant international haïtien (1m85), arrivé de Nashville SC en MLS, portera le numéro 28. Il a rencontré l'entraîneur Régis Brouard et, bonne nouvelle pour son intégration au groupe, parle déjà français.</description>
+    <source url="https://x.com/fcr1899">fcr1899 sur X</source>
+  </item>
 
   <item>
     <title>U19 : 7e place après la première journée</title>
