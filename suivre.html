@@ -40,9 +40,11 @@
 
   /* ---------- PAGE BANNER ---------- */
   .banner{
-    position:relative; padding:56px 5vw 40px; background:var(--paper); overflow:hidden;
+    position:relative; padding:56px 5vw 40px; overflow:hidden;
     border-bottom:1px solid rgba(12,11,10,0.08);
+    background:var(--red) url('assets/banniere.jpg') right center / auto 100% no-repeat;
   }
+  @media(max-width:900px){ .banner{background-image:none; background-color:var(--red);} }
   .banner-bg-text{
     position:absolute; top:-14px; left:-4%; z-index:0;
     font-family:'Anton'; font-size:min(24vw,200px); color:transparent;
@@ -69,11 +71,7 @@
     color:var(--on-accent);
   }
   .banner-sub{
-    margin-top:20px; max-width:60ch; font-size:15px; line-height:1.6; color:var(--paper-dim);
-  }
-  .x-banner{
-    margin-top:28px; max-width:560px; width:100%; border-radius:4px;
-    border:1px solid rgba(12,11,10,0.1); box-shadow:0 14px 30px rgba(12,11,10,0.12);
+    margin-top:20px; max-width:38ch; font-size:15px; line-height:1.6; color:rgba(245,241,234,0.82);
   }
 
   /* ---------- SOCIAL LINKS ---------- */
@@ -189,14 +187,12 @@
 
 <main id="main">
 <div class="banner">
-  <div class="banner-bg-text">SUIVEZ-NOUS</div>
   <div class="banner-stack">
     <div class="torn-panel">
       <div class="banner-eyebrow">RESTEZ CONNECTÉS</div>
       <h1>On est là.<br>Rejoignez-nous.</h1>
     </div>
     <p class="banner-sub">On n'est pas un groupe, juste des fans qui postent trop. Deux comptes, zéro filtre.</p>
-    <img class="x-banner reveal" src="assets/banniere.jpg" alt="Bannière du compte X Rouen Supporters Club" width="600" height="200" loading="lazy">
   </div>
 </div>
 
