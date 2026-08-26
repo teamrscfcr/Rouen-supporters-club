@@ -6,7 +6,17 @@
   <description>Actus vues des tribunes sur le FC Rouen 1899, par les Rouen Supporters Club — page fan non-officielle.</description>
   <language>fr-fr</language>
   <atom:link href="https://rouen-supporters-club.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Tue, 25 Aug 2026 12:00:00 +0200</lastBuildDate>
+  <lastBuildDate>Wed, 26 Aug 2026 12:00:00 +0200</lastBuildDate>
+
+  <item>
+    <title>Malik Tchokounté est devenu papa</title>
+    <link>https://rouen-supporters-club.vercel.app/actus.html</link>
+    <guid isPermaLink="false">drs-2026-08-26-tchokounte-papa</guid>
+    <pubDate>Wed, 26 Aug 2026 12:00:00 +0200</pubDate>
+    <category>Groupe</category>
+    <description>La famille du FC Rouen s'agrandit ! Le club a adressé toutes ses félicitations à Malik Tchokounté, devenu papa d'un petit garçon. Le FC Rouen souhaite tout le bonheur du monde à Malik et à sa famille pour cette magnifique nouvelle.</description>
+    <source url="https://x.com/fcr1899">fcr1899 sur X</source>
+  </item>
 
   <item>
     <title>Woobens Pacius, c'est officiel : numéro 28</title>
