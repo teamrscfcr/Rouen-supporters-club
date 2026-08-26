@@ -305,14 +305,16 @@
   .manifesto-inner{position:relative; z-index:2;}
   .manifesto h2{font-size:clamp(30px,6vw,64px); max-width:22ch; margin:0 auto; line-height:1.02;}
   .manifesto p.hand{font-size:clamp(22px,3vw,32px); margin-top:22px; color:var(--on-accent);}
+  .manifesto-ctas{display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top:32px;}
   .manifesto .cta{
-    display:inline-block; margin-top:32px; padding:16px 34px;
+    display:inline-block; padding:16px 34px;
     background:var(--on-accent); color:var(--red);
     font-family:'Anton'; font-size:15px; letter-spacing:0.06em;
     text-transform:uppercase; border:2px solid var(--black);
     transition:transform .15s;
   }
   .manifesto .cta:hover{transform:scale(1.05) rotate(-1deg);}
+  .manifesto .cta.secondary{background:transparent; color:var(--on-accent); border-color:var(--on-accent);}
 
   /* ---------- ANIMATIONS ---------- */
   @media (prefers-reduced-motion: no-preference){
@@ -590,7 +592,10 @@
   <div class="manifesto-inner reveal">
     <h2>Pas un collectif.<br>Juste des fans qui suivent tout.</h2>
     <p class="hand">On rate rien, on vous tient au jus.</p>
-    <a class="cta" href="https://x.com/DiablesRouges_">Suivre @DiablesRouges_ ↗</a>
+    <div class="manifesto-ctas">
+      <a class="cta" href="https://x.com/DiablesRouges_">Suivre @DiablesRouges_ ↗</a>
+      <a class="cta secondary" href="https://www.tiktok.com/@rouensupportersclub">Suivre sur TikTok ↗</a>
+    </div>
   </div>
 </div>
 </main>

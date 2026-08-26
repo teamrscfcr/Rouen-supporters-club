@@ -148,14 +148,16 @@
   .manifesto-inner{position:relative; z-index:2; max-width:640px; margin:0 auto;}
   .manifesto h2{font-size:clamp(26px,4.6vw,46px); line-height:1.1;}
   .manifesto p.hand{font-size:clamp(20px,2.6vw,28px); margin-top:18px; color:var(--on-accent);}
+  .manifesto-ctas{display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top:28px;}
   .manifesto .cta{
-    display:inline-block; margin-top:28px; padding:15px 32px;
+    display:inline-block; padding:15px 32px;
     background:var(--on-accent); color:var(--red);
     font-family:'Anton'; font-size:14px; letter-spacing:0.06em;
     text-transform:uppercase; border:2px solid var(--black);
     transition:transform .15s, background .15s;
   }
   .manifesto .cta:hover{transform:translateY(-2px);}
+  .manifesto .cta.secondary{background:transparent; color:var(--on-accent); border-color:var(--on-accent);}
 
   /* ---------- ANIMATIONS (sobres) ---------- */
   @media (prefers-reduced-motion: no-preference){
@@ -231,8 +233,8 @@
 
 <div class="stats-strip">
   <div class="stat-cell"><div class="num">10/07/1899</div><div class="lbl">Fondation officielle</div></div>
-  <div class="stat-cell"><div class="num">14 saisons</div><div class="lbl">En Division 1</div></div>
-  <div class="stat-cell"><div class="num">3</div><div class="lbl">Dépôts de bilan</div></div>
+  <div class="stat-cell"><div class="num">19 saisons</div><div class="lbl">En Division 1</div></div>
+  <div class="stat-cell"><div class="num">36 saisons</div><div class="lbl">En Division 2</div></div>
   <div class="stat-cell"><div class="num">Ligue 3</div><div class="lbl">Division actuelle</div></div>
 </div>
 
@@ -366,7 +368,10 @@
   <div class="manifesto-inner reveal">
     <h2>127 ans d'histoire.<br>On n'en rate pas une ligne.</h2>
     <p class="hand">Et la saison prochaine, on sera encore là pour la raconter.</p>
-    <a class="cta" href="https://x.com/DiablesRouges_">Suivre @DiablesRouges_ ↗</a>
+    <div class="manifesto-ctas">
+      <a class="cta" href="https://x.com/DiablesRouges_">Suivre @DiablesRouges_ ↗</a>
+      <a class="cta secondary" href="https://www.tiktok.com/@rouensupportersclub">Suivre sur TikTok ↗</a>
+    </div>
   </div>
 </div>
 </main>
