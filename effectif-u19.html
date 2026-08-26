@@ -5,23 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>Effectif — Rouen Supporters Club</title>
-<meta name="description" content="L'effectif du FC Rouen 1899 poste par poste — gardiens, défenseurs, milieux, attaquants et staff technique.">
+<title>Effectif U19 — Rouen Supporters Club</title>
+<meta name="description" content="L'effectif U19 du FC Rouen 1899, poste par poste — la relève rouennaise.">
 <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
 <link rel="apple-touch-icon" href="assets/logo.jpg">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Rouen Supporters Club">
 <meta property="og:locale" content="fr_FR">
-<meta property="og:title" content="Effectif — Rouen Supporters Club">
-<meta property="og:url" content="https://rouen-supporters-club.vercel.app/effectif.html">
-<meta property="og:description" content="L'effectif du FC Rouen 1899 poste par poste — gardiens, défenseurs, milieux, attaquants et staff technique.">
-<meta property="og:image" content="https://rouen-supporters-club.vercel.app/assets/og-effectif.jpg">
+<meta property="og:title" content="Effectif U19 — Rouen Supporters Club">
+<meta property="og:url" content="https://rouen-supporters-club.vercel.app/effectif-u19.html">
+<meta property="og:description" content="L'effectif U19 du FC Rouen 1899, poste par poste — la relève rouennaise.">
+<meta property="og:image" content="https://rouen-supporters-club.vercel.app/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://rouen-supporters-club.vercel.app/assets/og-effectif.jpg">
-<meta name="twitter:title" content="Effectif — Rouen Supporters Club">
-<meta name="twitter:description" content="L'effectif du FC Rouen 1899 poste par poste — gardiens, défenseurs, milieux, attaquants et staff technique.">
+<meta name="twitter:image" content="https://rouen-supporters-club.vercel.app/og-image.jpg">
+<meta name="twitter:title" content="Effectif U19 — Rouen Supporters Club">
+<meta name="twitter:description" content="L'effectif U19 du FC Rouen 1899, poste par poste — la relève rouennaise.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Caveat:wght@700&family=Archivo:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -80,7 +80,6 @@
     border-left:2px solid var(--gold); padding-left:10px;
   }
   .source-note a{color:var(--gold); border-bottom:1px dotted var(--gold);}
-
   .squad-links{padding:18px 5vw 0; display:flex; flex-wrap:wrap; gap:10px; font-family:'JetBrains Mono'; font-size:12px;}
   .squad-links a{color:var(--red-deep); border-bottom:1px dotted var(--red-deep); font-weight:700;}
 
@@ -129,21 +128,8 @@
   }
   .player:hover .ptap{color:var(--gold);}
   .player.hidden{display:none;}
-  .player.bonus{border-style:dashed;}
   @media(max-width:900px){.squad{grid-template-columns:repeat(3,1fr);}}
   @media(max-width:520px){.squad{grid-template-columns:repeat(2,1fr);}}
-
-  /* ---------- STAFF ---------- */
-  .staff-strip{border-top:1px solid rgba(12,11,10,0.1); background:var(--black-soft); padding:56px 5vw;}
-  .staff-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(150px,1fr)); gap:14px; max-width:1100px; margin:0 auto;}
-  .staff-card{
-    background:var(--paper); border:1px solid rgba(12,11,10,0.1);
-    padding:14px 10px; text-align:center;
-    box-shadow:0 6px 14px rgba(12,11,10,0.05);
-  }
-  .staff-card .role{font-family:'JetBrains Mono'; font-size:9px; letter-spacing:0.08em; color:var(--gold-ink); text-transform:uppercase;}
-  .staff-card .sname{font-size:13px; font-weight:700; margin-top:6px; text-transform:uppercase;}
-  .staff-card .sfirst{font-size:11px; color:var(--paper-dim); margin-top:1px;}
 
   /* ---------- MODAL ---------- */
   .modal-overlay{
@@ -180,7 +166,6 @@
   .modal-stat{border:1px solid rgba(12,11,10,0.12); padding:11px 8px;}
   .modal-stat .lbl{font-family:'JetBrains Mono'; font-size:9px; letter-spacing:0.08em; color:var(--paper-dim); text-transform:uppercase;}
   .modal-stat .val{font-family:'Anton'; font-size:15px; margin-top:5px;}
-  .modal-minutes{margin-top:10px; font-family:'JetBrains Mono'; font-size:11px; color:var(--paper-dim);}
   .modal-flavor{margin-top:18px; font-size:14px; line-height:1.5; color:var(--paper-dim);}
   .modal-source{
     margin-top:18px; font-family:'JetBrains Mono'; font-size:10px; color:var(--paper-dim);
@@ -279,27 +264,27 @@
 
 <main id="main">
 <div class="banner">
-  <div class="banner-bg-text">L'EFFECTIF</div>
+  <div class="banner-bg-text">U19</div>
   <div class="banner-stack">
     <div class="torn-panel">
-      <div class="banner-eyebrow">LIGUE 3 · SAISON 2026-2027</div>
-      <h1>Le groupe au complet, poste par poste.</h1>
+      <div class="banner-eyebrow">U19 NATIONAUX · SAISON 2026-2027</div>
+      <h1>La relève rouennaise.</h1>
     </div>
-    <p class="banner-sub">Gardiens, défenseurs, milieux, attaquants : tout le monde y passe. Clique sur un joueur pour sa fiche — âge, nationalité, stats sur les 3 premières journées.</p>
-    <div class="source-note mono">Noms/numéros/postes : <a href="https://fcr1899.com/equipe/" target="_blank" rel="noopener noreferrer">fcr1899.com/equipe ↗</a> · Âge/nationalité/stats : <a href="https://www.transfermarkt.fr/fc-rouen-1899/leistungsdaten/verein/1564" target="_blank" rel="noopener noreferrer">Transfermarkt ↗</a>.</div>
+    <p class="banner-sub">Le groupe U19 du FC Rouen, poste par poste. Clique sur un joueur pour sa fiche.</p>
+    <div class="source-note mono">Noms/postes/âges/nationalités : <a href="https://www.transfermarkt.fr/fc-rouen-u19/kader/verein/16035" target="_blank" rel="noopener noreferrer">Transfermarkt ↗</a>.</div>
   </div>
 </div>
 
 <div class="squad-links">
-  <a href="effectif-u19.html">Voir l'effectif U19 →</a>
+  <a href="effectif.html">← Effectif professionnel</a>
 </div>
 
 <div class="tabs">
-  <button class="tab-btn active" data-tab="tout">Tout <span class="count mono">(23)</span></button>
+  <button class="tab-btn active" data-tab="tout">Tout <span class="count mono">(24)</span></button>
   <button class="tab-btn" data-tab="gardiens">Gardiens <span class="count mono">(3)</span></button>
   <button class="tab-btn" data-tab="defenseurs">Défenseurs <span class="count mono">(7)</span></button>
-  <button class="tab-btn" data-tab="milieux">Milieux <span class="count mono">(6)</span></button>
-  <button class="tab-btn" data-tab="attaquants">Attaquants <span class="count mono">(7)</span></button>
+  <button class="tab-btn" data-tab="milieux">Milieux <span class="count mono">(8)</span></button>
+  <button class="tab-btn" data-tab="attaquants">Attaquants <span class="count mono">(6)</span></button>
 </div>
 
 <section>
@@ -311,9 +296,9 @@
       <div class="count mono">3</div>
     </div>
     <div class="squad">
-      <div class="player" data-pos="gardiens" data-poste="Gardien" data-num="30" data-name="Desprez" data-first="Didier" data-age="27 ans" data-nat="France" data-mj="Non utilisé cette saison" data-buts="—" data-min="—"><div class="num">30</div><div class="pname">Desprez</div><div class="pfirst">Didier</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="gardiens" data-poste="Gardien" data-num="1" data-name="Maraval" data-first="Axel" data-age="32 ans" data-nat="France" data-mj="3 matchs" data-buts="0" data-min="270 min jouées"><div class="num">1</div><div class="pname">Maraval</div><div class="pfirst">Axel</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="gardiens" data-poste="Gardien" data-num="16" data-name="Sanglier" data-first="Thomas" data-age="22 ans" data-nat="France" data-mj="Non utilisé cette saison" data-buts="—" data-min="—"><div class="num">16</div><div class="pname">Sanglier</div><div class="pfirst">Thomas</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="gardiens" data-poste="Gardien" data-num="—" data-name="Gicquel" data-first="Mathyss" data-age="18 ans" data-nat="France"><div class="num">—</div><div class="pname">Gicquel</div><div class="pfirst">Mathyss</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="gardiens" data-poste="Gardien" data-num="—" data-name="Mansaray" data-first="Mory" data-age="18 ans" data-nat="France"><div class="num">—</div><div class="pname">Mansaray</div><div class="pfirst">Mory</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="gardiens" data-poste="Gardien" data-num="—" data-name="Magalhães Teixeira" data-first="Joakim" data-age="17 ans" data-nat="France"><div class="num">—</div><div class="pname">Magalhães Teixeira</div><div class="pfirst">Joakim</div><div class="ptap">FICHE →</div></div>
     </div>
   </div>
 
@@ -324,13 +309,13 @@
       <div class="count mono">7</div>
     </div>
     <div class="squad">
-      <div class="player" data-pos="defenseurs" data-poste="Défenseur" data-num="25" data-name="Diaby" data-first="Salim" data-age="25 ans" data-nat="France / Sénégal" data-mj="3 matchs" data-buts="0" data-min="62 min jouées"><div class="num">25</div><div class="pname">Diaby</div><div class="pfirst">Salim</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="defenseurs" data-poste="Défenseur" data-num="15" data-name="Lamgahez" data-first="Zakariy" data-age="23 ans" data-nat="France / Maroc" data-mj="3 matchs" data-buts="0" data-min="270 min jouées"><div class="num">15</div><div class="pname">Lamgahez</div><div class="pfirst">Zakariy</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="defenseurs" data-poste="Défenseur" data-num="5" data-name="Gaspari" data-first="Johdy" data-age="29 ans" data-nat="Angola / France" data-mj="3 matchs" data-buts="0" data-min="243 min jouées"><div class="num">5</div><div class="pname">Gaspari</div><div class="pfirst">Johdy</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="defenseurs" data-poste="Défenseur" data-num="3" data-name="Borne" data-first="Melvin" data-age="21 ans" data-nat="France / Martinique" data-mj="1 match" data-buts="0" data-min="90 min jouées"><div class="num">3</div><div class="pname">Borne</div><div class="pfirst">Melvin</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="defenseurs" data-poste="Défenseur" data-num="18" data-name="Bassin" data-first="Clément" data-age="31 ans" data-nat="France" data-mj="3 matchs" data-buts="0" data-min="270 min jouées"><div class="num">18</div><div class="pname">Bassin</div><div class="pfirst">Clément</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="defenseurs" data-poste="Défenseur" data-num="22" data-name="Mendy" data-first="Formose" data-age="32 ans" data-nat="France / Sénégal" data-mj="2 matchs" data-buts="0" data-min="180 min jouées"><div class="num">22</div><div class="pname">Mendy</div><div class="pfirst">Formose</div><div class="ptap">FICHE →</div></div>
-      <div class="player bonus" data-pos="defenseurs" data-poste="Défenseur" data-num="—" data-name="Frebourg" data-first="Enzo" data-age="Non communiqué" data-nat="Non communiquée" data-mj="Non utilisé cette saison" data-buts="—" data-min="—"><div class="num">—</div><div class="pname">Frebourg</div><div class="pfirst">Enzo</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="defenseurs" data-poste="Défenseur" data-num="—" data-name="Ribeiro Rodrigues" data-first="Tomas" data-age="18 ans" data-nat="France"><div class="num">—</div><div class="pname">Ribeiro Rodrigues</div><div class="pfirst">Tomas</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="defenseurs" data-poste="Défenseur" data-num="—" data-name="Dumesnil" data-first="Swann" data-age="18 ans" data-nat="France"><div class="num">—</div><div class="pname">Dumesnil</div><div class="pfirst">Swann</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="defenseurs" data-poste="Défenseur" data-num="—" data-name="Duthil" data-first="Simon" data-age="18 ans" data-nat="France"><div class="num">—</div><div class="pname">Duthil</div><div class="pfirst">Simon</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="defenseurs" data-poste="Défenseur" data-num="—" data-name="Benard" data-first="Lilian" data-age="18 ans" data-nat="France"><div class="num">—</div><div class="pname">Benard</div><div class="pfirst">Lilian</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="defenseurs" data-poste="Défenseur" data-num="—" data-name="Amadi" data-first="Nelson" data-age="18 ans" data-nat="Centrafrique"><div class="num">—</div><div class="pname">Amadi</div><div class="pfirst">Nelson</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="defenseurs" data-poste="Défenseur" data-num="—" data-name="Agoua" data-first="Raphaël" data-age="17 ans" data-nat="France"><div class="num">—</div><div class="pname">Agoua</div><div class="pfirst">Raphaël</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="defenseurs" data-poste="Défenseur" data-num="—" data-name="Sino" data-first="Marcelin" data-age="18 ans" data-nat="France / Cameroun"><div class="num">—</div><div class="pname">Sino</div><div class="pfirst">Marcelin</div><div class="ptap">FICHE →</div></div>
     </div>
   </div>
 
@@ -338,15 +323,17 @@
     <div class="pos-head">
       <h2>Milieux<span class="underline"></span></h2>
       <div class="line"></div>
-      <div class="count mono">6</div>
+      <div class="count mono">8</div>
     </div>
     <div class="squad">
-      <div class="player" data-pos="milieux" data-poste="Milieu" data-num="26" data-name="Gakpa" data-first="Marvin" data-age="32 ans" data-nat="France / Algérie" data-mj="3 matchs" data-buts="0" data-min="255 min jouées"><div class="num">26</div><div class="pname">Gakpa</div><div class="pfirst">Marvin</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="milieux" data-poste="Milieu" data-num="17" data-name="Samoura" data-first="Ibrahima" data-age="21 ans" data-nat="France / Sénégal" data-mj="2 matchs" data-buts="0" data-min="71 min jouées"><div class="num">17</div><div class="pname">Samoura</div><div class="pfirst">Ibrahima</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="milieux" data-poste="Milieu" data-num="13" data-name="Camara" data-first="Bakari" data-age="32 ans" data-nat="Mauritanie / France" data-mj="2 matchs" data-buts="0" data-min="180 min jouées"><div class="num">13</div><div class="pname">Camara</div><div class="pfirst">Bakari</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="milieux" data-poste="Milieu" data-num="11" data-name="Sommer" data-first="Noé" data-age="25 ans" data-nat="France" data-mj="3 matchs" data-buts="0" data-min="258 min jouées"><div class="num">11</div><div class="pname">Sommer</div><div class="pfirst">Noé</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="milieux" data-poste="Milieu" data-num="12" data-name="Touré" data-first="Amara" data-age="21 ans" data-nat="Côte d'Ivoire" data-mj="Non communiqué" data-buts="—" data-min="—"><div class="num">12</div><div class="pname">Touré</div><div class="pfirst">Amara</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="milieux" data-poste="Milieu" data-num="8" data-name="Guiry Egny" data-first="El Hadji" data-age="24 ans" data-nat="France / Côte d'Ivoire" data-mj="1 match" data-buts="0" data-min="12 min jouées"><div class="num">8</div><div class="pname">Guiry Egny</div><div class="pfirst">El Hadji</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="milieux" data-poste="Milieu" data-num="—" data-name="Cardoso Martins" data-first="Quevin" data-age="Non communiqué" data-nat="France"><div class="num">—</div><div class="pname">Cardoso Martins</div><div class="pfirst">Quevin</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="milieux" data-poste="Milieu" data-num="—" data-name="Kaba" data-first="Mamadou" data-age="Non communiqué" data-nat="France"><div class="num">—</div><div class="pname">Kaba</div><div class="pfirst">Mamadou</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="milieux" data-poste="Milieu" data-num="—" data-name="Jahed" data-first="Zakaria" data-age="17 ans" data-nat="France"><div class="num">—</div><div class="pname">Jahed</div><div class="pfirst">Zakaria</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="milieux" data-poste="Milieu" data-num="—" data-name="Dani" data-first="Cheikh Hosni" data-age="17 ans" data-nat="France"><div class="num">—</div><div class="pname">Dani</div><div class="pfirst">Cheikh Hosni</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="milieux" data-poste="Milieu" data-num="—" data-name="Amiche" data-first="Adnane" data-age="18 ans" data-nat="France"><div class="num">—</div><div class="pname">Amiche</div><div class="pfirst">Adnane</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="milieux" data-poste="Milieu" data-num="—" data-name="Tozlu" data-first="Kerem" data-age="18 ans" data-nat="France"><div class="num">—</div><div class="pname">Tozlu</div><div class="pfirst">Kerem</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="milieux" data-poste="Milieu" data-num="—" data-name="Liberge" data-first="Arthur" data-age="17 ans" data-nat="France"><div class="num">—</div><div class="pname">Liberge</div><div class="pfirst">Arthur</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="milieux" data-poste="Milieu" data-num="—" data-name="Nahimana" data-first="Hilaire" data-age="18 ans" data-nat="France"><div class="num">—</div><div class="pname">Nahimana</div><div class="pfirst">Hilaire</div><div class="ptap">FICHE →</div></div>
     </div>
   </div>
 
@@ -354,40 +341,19 @@
     <div class="pos-head">
       <h2>Attaquants<span class="underline"></span></h2>
       <div class="line"></div>
-      <div class="count mono">7</div>
+      <div class="count mono">6</div>
     </div>
     <div class="squad">
-      <div class="player" data-pos="attaquants" data-poste="Attaquant" data-num="29" data-name="Viana" data-first="Joel" data-age="23 ans" data-nat="France" data-mj="2 matchs" data-buts="0" data-min="2 min jouées"><div class="num">29</div><div class="pname">Viana</div><div class="pfirst">Joel</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="attaquants" data-poste="Attaquant" data-num="21" data-name="Traoré" data-first="Sory" data-age="21 ans" data-nat="Guinée" data-mj="3 matchs" data-buts="2" data-min="52 min jouées"><div class="num">21</div><div class="pname">Traoré</div><div class="pfirst">Sory</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="attaquants" data-poste="Attaquant" data-num="19" data-name="Tramoni" data-first="Lisandru" data-age="23 ans" data-nat="France / Italie" data-mj="3 matchs" data-buts="1" data-min="223 min jouées"><div class="num">19</div><div class="pname">Tramoni</div><div class="pfirst">Lisandru</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="attaquants" data-poste="Attaquant" data-num="10" data-name="Karamoko" data-first="Issiaka" data-age="25 ans" data-nat="France / Côte d'Ivoire" data-mj="3 matchs" data-buts="0" data-min="169 min jouées"><div class="num">10</div><div class="pname">Karamoko</div><div class="pfirst">Issiaka</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="attaquants" data-poste="Attaquant" data-num="9" data-name="Tchokounté" data-first="Malik" data-age="37 ans" data-nat="France / Cameroun" data-mj="3 matchs" data-buts="2" data-min="270 min jouées"><div class="num">9</div><div class="pname">Tchokounté</div><div class="pfirst">Malik</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="attaquants" data-poste="Attaquant" data-num="7" data-name="Fuss" data-first="Valentin" data-age="26 ans" data-nat="France" data-mj="2 matchs" data-buts="0" data-min="96 min jouées"><div class="num">7</div><div class="pname">Fuss</div><div class="pfirst">Valentin</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="attaquants" data-poste="Attaquant" data-num="28" data-name="Pacius" data-first="Woobens" data-age="25 ans" data-nat="Haïti / Canada" data-mj="Non utilisé cette saison" data-buts="—" data-min="—"><div class="num">28</div><div class="pname">Pacius</div><div class="pfirst">Woobens</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="attaquants" data-poste="Attaquant" data-num="—" data-name="Aboudh" data-first="Jules" data-age="18 ans" data-nat="France"><div class="num">—</div><div class="pname">Aboudh</div><div class="pfirst">Jules</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="attaquants" data-poste="Attaquant" data-num="—" data-name="Magassouba" data-first="Fodé" data-age="18 ans" data-nat="France"><div class="num">—</div><div class="pname">Magassouba</div><div class="pfirst">Fodé</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="attaquants" data-poste="Attaquant" data-num="—" data-name="Couturier" data-first="Enzo" data-age="18 ans" data-nat="France"><div class="num">—</div><div class="pname">Couturier</div><div class="pfirst">Enzo</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="attaquants" data-poste="Attaquant" data-num="—" data-name="N'Zi" data-first="Marc-Ylann" data-age="Non communiqué" data-nat="France"><div class="num">—</div><div class="pname">N'Zi</div><div class="pfirst">Marc-Ylann</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="attaquants" data-poste="Attaquant" data-num="—" data-name="Puatany Nkodia" data-first="Uriel" data-age="17 ans" data-nat="RD Congo"><div class="num">—</div><div class="pname">Puatany Nkodia</div><div class="pfirst">Uriel</div><div class="ptap">FICHE →</div></div>
+      <div class="player" data-pos="attaquants" data-poste="Attaquant" data-num="—" data-name="Attrouche" data-first="Yanis" data-age="17 ans" data-nat="France"><div class="num">—</div><div class="pname">Attrouche</div><div class="pfirst">Yanis</div><div class="ptap">FICHE →</div></div>
     </div>
   </div>
 
 </section>
-
-<div class="staff-strip">
-  <div class="pos-head reveal" style="max-width:1100px; margin:0 auto 22px;">
-    <h2>Staff technique<span class="underline"></span></h2>
-    <div class="line"></div>
-  </div>
-  <div class="staff-grid reveal">
-    <div class="staff-card"><div class="role mono">Entr. principal</div><div class="sname">Brouard</div><div class="sfirst">Régis</div></div>
-    <div class="staff-card"><div class="role mono">Entr. adjoint</div><div class="sname">Braud</div><div class="sfirst">Pascal</div></div>
-    <div class="staff-card"><div class="role mono">Entr. gardiens</div><div class="sname">Lacaille</div><div class="sfirst">Mathieu</div></div>
-    <div class="staff-card"><div class="role mono">Prép. athlétique</div><div class="sname">Catherine</div><div class="sfirst">Kevin</div></div>
-    <div class="staff-card"><div class="role mono">Prép. athlétique</div><div class="sname">David</div><div class="sfirst">Maxime</div></div>
-    <div class="staff-card"><div class="role mono">Analyste vidéo</div><div class="sname">Desvallées</div><div class="sfirst">Félix</div></div>
-    <div class="staff-card"><div class="role mono">Analyste data</div><div class="sname">Lesueur</div><div class="sfirst">Louis</div></div>
-    <div class="staff-card"><div class="role mono">Cellule médicale</div><div class="sname">Hedouin</div><div class="sfirst">Matthieu</div></div>
-    <div class="staff-card"><div class="role mono">Kiné</div><div class="sname">Baldo</div><div class="sfirst">Yoann</div></div>
-    <div class="staff-card"><div class="role mono">Intendant</div><div class="sname">Spinos</div><div class="sfirst">Thylan</div></div>
-    <div class="staff-card"><div class="role mono">Intendant</div><div class="sname">Laiguillon</div><div class="sfirst">Léo Paul</div></div>
-  </div>
-</div>
 </main>
 
 <footer>
@@ -405,19 +371,15 @@
   <div class="modal-card">
     <div class="tape"></div>
     <button class="modal-close" id="modal-close" aria-label="Fermer">✕</button>
-    <div class="modal-num mono" id="modal-num"></div>
     <h3 id="modal-name"></h3>
     <div class="modal-first" id="modal-first"></div>
     <div class="modal-poste" id="modal-poste"></div>
     <div class="modal-stats">
       <div class="modal-stat"><div class="lbl mono">Âge</div><div class="val" id="modal-age"></div></div>
       <div class="modal-stat"><div class="lbl mono">Nationalité</div><div class="val" id="modal-nat"></div></div>
-      <div class="modal-stat"><div class="lbl mono">Matchs (saison)</div><div class="val" id="modal-mj"></div></div>
-      <div class="modal-stat"><div class="lbl mono">Buts (saison)</div><div class="val" id="modal-buts"></div></div>
     </div>
-    <div class="modal-minutes mono" id="modal-min"></div>
     <p class="modal-flavor hand" id="modal-flavor"></p>
-    <div class="modal-source mono">Numéro/poste : <a href="https://fcr1899.com/equipe/" target="_blank" rel="noopener noreferrer">fcr1899.com ↗</a> · Âge/nat./stats : <a href="https://www.transfermarkt.fr/fc-rouen-1899/leistungsdaten/verein/1564" target="_blank" rel="noopener noreferrer">Transfermarkt ↗</a></div>
+    <div class="modal-source mono">Source : <a href="https://www.transfermarkt.fr/fc-rouen-u19/kader/verein/16035" target="_blank" rel="noopener noreferrer">Transfermarkt ↗</a></div>
   </div>
 </div>
 
@@ -471,21 +433,17 @@
   });
 
   const overlay = document.getElementById('modal-overlay');
-  const mNum = document.getElementById('modal-num');
   const mName = document.getElementById('modal-name');
   const mFirst = document.getElementById('modal-first');
   const mPoste = document.getElementById('modal-poste');
   const mAge = document.getElementById('modal-age');
   const mNat = document.getElementById('modal-nat');
-  const mMj = document.getElementById('modal-mj');
-  const mButs = document.getElementById('modal-buts');
-  const mMin = document.getElementById('modal-min');
   const mFlavor = document.getElementById('modal-flavor');
   const flavorByPoste = {
-    'Gardien': 'Le dernier rempart. On souffle avec lui à chaque tir cadré.',
-    'Défenseur': "Le sale boulot, celui qu'on ne remercie jamais assez.",
-    'Milieu': 'Il fait tourner le ballon, nous on fait tourner les chants.',
-    'Attaquant': 'Un but de lui, et Diochon explose.',
+    'Gardien': 'Le dernier rempart de la relève.',
+    'Défenseur': 'Il apprend le sale boulot, celui qu\'on ne remercie jamais assez.',
+    'Milieu': 'Il fait tourner le ballon, en attendant de faire tourner les têtes.',
+    'Attaquant': 'La génération qui pousse derrière.',
   };
 
   let modalLastFocused = null;
@@ -500,15 +458,11 @@
 
   function openModal(card){
     modalLastFocused = document.activeElement;
-    mNum.textContent = card.dataset.num === '—' ? '—' : ('#' + card.dataset.num);
     mName.textContent = card.dataset.name;
     mFirst.textContent = card.dataset.first;
     mPoste.textContent = card.dataset.poste;
     mAge.textContent = card.dataset.age;
     mNat.textContent = card.dataset.nat;
-    mMj.textContent = card.dataset.mj;
-    mButs.textContent = card.dataset.buts;
-    mMin.textContent = card.dataset.min !== '—' ? card.dataset.min : '';
     mFlavor.textContent = flavorByPoste[card.dataset.poste] || '';
     overlay.classList.add('open');
     document.body.classList.add('modal-open');
