@@ -64,7 +64,20 @@
   .source-note a{color:var(--gold); border-bottom:1px dotted var(--gold);}
   .lightbox-cap a{color:#f5f1ea; border-bottom:1px dotted #f5f1ea;}
 
-  section{padding:56px 5vw 90px;}
+  /* ---------- FILTERS ---------- */
+  .filters{
+    display:flex; flex-wrap:wrap; gap:10px; padding:34px 5vw 0; position:relative; z-index:2;
+  }
+  .filter-btn{
+    font-family:'JetBrains Mono'; font-size:12px; font-weight:700; letter-spacing:0.06em;
+    text-transform:uppercase; padding:9px 16px; background:var(--black-soft);
+    border:2px solid var(--paper-dim); color:var(--paper-dim); cursor:pointer;
+    transition:all .15s;
+  }
+  .filter-btn:hover{border-color:var(--black); color:var(--black);}
+  .filter-btn.active{background:var(--red); border-color:var(--red); color:var(--on-accent); transform:translateY(-2px);}
+
+  section{padding:34px 5vw 90px;}
 
   /* ---------- GALLERY ---------- */
   .gallery{
@@ -81,6 +94,7 @@
   .photo-tile:hover{transform:translateY(-3px); box-shadow:0 14px 26px rgba(12,11,10,0.16);}
   .photo-tile:focus-visible{outline:2px solid var(--gold-ink); outline-offset:3px;}
   .photo-tile img{width:100%; height:100%; object-fit:cover; display:block;}
+  .photo-tile.hidden{display:none;}
   .photo-tile .cap{
     position:absolute; left:0; right:0; bottom:0; padding:10px 12px;
     background:linear-gradient(to top, rgba(12,11,10,0.78), transparent);
@@ -184,6 +198,12 @@
   </div>
 </div>
 
+<div class="filters">
+  <button class="filter-btn active" data-filter="all">Tous</button>
+  <button class="filter-btn" data-filter="pro">Équipe pro</button>
+  <button class="filter-btn" data-filter="u19">U19</button>
+</div>
+
 <section>
   <div class="gallery" id="gallery"></div>
 </section>
@@ -232,27 +252,36 @@
      --------------------------------------------------------------- */
   const PHOTOGRAPHER_LINK = '<a href="https://www.instagram.com/rodolphe_photographe76/" target="_blank" rel="noopener noreferrer">Rodolphe_Photographe76 ↗</a>';
   const photos = [
-    {file:'photos/2AD73B14-33EA-49EF-9B57-712779C4A43B.jpg', caption:'Karamoko et Tchokounté fêtent le but ensemble, FCR - QRM (J3).'},
-    {file:'photos/B15285B4-43B2-4191-836A-41F02B61DCDD.jpg', caption:'Parade de Maraval dans les six mètres, devant un Diochon plein.'},
-    {file:'photos/8E9CE154-509C-44B4-9938-E42BC52C81DA.jpg', caption:"Mêlée collective avant le coup d'envoi, sous les arbres d'automne."},
-    {file:'photos/951B71EE-7A16-401F-A390-F8885D611A3E.jpg', caption:"Bassin (18), le brassard au bras, indique la position d'un coéquipier."},
-    {file:'photos/C7BAD464-C441-4648-86FD-7B54F0671E70.jpg', caption:'Frappe pleine puissance de Bassin, un des temps forts de la soirée.'},
-    {file:'photos/FD9EC0D6-B578-4E01-8C45-1E74DE36D0D4.jpg', caption:"Tramoni (19) et Côme-Ruiz (QRM) se disputent le ballon."},
-    {file:'photos/7BDD4694-1511-42FF-8560-E849E4D4FB16.jpg', caption:'Dos au but, il protège le ballon face à la défense de QRM.'},
-    {file:'photos/2376B4A1-3E37-4AF8-A935-AA6D1A7B09AB.jpg', caption:"Bassin ne lâche pas d'un pouce son adversaire de QRM."},
-    {file:'photos/6F56AD6F-D84C-4D9A-8B6E-064418B2B26A.jpg', caption:'Le n°27 dégage le ballon devant la défense de QRM.'},
-    {file:'photos/2530C22A-ECD6-46BF-9E5C-321CC3258EDA.jpg', caption:'Gakpa, Lamgahez et Camara se replacent sur un corner.'},
-    {file:'photos/2BEE5475-88CB-4084-BC63-8657BF89D450.jpg', caption:'Mendy (22), dos tourné, attend la relance.'},
-    {file:'photos/E487171C-D1A0-461D-A8F9-0A48D891E5B5.jpg', caption:'Mains sur les hanches, un joueur observe le jeu.'},
-    {file:'photos/62F0AE66-66F8-40ED-B1E6-2549AB43EF76.jpg', caption:'Sous les yeux de Diochon, retour vers le rond central.'},
-    {file:'photos/2B7066DC-88E7-4B35-B9BD-D563CFAA1E91.jpg', caption:'Sous le maillot alternatif, un joueur prépare sa frappe.'},
-    {file:'photos/738BCF68-E0BC-4AE9-A7CB-3BAD21A943D2.jpg', caption:'Portrait pris entre deux temps forts du match.'},
-    {file:'photos/6A79346F-17C2-4297-89AD-794899A40018.jpg', caption:'Bassin hausse le ton depuis le camp adverse.'},
-    {file:'photos/5DB38FFD-4FD3-43B6-A6D7-22341AFE0377.jpg', caption:"Tramoni (19) pendant l'échauffement, avant le coup d'envoi."},
-    {file:'photos/CD76EE04-3FF0-431E-9C33-5B09A2A02662.jpg', caption:'Frappe de Bassin, ballon envoyé vers le but.'},
-    {file:'photos/1465EABD-D34E-408E-8AE5-61A316B1C132.jpg', caption:"Rituel d'avant-match entre les deux gardiens remplaçants du FCR."},
-    {file:'photos/79BF727D-92AD-44A6-BD12-684B719E6D7C.jpg', caption:"Jeune gardien concentré avant l'échauffement."},
-    {file:'photos/EAEDCC7B-9BC4-482B-8903-7F4207BCC1CD.jpg', caption:"Mathieu Lacaille, l'entraîneur des gardiens, ballon sous le bras à l'entraînement."},
+    {cat:'pro', file:'photos/2AD73B14-33EA-49EF-9B57-712779C4A43B.jpg', caption:'Karamoko et Tchokounté fêtent le but ensemble, FCR - QRM (J3).'},
+    {cat:'pro', file:'photos/B15285B4-43B2-4191-836A-41F02B61DCDD.jpg', caption:'Parade de Maraval dans les six mètres, devant un Diochon plein.'},
+    {cat:'pro', file:'photos/8E9CE154-509C-44B4-9938-E42BC52C81DA.jpg', caption:"Mêlée collective avant le coup d'envoi, sous les arbres d'automne."},
+    {cat:'pro', file:'photos/951B71EE-7A16-401F-A390-F8885D611A3E.jpg', caption:"Bassin (18), le brassard au bras, indique la position d'un coéquipier."},
+    {cat:'pro', file:'photos/C7BAD464-C441-4648-86FD-7B54F0671E70.jpg', caption:'Frappe pleine puissance de Bassin, un des temps forts de la soirée.'},
+    {cat:'pro', file:'photos/FD9EC0D6-B578-4E01-8C45-1E74DE36D0D4.jpg', caption:"Tramoni (19) et Côme-Ruiz (QRM) se disputent le ballon."},
+    {cat:'pro', file:'photos/7BDD4694-1511-42FF-8560-E849E4D4FB16.jpg', caption:'Dos au but, il protège le ballon face à la défense de QRM.'},
+    {cat:'pro', file:'photos/2376B4A1-3E37-4AF8-A935-AA6D1A7B09AB.jpg', caption:"Bassin ne lâche pas d'un pouce son adversaire de QRM."},
+    {cat:'pro', file:'photos/6F56AD6F-D84C-4D9A-8B6E-064418B2B26A.jpg', caption:'Le n°27 dégage le ballon devant la défense de QRM.'},
+    {cat:'pro', file:'photos/2530C22A-ECD6-46BF-9E5C-321CC3258EDA.jpg', caption:'Gakpa, Lamgahez et Camara se replacent sur un corner.'},
+    {cat:'pro', file:'photos/2BEE5475-88CB-4084-BC63-8657BF89D450.jpg', caption:'Mendy (22), dos tourné, attend la relance.'},
+    {cat:'pro', file:'photos/E487171C-D1A0-461D-A8F9-0A48D891E5B5.jpg', caption:'Mains sur les hanches, un joueur observe le jeu.'},
+    {cat:'pro', file:'photos/62F0AE66-66F8-40ED-B1E6-2549AB43EF76.jpg', caption:'Sous les yeux de Diochon, retour vers le rond central.'},
+    {cat:'pro', file:'photos/2B7066DC-88E7-4B35-B9BD-D563CFAA1E91.jpg', caption:'Sous le maillot alternatif, un joueur prépare sa frappe.'},
+    {cat:'pro', file:'photos/738BCF68-E0BC-4AE9-A7CB-3BAD21A943D2.jpg', caption:'Portrait pris entre deux temps forts du match.'},
+    {cat:'pro', file:'photos/6A79346F-17C2-4297-89AD-794899A40018.jpg', caption:'Bassin hausse le ton depuis le camp adverse.'},
+    {cat:'pro', file:'photos/5DB38FFD-4FD3-43B6-A6D7-22341AFE0377.jpg', caption:"Tramoni (19) pendant l'échauffement, avant le coup d'envoi."},
+    {cat:'pro', file:'photos/CD76EE04-3FF0-431E-9C33-5B09A2A02662.jpg', caption:'Frappe de Bassin, ballon envoyé vers le but.'},
+    {cat:'pro', file:'photos/1465EABD-D34E-408E-8AE5-61A316B1C132.jpg', caption:"Rituel d'avant-match entre les deux gardiens remplaçants du FCR."},
+    {cat:'pro', file:'photos/79BF727D-92AD-44A6-BD12-684B719E6D7C.jpg', caption:"Jeune gardien concentré avant l'échauffement."},
+    {cat:'pro', file:'photos/EAEDCC7B-9BC4-482B-8903-7F4207BCC1CD.jpg', caption:"Mathieu Lacaille, l'entraîneur des gardiens, ballon sous le bras à l'entraînement."},
+    {cat:'u19', file:'photos/778779253_1620087729771652_1096351343769490978_n.jpg', caption:"Photo d'équipe des U19 avant le coup d'envoi."},
+    {cat:'u19', file:'photos/775374444_2121011361840511_1524846484458589033_n.jpg', caption:"Le numéro 9 des U19, insigne « U19 FFF » au bras."},
+    {cat:'u19', file:'photos/773799966_1615797229889803_376022926523517343_n.jpg', caption:'Un échange de balle avant le coup de sifflet.'},
+    {cat:'u19', file:'photos/783452734_28232819909682713_1092114216147320098_n.jpg', caption:'Un défenseur des U19 relance proprement.'},
+    {cat:'u19', file:'photos/778834184_2347015496045189_328661999678557335_n.jpg', caption:'Duel serré face à Versailles.'},
+    {cat:'u19', file:'photos/783685706_1732593058072264_8940349822036787690_n.jpg', caption:'Les U19 accrochent un point face à Versailles (0-0).'},
+    {cat:'u19', file:'photos/780067583_1733726262132911_1101386361387601481_n.jpg', caption:'Contrôle aérien devant les tribunes.'},
+    {cat:'u19', file:'photos/782123822_1343060400918258_6328015720879875591_n.jpg', caption:"Le capitaine et son gardien entrent sur le terrain."},
+    {cat:'u19', file:'photos/771843555_28409874021942876_3745095012632640986_n.jpg', caption:'Duel aérien pour disputer le ballon.'},
   ];
 
   const gallery = document.getElementById('gallery');
@@ -270,7 +299,7 @@
       return;
     }
     gallery.innerHTML = photos.map((p,i) => `
-      <div class="photo-tile" data-i="${i}" role="button" tabindex="0" aria-label="${p.caption ? 'Agrandir : ' + p.caption : 'Agrandir la photo'}">
+      <div class="photo-tile" data-i="${i}" data-cat="${p.cat || 'pro'}" role="button" tabindex="0" aria-label="${p.caption ? 'Agrandir : ' + p.caption : 'Agrandir la photo'}">
         <img src="${p.file}" alt="" loading="lazy">
         <div class="cap">${p.caption || ''}</div>
       </div>
@@ -283,6 +312,20 @@
     });
   }
   renderGallery();
+
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  filterButtons.forEach(btn=>{
+    btn.setAttribute('aria-pressed', btn.classList.contains('active') ? 'true' : 'false');
+    btn.addEventListener('click', ()=>{
+      filterButtons.forEach(b=>{ b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
+      btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
+      const f = btn.dataset.filter;
+      gallery.querySelectorAll('.photo-tile').forEach(tile=>{
+        tile.classList.toggle('hidden', f !== 'all' && tile.dataset.cat !== f);
+      });
+    });
+  });
 
   let lightboxLastFocused = null;
   function trapLightboxFocus(e){
