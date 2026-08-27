@@ -80,8 +80,17 @@
     border-left:2px solid var(--gold); padding-left:10px;
   }
   .source-note a{color:var(--gold); border-bottom:1px dotted var(--gold);}
-  .squad-links{padding:18px 5vw 0; display:flex; flex-wrap:wrap; gap:10px; font-family:'JetBrains Mono'; font-size:12px;}
-  .squad-links a{color:var(--red-deep); border-bottom:1px dotted var(--red-deep); font-weight:700;}
+  .squad-tabs{
+    display:flex; flex-wrap:wrap; gap:12px; padding:24px 5vw 0; position:relative; z-index:2;
+  }
+  .squad-tab{
+    font-family:'JetBrains Mono'; font-size:13px; font-weight:700; letter-spacing:0.06em;
+    text-transform:uppercase; padding:12px 22px; background:var(--black-soft);
+    border:2px solid var(--paper-dim); color:var(--paper-dim); display:inline-block;
+    transition:all .15s;
+  }
+  .squad-tab:hover{border-color:var(--black); color:var(--black);}
+  .squad-tab.active{background:var(--red); border-color:var(--red); color:var(--on-accent); transform:translateY(-2px); cursor:default;}
 
   /* ---------- TABS ---------- */
   .tabs{
@@ -275,9 +284,10 @@
   </div>
 </div>
 
-<div class="squad-links">
-  <a href="effectif.html">← Effectif professionnel</a>
-  <a href="effectif-u19.html">Effectif U19 →</a>
+<div class="squad-tabs">
+  <a class="squad-tab" href="effectif.html">Équipe pro</a>
+  <a class="squad-tab" href="effectif-u19.html">Effectif U19</a>
+  <span class="squad-tab active">Effectif réserve</span>
 </div>
 
 <div class="tabs">
