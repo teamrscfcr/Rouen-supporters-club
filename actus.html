@@ -156,6 +156,7 @@
   .modal-tag{font-family:'JetBrains Mono'; font-size:11px; color:var(--red-deep); letter-spacing:0.14em; font-weight:700;}
   .modal-card h3{font-size:clamp(20px,3vw,28px); margin-top:10px; line-height:1.1;}
   .modal-date{font-family:'JetBrains Mono'; font-size:11px; color:var(--paper-dim); margin-top:8px;}
+  .modal-photo{width:calc(100% + 56px); margin:18px -28px 0; display:none;}
   .modal-body{margin-top:18px; font-size:15px; line-height:1.65;}
   .modal-source{
     margin-top:16px; font-family:'JetBrains Mono'; font-size:11px; color:var(--paper-dim);
@@ -282,7 +283,8 @@
 
     <div class="actu-card feature reveal" data-cat="matchday"
       data-full="Le FC Rouen a fait le nécessaire face à Quevilly (QRM) pour ce troisième match de la saison : ouverture du score de Tchokounté sur un centre de Bassin (14e), doublé par une frappe splendide de Tramoni sur passe de Karamoko (34e), et le but du confort signé Traoré sur une passe de Tchokounté (85e). 6 500 spectateurs à Diochon pour cette victoire qui lance idéalement la saison."
-      data-source="https://www.ici.fr/normandie/seine-maritime-76/rouen/ligue-3-le-fc-rouen-bat-logiquement-qrm-3-0-et-lance-idealement-sa-saison-8451240" data-source-name="ici.fr">
+      data-source="https://www.ici.fr/normandie/seine-maritime-76/rouen/ligue-3-le-fc-rouen-bat-logiquement-qrm-3-0-et-lance-idealement-sa-saison-8451240" data-source-name="ici.fr"
+      data-photo="photos/2AD73B14-33EA-49EF-9B57-712779C4A43B.jpg" data-photo-alt="Karamoko et Tchokounté fêtent le but ensemble, FCR - QRM (J3)."
       <div class="tape"></div>
       <div class="tag">MATCHDAY</div>
       <p>3-0. Un seul club rouennais : le FC Rouen !</p>
@@ -492,6 +494,7 @@
     <div class="modal-tag mono" id="modal-tag"></div>
     <h3 id="modal-title"></h3>
     <div class="modal-date mono" id="modal-date"></div>
+    <img class="modal-photo" id="modal-photo" alt="" loading="lazy">
     <div class="modal-body" id="modal-body"></div>
     <div class="modal-source" id="modal-source"></div>
   </div>
@@ -557,6 +560,7 @@
   const modalTag = document.getElementById('modal-tag');
   const modalTitle = document.getElementById('modal-title');
   const modalDate = document.getElementById('modal-date');
+  const modalPhoto = document.getElementById('modal-photo');
   const modalBody = document.getElementById('modal-body');
   const modalSource = document.getElementById('modal-source');
 
@@ -575,6 +579,15 @@
     modalTag.textContent = card.querySelector('.tag').textContent;
     modalTitle.textContent = card.querySelector('p').textContent;
     modalDate.textContent = card.querySelector('.date').textContent;
+    const photo = card.dataset.photo;
+    if(photo){
+      modalPhoto.src = photo;
+      modalPhoto.alt = card.dataset.photoAlt || '';
+      modalPhoto.style.display = 'block';
+    } else {
+      modalPhoto.style.display = 'none';
+      modalPhoto.src = '';
+    }
     modalBody.textContent = card.dataset.full || card.querySelector('p').textContent;
     const src = card.dataset.source, srcName = card.dataset.sourceName;
     modalSource.innerHTML = src ? `Source : <a href="${src}" target="_blank" rel="noopener noreferrer">${srcName} ↗</a>` : '';
