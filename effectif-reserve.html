@@ -97,6 +97,15 @@
   .squad-tab:hover{border-color:var(--black); color:var(--black);}
   .squad-tab.active{background:var(--red); border-color:var(--red); color:var(--on-accent); transform:translateY(-2px); cursor:default;}
 
+  /* ---------- EMPTY STATE ---------- */
+  .empty-state{
+    max-width:620px; margin:40px auto 0; text-align:center; padding:60px 30px;
+    border:1px dashed rgba(12,11,10,0.2); background:var(--black-soft);
+  }
+  .empty-state .icon{font-size:34px; margin-bottom:14px; color:var(--gold-ink);}
+  .empty-state h3{font-size:19px; margin-bottom:10px;}
+  .empty-state p{font-size:14px; line-height:1.6; color:var(--paper-dim);}
+
   /* ---------- TABS ---------- */
   .tabs{
     display:flex; flex-wrap:wrap; gap:10px; padding:18px 5vw 34px; position:relative; z-index:2;
@@ -112,7 +121,7 @@
   .tab-btn .count{opacity:0.7; margin-left:4px;}
 
   /* ---------- SECTIONS ---------- */
-  section{padding:0 5vw 64px;}
+  section{padding:24px 5vw 64px;}
   .pos-group{margin-bottom:46px;}
   .pos-group:last-child{margin-bottom:0;}
   .pos-head{display:flex; align-items:baseline; gap:14px; margin-bottom:22px;}
@@ -284,9 +293,7 @@
       <div class="banner-eyebrow">ÉQUIPE B · SAISON 2026-2027</div>
       <h1>Le groupe élargi</h1>
     </div>
-    <p class="banner-sub">L'effectif de la réserve du FC Rouen, poste par poste. Clique sur un joueur pour sa fiche.</p>
-    <div class="source-note mono">Noms/postes/âges/nationalités : <a href="https://www.transfermarkt.fr/fc-rouen-b/startseite/verein/17205" target="_blank" rel="noopener noreferrer">Transfermarkt ↗</a>.</div>
-    <div class="unofficial-badge">⚠ Effectif non confirmé officiellement par le club, à titre indicatif</div>
+    <p class="banner-sub">L'effectif de la réserve du FC Rouen, poste par poste.</p>
   </div>
 </div>
 
@@ -296,73 +303,12 @@
   <span class="squad-tab active">Effectif réserve</span>
 </div>
 
-<div class="tabs">
-  <button class="tab-btn active" data-tab="tout">Tout <span class="count mono">(17)</span></button>
-  <button class="tab-btn" data-tab="gardiens">Gardiens <span class="count mono">(4)</span></button>
-  <button class="tab-btn" data-tab="defenseurs">Défenseurs <span class="count mono">(3)</span></button>
-  <button class="tab-btn" data-tab="milieux">Milieux <span class="count mono">(7)</span></button>
-  <button class="tab-btn" data-tab="attaquants">Attaquants <span class="count mono">(3)</span></button>
-</div>
-
 <section>
-
-  <div class="pos-group reveal" data-pos="gardiens">
-    <div class="pos-head">
-      <h2>Gardiens<span class="underline"></span></h2>
-      <div class="line"></div>
-      <div class="count mono">4</div>
-    </div>
-    <div class="squad">
-      <div class="player" data-pos="gardiens" data-poste="Gardien" data-num="—" data-name="Lesieur" data-first="Valentino" data-age="23 ans" data-nat="Portugal / France"><div class="num">—</div><div class="pname">Lesieur</div><div class="pfirst">Valentino</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="gardiens" data-poste="Gardien" data-num="—" data-name="Nlandu Osia" data-first="Cedou" data-age="29 ans" data-nat="France"><div class="num">—</div><div class="pname">Nlandu Osia</div><div class="pfirst">Cedou</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="gardiens" data-poste="Gardien" data-num="—" data-name="Louis-Aimé" data-first="Joshua" data-age="25 ans" data-nat="France"><div class="num">—</div><div class="pname">Louis-Aimé</div><div class="pfirst">Joshua</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="gardiens" data-poste="Gardien" data-num="16" data-name="Sanglier" data-first="Thomas" data-age="22 ans" data-nat="France"><div class="num">16</div><div class="pname">Sanglier</div><div class="pfirst">Thomas</div><div class="ptap">FICHE →</div></div>
-    </div>
+  <div class="empty-state reveal">
+    <div class="icon">⚠</div>
+    <h3>Effectif en cours de vérification</h3>
+    <p>La liste tirée de Transfermarkt contenait plusieurs erreurs (joueurs partis toujours listés, poste erroné, effectif incomplet) — on préfère la retirer plutôt que d'afficher des informations fausses. Elle reviendra dès qu'on aura la vraie composition du groupe.</p>
   </div>
-
-  <div class="pos-group reveal" data-pos="defenseurs">
-    <div class="pos-head">
-      <h2>Défenseurs<span class="underline"></span></h2>
-      <div class="line"></div>
-      <div class="count mono">3</div>
-    </div>
-    <div class="squad">
-      <div class="player" data-pos="defenseurs" data-poste="Défenseur" data-num="—" data-name="Frebourg" data-first="Enzo" data-age="21 ans" data-nat="France"><div class="num">—</div><div class="pname">Frebourg</div><div class="pfirst">Enzo</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="defenseurs" data-poste="Défenseur" data-num="—" data-name="Tshiabu" data-first="Joan" data-age="20 ans" data-nat="France / RD Congo"><div class="num">—</div><div class="pname">Tshiabu</div><div class="pfirst">Joan</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="defenseurs" data-poste="Défenseur" data-num="—" data-name="Mbemba" data-first="Stanislas" data-age="22 ans" data-nat="France / Congo"><div class="num">—</div><div class="pname">Mbemba</div><div class="pfirst">Stanislas</div><div class="ptap">FICHE →</div></div>
-    </div>
-  </div>
-
-  <div class="pos-group reveal" data-pos="milieux">
-    <div class="pos-head">
-      <h2>Milieux<span class="underline"></span></h2>
-      <div class="line"></div>
-      <div class="count mono">7</div>
-    </div>
-    <div class="squad">
-      <div class="player" data-pos="milieux" data-poste="Milieu" data-num="—" data-name="Adjakly" data-first="Tom" data-age="23 ans" data-nat="Togo / France"><div class="num">—</div><div class="pname">Adjakly</div><div class="pfirst">Tom</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="milieux" data-poste="Milieu" data-num="—" data-name="Dialuta" data-first="Kikunda" data-age="24 ans" data-nat="France"><div class="num">—</div><div class="pname">Dialuta</div><div class="pfirst">Kikunda</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="milieux" data-poste="Milieu" data-num="—" data-name="Betrom" data-first="Lucas" data-age="21 ans" data-nat="France"><div class="num">—</div><div class="pname">Betrom</div><div class="pfirst">Lucas</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="milieux" data-poste="Milieu" data-num="—" data-name="Hammadi" data-first="Sidi Mohamed" data-age="24 ans" data-nat="France"><div class="num">—</div><div class="pname">Hammadi</div><div class="pfirst">Sidi Mohamed</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="milieux" data-poste="Milieu" data-num="—" data-name="Atsang Beyine" data-first="Steven" data-age="23 ans" data-nat="France"><div class="num">—</div><div class="pname">Atsang Beyine</div><div class="pfirst">Steven</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="milieux" data-poste="Milieu" data-num="—" data-name="Chesneaux" data-first="Antoine" data-age="20 ans" data-nat="France"><div class="num">—</div><div class="pname">Chesneaux</div><div class="pfirst">Antoine</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="milieux" data-poste="Milieu" data-num="—" data-name="Ajgou" data-first="Soufyene" data-age="20 ans" data-nat="France"><div class="num">—</div><div class="pname">Ajgou</div><div class="pfirst">Soufyene</div><div class="ptap">FICHE →</div></div>
-    </div>
-  </div>
-
-  <div class="pos-group reveal" data-pos="attaquants">
-    <div class="pos-head">
-      <h2>Attaquants<span class="underline"></span></h2>
-      <div class="line"></div>
-      <div class="count mono">3</div>
-    </div>
-    <div class="squad">
-      <div class="player" data-pos="attaquants" data-poste="Attaquant" data-num="—" data-name="Ibanez" data-first="Léopold" data-age="21 ans" data-nat="France"><div class="num">—</div><div class="pname">Ibanez</div><div class="pfirst">Léopold</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="attaquants" data-poste="Attaquant" data-num="—" data-name="Menezes" data-first="Jumanuel" data-age="21 ans" data-nat="France / Guinée-Bissau"><div class="num">—</div><div class="pname">Menezes</div><div class="pfirst">Jumanuel</div><div class="ptap">FICHE →</div></div>
-      <div class="player" data-pos="attaquants" data-poste="Attaquant" data-num="—" data-name="Hathat" data-first="Adama" data-age="24 ans" data-nat="France"><div class="num">—</div><div class="pname">Hathat</div><div class="pfirst">Adama</div><div class="ptap">FICHE →</div></div>
-    </div>
-  </div>
-
 </section>
 </main>
 
