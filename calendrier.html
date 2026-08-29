@@ -452,10 +452,10 @@
     return `${wd} ${dd}/${mm}/${yy}`;
   }
 
-  // find the next unplayed fixture (by date) to mark as "next-row"
+  // find the next unplayed fixture (by date, skipping already-scored matches) to mark as "next-row"
   let nextJ = null;
   for(const f of fixtures){
-    if(new Date(f.date+'T00:00:00') >= TODAY){ nextJ = f.j; break; }
+    if(!f.score && new Date(f.date+'T00:00:00') >= TODAY){ nextJ = f.j; break; }
   }
 
   function hasMoments(f){
@@ -467,7 +467,7 @@
     // ce match "extérieur" se joue donc aussi à Diochon.
     const isHome = f.home === RC || (f.j === 19 && f.leg === 'retour');
     const opponent = isHome ? f.away : f.home;
-    const played = new Date(f.date+'T00:00:00') < TODAY && f.j !== nextJ;
+    const played = !!f.score;
     const classes = ['fx-row'];
     if(played) classes.push('played');
     if(f.j === nextJ) classes.push('next-row');
@@ -589,24 +589,24 @@
     .catch(() => { /* fetch failed: keep the static scores already in the page */ });
 
   const fallbackStandings = [
-    {pos:1,  club:'US Thionville Lusitanos',        j:3, g:3, n:0, d:0, bp:9, bc:3, pts:9},
+    {pos:1,  club:'US Thionville Lusitanos',        j:4, g:3, n:1, d:0, bp:10, bc:4, pts:10},
     {pos:2,  club:'FC Rouen 1899',                  j:4, g:3, n:1, d:0, bp:7, bc:1, pts:10},
-    {pos:3,  club:'VFC La Roche-sur-Yon',           j:3, g:2, n:1, d:0, bp:5, bc:3, pts:7},
-    {pos:4,  club:'SM Caen',                        j:3, g:2, n:0, d:1, bp:8, bc:4, pts:6},
-    {pos:5,  club:'US Orléans',                     j:3, g:2, n:0, d:1, bp:5, bc:2, pts:6},
-    {pos:6,  club:'Le Puy-en-Velay FC',              j:3, g:2, n:0, d:1, bp:3, bc:1, pts:6},
-    {pos:7,  club:'FC Versailles 78',                j:3, g:2, n:0, d:1, bp:6, bc:5, pts:6},
-    {pos:8,  club:'Paris 13 Atletico',               j:3, g:2, n:0, d:1, bp:3, bc:3, pts:6},
-    {pos:9,  club:'US Concarneau',                   j:3, g:1, n:1, d:1, bp:3, bc:3, pts:4},
-    {pos:10, club:'AS Cannes',                       j:3, g:0, n:3, d:0, bp:2, bc:2, pts:3},
-    {pos:11, club:'FC Villefranche-Beaujolais',      j:3, g:1, n:0, d:2, bp:4, bc:5, pts:3},
-    {pos:12, club:'SC Bastia',                       j:3, g:1, n:0, d:2, bp:3, bc:5, pts:3},
-    {pos:13, club:'Valenciennes FC',                 j:3, g:1, n:0, d:2, bp:3, bc:6, pts:3},
-    {pos:13, club:'Bourg-en-Bresse Péronnas 01',      j:3, g:1, n:0, d:2, bp:3, bc:6, pts:3},
-    {pos:15, club:'FC Fleury 91',                    j:3, g:0, n:2, d:1, bp:1, bc:3, pts:2},
-    {pos:16, club:'Amiens SC',                        j:3, g:0, n:1, d:2, bp:0, bc:2, pts:1},
-    {pos:17, club:'Quevilly - Rouen Métropole',       j:3, g:0, n:1, d:2, bp:1, bc:5, pts:1},
-    {pos:18, club:'SC Aubagne Air Bel',               j:3, g:0, n:0, d:3, bp:0, bc:5, pts:0},
+    {pos:3,  club:'VFC La Roche-sur-Yon',           j:4, g:3, n:1, d:0, bp:6, bc:3, pts:10},
+    {pos:4,  club:'Paris 13 Atletico',               j:4, g:2, n:1, d:1, bp:4, bc:4, pts:7},
+    {pos:5,  club:'FC Versailles 78',                j:4, g:2, n:0, d:2, bp:6, bc:8, pts:6},
+    {pos:6,  club:'AS Cannes',                       j:4, g:1, n:3, d:0, bp:4, bc:2, pts:6},
+    {pos:7,  club:'Le Puy-en-Velay FC',              j:4, g:2, n:0, d:2, bp:3, bc:3, pts:6},
+    {pos:8,  club:'SC Bastia',                       j:4, g:2, n:0, d:2, bp:4, bc:5, pts:6},
+    {pos:9,  club:'US Orléans',                     j:4, g:2, n:0, d:2, bp:5, bc:3, pts:6},
+    {pos:10, club:'SM Caen',                        j:4, g:2, n:0, d:2, bp:8, bc:5, pts:6},
+    {pos:11, club:'US Concarneau',                   j:4, g:1, n:2, d:1, bp:3, bc:3, pts:5},
+    {pos:12, club:'Amiens SC',                        j:4, g:1, n:1, d:2, bp:3, bc:2, pts:4},
+    {pos:13, club:'Valenciennes FC',                 j:4, g:1, n:1, d:2, bp:3, bc:6, pts:4},
+    {pos:14, club:'Quevilly - Rouen Métropole',       j:4, g:1, n:1, d:2, bp:3, bc:6, pts:4},
+    {pos:15, club:'SC Aubagne Air Bel',               j:4, g:1, n:0, d:3, bp:2, bc:5, pts:3},
+    {pos:16, club:'Bourg-en-Bresse Péronnas 01',      j:4, g:1, n:0, d:3, bp:3, bc:8, pts:3},
+    {pos:17, club:'FC Villefranche-Beaujolais',      j:4, g:1, n:0, d:3, bp:4, bc:7, pts:3},
+    {pos:18, club:'FC Fleury 91',                    j:4, g:0, n:2, d:2, bp:2, bc:5, pts:2},
   ];
 
   function escapeHtml(str){
