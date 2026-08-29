@@ -435,31 +435,31 @@
     <div class="board" id="board">
       <div class="tape"></div>
       <div class="tape t2"></div>
-      <div class="board-label" id="board-label">DERNIER RÉSULTAT · LIGUE 3 · J3</div>
+      <div class="board-label" id="board-label">DERNIER RÉSULTAT · LIGUE 3 · J4</div>
       <div class="team">
-        <div class="name" id="board-home-name">FC Rouen 1899</div>
+        <div class="name" id="board-home-name">FC Villefranche</div>
         <div class="tag" id="board-home-tag">DOMICILE</div>
       </div>
       <div class="score">
-        <div class="num" id="board-home-score">3</div>
+        <div class="num" id="board-home-score">0</div>
         <div class="sep">–</div>
-        <div class="num" id="board-away-score">0</div>
+        <div class="num" id="board-away-score">2</div>
       </div>
       <div class="team">
-        <div class="name" id="board-away-name">Quevilly</div>
+        <div class="name" id="board-away-name">FC Rouen 1899</div>
         <div class="tag" id="board-away-tag">EXTÉRIEUR</div>
       </div>
-      <div class="score-note" id="board-note">Diochon debout du début à la fin ✊</div>
-      <div class="board-goals mono" id="board-goals">⚽ 14' Tchokounté (Bassin) · 34' Tramoni · 85' Traoré</div>
+      <div class="score-note" id="board-note">Victoire arrachée à l'extérieur !</div>
+      <div class="board-goals mono" id="board-goals">⚽ 52' Tchokounté (Tramoni) · 83' Traoré (Karamoko)</div>
     </div>
   </div>
 </div>
 
 <div class="next reveal">
   <div class="next-info">
-    <div class="label" id="next-label">PROCHAIN RENDEZ-VOUS · J4</div>
-    <h2 id="next-title">FC Villefranche — FC Rouen 1899</h2>
-    <div class="next-meta" id="next-meta">SAMEDI 29 AOÛT · 14H45 · STADE ARMAND-CHOUFFET (EXTÉRIEUR)</div>
+    <div class="label" id="next-label">PROCHAIN RENDEZ-VOUS · J5</div>
+    <h2 id="next-title">FC Rouen 1899 — Valenciennes FC</h2>
+    <div class="next-meta" id="next-meta">JEUDI 3 SEPTEMBRE · 20H45 · STADE ROBERT-DIOCHON (DOMICILE)</div>
   </div>
   <div class="countdown" id="countdown">
     <div class="cd-cell"><div class="num" id="cd-d">–</div><div class="unit">jours</div></div>
@@ -547,16 +547,16 @@
       <div class="fx-score">3–0</div>
       <div class="fx-date">Jeu. 20/08 · 20h00</div>
     </div>
-    <div class="fx-row next-row row-reveal">
+    <div class="fx-row played row-reveal has-moments" data-date="2026-08-29">
       <div class="fx-j mono">J4</div>
-      <div class="fx-teams">FC Villefranche <span class="vs">vs</span> FC Rouen 1899</div>
-      <div class="fx-score">À VENIR</div>
+      <div class="fx-teams">FC Villefranche <span class="vs">vs</span> FC Rouen 1899 <span class="fx-info">ⓘ</span></div>
+      <div class="fx-score">0–2</div>
       <div class="fx-date">Sam. 29/08 · 14h45</div>
     </div>
-    <div class="fx-row row-reveal">
+    <div class="fx-row next-row row-reveal">
       <div class="fx-j mono">J5</div>
       <div class="fx-teams">FC Rouen 1899 <span class="vs">vs</span> Valenciennes FC</div>
-      <div class="fx-score">—</div>
+      <div class="fx-score">À VENIR</div>
       <div class="fx-date">Jeu. 03/09 · 20h45</div>
     </div>
   </div>
@@ -628,7 +628,7 @@
 </div>
 
 <script>
-  let target = new Date("2026-08-29T14:45:00");
+  let target = new Date("2026-09-03T20:45:00");
   const cdCells = {d:'cd-d', h:'cd-h', m:'cd-m'};
   const cdPrev = {d:null, h:null, m:null};
   function tick(){
@@ -663,6 +663,7 @@
     '2026-08-07': [],
     '2026-08-14': [{min:13, scorer:'Tchokounté', note:'penalty'}, {min:68, scorer:'Legendre (Orléans)', note:'penalty'}, {min:78, scorer:'Traoré'}],
     '2026-08-20': [{min:14, scorer:'Tchokounté', assist:'Bassin'}, {min:34, scorer:'Tramoni', assist:'Karamoko'}, {min:85, scorer:'Traoré', assist:'Tchokounté'}],
+    '2026-08-29': [{min:52, scorer:'Tchokounté', assist:'Tramoni'}, {min:83, scorer:'Traoré', assist:'Karamoko'}],
   };
   const matchSources = {
     '2026-08-07': {url:'https://supporters-12rouennais.com/fc-rouen-as-cannes-0-0/', name:'12 Rouennais'},
@@ -778,11 +779,17 @@
   modalOverlay.addEventListener('click', (e) => { if(e.target === modalOverlay) closeMatchModal(); });
   document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeMatchModal(); trapModalFocus(e); });
 
+  /* Dernier match confirme manuellement : si TheSportsDB n'a pas encore
+     indexe un match plus recent, on garde l'affichage statique deja a jour
+     plutot que de reafficher un ancien resultat par-dessus. */
+  const LATEST_KNOWN_MATCH_DATE = '2026-08-29';
+
   fetch(`${SPORTSDB}/eventslast.php?id=${ROUEN_ID}`)
     .then(r => r.json())
     .then(data => {
       const ev = data && data.results && data.results[0];
       if(!ev) return;
+      if(ev.dateEvent && ev.dateEvent <= LATEST_KNOWN_MATCH_DATE) return;
       const isHome = ev.idHomeTeam === ROUEN_ID;
       const hs = parseInt(ev.intHomeScore, 10), as = parseInt(ev.intAwayScore, 10);
       const rouenScore = isHome ? hs : as, oppScore = isHome ? as : hs;
@@ -810,6 +817,7 @@
     .then(data => {
       const ev = data && data.events && data.events[0];
       if(!ev) return;
+      if(ev.dateEvent && ev.dateEvent <= LATEST_KNOWN_MATCH_DATE) return;
       const isHome = ev.idHomeTeam === ROUEN_ID;
       const dt = new Date(ev.strTimestamp + 'Z');
       target = dt;

@@ -6,7 +6,16 @@
   <description>Actus vues des tribunes sur le FC Rouen 1899, par les Rouen Supporters Club — page fan non-officielle.</description>
   <language>fr-fr</language>
   <atom:link href="https://rouen-supporters-club.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Fri, 28 Aug 2026 12:00:00 +0200</lastBuildDate>
+  <lastBuildDate>Sat, 29 Aug 2026 17:00:00 +0200</lastBuildDate>
+
+  <item>
+    <title>Victoire 2-0 à Villefranche</title>
+    <link>https://rouen-supporters-club.vercel.app/actus.html</link>
+    <guid isPermaLink="false">drs-2026-08-29-villefranche-2-0</guid>
+    <pubDate>Sat, 29 Aug 2026 17:00:00 +0200</pubDate>
+    <category>Matchday</category>
+    <description>Le FC Rouen s'impose 2-0 à Villefranche pour ce quatrième match de la saison : Tchokounté ouvre le score sur un magnifique centre de Tramoni (52e), avant que Traoré ne double la mise sur une percée solitaire et un crochet sur le gardien, sur une passe décisive de Karamoko (83e). Une deuxième victoire à l'extérieur qui confirme le début de saison parfait du FCR.</description>
+  </item>
 
   <item>
     <title>Enzo Frébourg intégré à l'équipe première, numéro 4</title>
